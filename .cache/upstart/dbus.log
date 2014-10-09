@@ -19,3 +19,5 @@ Successfully activated service 'com.ubuntu.sso'
 ** (process:2122): WARNING **:   dir: /home/francisco/.local/share/Trash/files, file: Programacion_Web, type: 1
 
 
+module-cache-reaper-Message: Reaping abandoned data directories
+module-cache-reaper-Message: Reaping abandoned cache directories

@@ -1153,6 +1153,9 @@
                   "protocol_str": "quic"
                }
             },
+            "3-channel-proxy-06-ash2.facebook.com:443": {
+               "supports_spdy": true
+            },
             "3-channel-proxy-06-frc1.facebook.com:443": {
                "supports_spdy": true
             },
@@ -1263,7 +1266,7 @@
                },
                "settings": {
                   "4": 100,
-                  "5": 60,
+                  "5": 42,
                   "6": 0
                },
                "supports_spdy": true
@@ -1338,7 +1341,7 @@
                "settings": {
                   "4": 100,
                   "5": 22,
-                  "6": 0
+                  "6": 3
                },
                "supports_spdy": true
             },
@@ -1647,7 +1650,7 @@
                },
                "settings": {
                   "4": 10,
-                  "5": 14,
+                  "5": 9,
                   "6": 0
                },
                "supports_spdy": true
@@ -2145,7 +2148,7 @@
    },
    "translate_blocked_languages": [ "es" ],
    "translate_denied_count": {
-      "en": 11,
+      "en": 13,
       "es": 2
    },
    "translate_whitelists": {

@@ -281,4 +281,17 @@
       </metadata>
     </info>
   </bookmark>
+  <bookmark href="file:///home/francisco/Im%C3%A1genes/Captura%20de%20pantalla%20de%202014-10-09%2012%3A41%3A50.png" added="2014-10-09T17:41:55Z" modified="2014-10-09T17:41:55Z" visited="2014-10-09T17:41:55.198167Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="GNOME Screenshot" exec="&apos;eog %u&apos;" modified="2014-10-09T17:41:55Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
 </xbel>
