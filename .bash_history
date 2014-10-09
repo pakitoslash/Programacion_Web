@@ -335,3 +335,30 @@ git add .
 git commit -m "tu comentario"
 git checkout master
 git branch
+man git
+git branch
+git branch miBranch
+git branch miRama
+git checkout -b Rama1
+git checkout -b ramaPrebe28
+git add .
+git commit -m "No entiendo"
+ls
+cd CursoWeb
+cd ..
+git init
+git remote add origin https://github.com/pakitoslash/Programacion_Web.git
+git push -u origin master
+ls
+git clone /
+cd ../
+ls
+cd francisco/
+ls
+cd .git
+ls
+mkdir Programacion_Web
+ls
+cd Programacion_Web/
+cp /home/francisco/Escritorio/Pagina_Web.zip Pagina_Web.zip
+ls

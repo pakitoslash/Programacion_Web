@@ -1238,6 +1238,18 @@
                   "protocol_str": "quic"
                }
             },
+            "ajax.googleapis.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "protocol_str": "quic"
+               },
+               "settings": {
+                  "4": 100,
+                  "5": 22,
+                  "6": 12
+               },
+               "supports_spdy": true
+            },
             "ajax.googleapis.com:80": {
                "alternate_protocol": {
                   "port": 80,
@@ -1251,7 +1263,7 @@
                },
                "settings": {
                   "4": 100,
-                  "5": 38,
+                  "5": 60,
                   "6": 0
                },
                "supports_spdy": true
@@ -1369,6 +1381,9 @@
                },
                "supports_spdy": true
             },
+            "docs.moodle.org:443": {
+               "supports_spdy": true
+            },
             "f.vimeocdn.com:80": {
                "alternate_protocol": {
                   "port": 80,
@@ -1484,7 +1499,7 @@
                },
                "settings": {
                   "4": 100,
-                  "5": 20,
+                  "5": 22,
                   "6": 0
                },
                "supports_spdy": true
@@ -1590,18 +1605,26 @@
                }
             },
             "lh3.googleusercontent.com:443": {
-               "alternate_protocol": {
-                  "port": 443,
-                  "protocol_str": "quic"
-               },
                "settings": {
                   "4": 100,
-                  "5": 6,
-                  "6": 1
+                  "5": 7,
+                  "6": 0
                },
                "supports_spdy": true
             },
             "lh4.googleusercontent.com:443": {
+               "settings": {
+                  "4": 100,
+                  "5": 32,
+                  "6": 0
+               },
+               "supports_spdy": true
+            },
+            "lh5.googleusercontent.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "protocol_str": "quic"
+               },
                "settings": {
                   "4": 100,
                   "5": 32,
@@ -1624,8 +1647,8 @@
                },
                "settings": {
                   "4": 10,
-                  "5": 30,
-                  "6": 9
+                  "5": 14,
+                  "6": 0
                },
                "supports_spdy": true
             },
@@ -1690,7 +1713,7 @@
             "oauth.googleusercontent.com:443": {
                "settings": {
                   "4": 100,
-                  "5": 22,
+                  "5": 24,
                   "6": 0
                },
                "supports_spdy": true
@@ -1717,7 +1740,7 @@
                },
                "settings": {
                   "4": 100,
-                  "5": 29,
+                  "5": 56,
                   "6": 0
                },
                "supports_spdy": true
@@ -1817,6 +1840,12 @@
                "supports_spdy": true
             },
             "tools.google.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "protocol_str": "quic"
+               }
+            },
+            "tpc.googlesyndication.com:80": {
                "alternate_protocol": {
                   "port": 80,
                   "protocol_str": "quic"
@@ -1923,7 +1952,7 @@
                },
                "settings": {
                   "4": 100,
-                  "5": 87,
+                  "5": 42,
                   "6": 0
                },
                "supports_spdy": true
@@ -1966,11 +1995,17 @@
                "settings": {
                   "4": 100,
                   "5": 22,
-                  "6": 2
+                  "6": 0
                },
                "supports_spdy": true
             },
             "www.googleadservices.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "protocol_str": "quic"
+               }
+            },
+            "www.googletagservices.com:80": {
                "alternate_protocol": {
                   "port": 80,
                   "protocol_str": "quic"
@@ -1984,7 +2019,7 @@
                "settings": {
                   "4": 100,
                   "5": 31,
-                  "6": 8
+                  "6": 0
                },
                "supports_spdy": true
             },
@@ -2110,7 +2145,7 @@
    },
    "translate_blocked_languages": [ "es" ],
    "translate_denied_count": {
-      "en": 10,
+      "en": 11,
       "es": 2
    },
    "translate_whitelists": {
