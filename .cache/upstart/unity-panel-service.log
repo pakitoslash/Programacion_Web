@@ -1,0 +1,4 @@
+
+(unity-panel-service:1771): LIBDBUSMENU-GLIB-WARNING **: Getting layout failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No existe tal interfaz «com.canonical.dbusmenu» en ruta de objeto /com/canonical/menu/460005E
+
+(unity-panel-service:1771): LIBDBUSMENU-GLIB-WARNING **: Getting layout failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No existe tal interfaz «com.canonical.dbusmenu» en ruta de objeto /com/canonical/menu/4600061

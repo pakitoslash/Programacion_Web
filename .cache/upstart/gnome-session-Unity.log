@@ -1,0 +1,30 @@
+libGL error: pci id for fd 11: 80ee:beef, driver (null)
+OpenGL Warning: Failed to connect to host. Make sure 3D acceleration is enabled for this VM.
+libGL error: core dri or dri2 extension not found
+libGL error: failed to load driver: vboxvideo
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+[2367:2367:1009/114020:ERROR:desktop_window_tree_host_x11.cc(1478)] Not implemented reached in void views::DesktopWindowTreeHostX11::MapWindow(ui::WindowShowState)
+[WARNING:flash/platform/pepper/pep_module.cpp(63)] SANDBOXED
+
+** (zeitgeist-datahub:2193): WARNING **: downloads-directory-provider.vala:120: Couldn't process /home/francisco/Descargas/.com.google.Chrome.0KXCoa: Error when getting information for file '/home/francisco/Descargas/.com.google.Chrome.0KXCoa': No such file or directory
+
+** (zeitgeist-datahub:2193): WARNING **: zeitgeist-datahub.vala:212: Error during inserting events: GDBus.Error:org.gnome.zeitgeist.EngineError.InvalidArgument: Incomplete event: interpretation, manifestation and actor are required
+WARN  2014-10-09 11:47:50 unity <unknown>:0 Unable to fetch children: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No existe tal interfaz «org.ayatana.bamf.view» en ruta de objeto /org/ayatana/bamf/application/1385522938
+
+WARN  2014-10-09 11:47:50 unity <unknown>:0 Failed to fetch path: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No existe tal interfaz «org.ayatana.bamf.application» en ruta de objeto /org/ayatana/bamf/application/1385522938
+WARN  2014-10-09 11:47:50 unity <unknown>:0 Failed to fetch path: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No existe tal interfaz «org.ayatana.bamf.application» en ruta de objeto /org/ayatana/bamf/application/1385522938
+WARN  2014-10-09 11:47:50 unity <unknown>:0 Failed to fetch path: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No existe tal interfaz «org.ayatana.bamf.application» en ruta de objeto /org/ayatana/bamf/application/1385522938
+WARN  2014-10-09 11:47:50 unity <unknown>:0 Failed to fetch path: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No existe tal interfaz «org.ayatana.bamf.application» en ruta de objeto /org/ayatana/bamf/application/1385522938
+WARN  2014-10-09 11:47:50 unity <unknown>:0 Failed to fetch path: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No existe tal interfaz «org.ayatana.bamf.application» en ruta de objeto /org/ayatana/bamf/application/1385522938
+WARN  2014-10-09 11:47:50 unity <unknown>:0 Failed to fetch path: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No existe tal interfaz «org.ayatana.bamf.application» en ruta de objeto /org/ayatana/bamf/application/1385522938
+WARN  2014-10-09 11:47:50 unity <unknown>:0 Unable to fetch children: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No existe tal interfaz «org.ayatana.bamf.view» en ruta de objeto /org/ayatana/bamf/application/1385522938
+
+WARN  2014-10-09 11:47:50 unity <unknown>:0 Failed to fetch path: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No existe tal interfaz «org.ayatana.bamf.application» en ruta de objeto /org/ayatana/bamf/application/1385522938
+
+** (zeitgeist-datahub:2193): WARNING **: recent-manager-provider.vala:132: Desktop file for "file:///home/francisco/Escritorio/Clase_2/Tarea.tar.gz" was not found, exec: google-chrome-stable, mime_type: application/x-compressed-tar
+
+** (zeitgeist-datahub:2193): WARNING **: recent-manager-provider.vala:132: Desktop file for "file:///home/francisco/Escritorio/Clase_2/Tarea.tar.gz" was not found, exec: google-chrome-stable, mime_type: application/x-compressed-tar
+WARN  2014-10-09 11:52:02 unity.dash.view DashView.cpp:1263 Search failed  ''=> Timed out waiting for scope proxy connection
+WARN  2014-10-09 11:52:02 unity.dash.scopeproxy ScopeProxy.cpp:516 Could not search '' on home.scope => Timed out waiting for scope proxy connection
+WARN  2014-10-09 11:52:03 unity.iconloader IconLoader.cpp:755 Unable to load icon file:/// at size -1x22: No se puede abrir el directorio
+[WARNING:flash/platform/pepper/pep_module.cpp(63)] SANDBOXED

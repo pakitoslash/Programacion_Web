@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+<title>Git clonar repositorio y manejo de ramas |</title>
+<meta property="template" content="tempera" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://www.notodocodigo.com/xmlrpc.php" />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="http://www.notodocodigo.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; RSS de los comentarios" href="http://www.notodocodigo.com/comments/feed/" />
+
+            <script type="text/javascript">//<![CDATA[
+            // Google Analytics for WordPress by Yoast v4.3.5 | http://yoast.com/wordpress/google-analytics/
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-40460068-1']);
+				            _gaq.push(['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+            //]]></script>
+			<link rel="alternate" type="application/rss+xml" title=" &raquo; Git, clonar repositorio y manejo de ramas RSS de los comentarios" href="http://www.notodocodigo.com/integracion-continua/git-clonar-repositorio-y-manejo-de-ramas/feed/" />
+<!-- This site is powered by Shareaholic - https://shareaholic.com -->
+<script type='text/javascript' data-cfasync='false'>
+  //<![CDATA[
+    (function() {
+      var shr = document.createElement('script');
+      shr.setAttribute('data-cfasync', 'false');
+      shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+      shr.type = 'text/javascript'; shr.async = 'true';
+      shr.onload = shr.onreadystatechange = function() {
+        var rs = this.readyState;
+        if (rs && rs != 'complete' && rs != 'loaded') return;
+        var site_id = '6f6e9d9e8eb2b3fa13bb3a0c65031e98';
+        var page_config = {};
+        try { Shareaholic.init(site_id, page_config); } catch (e) {}
+      };
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(shr, s);
+    })();
+  //]]>
+</script>
+
+<!-- Shareaholic Content Tags -->
+<meta name='shareaholic:language' content='es-ES' />
+<meta name='shareaholic:url' content='http://www.notodocodigo.com/integracion-continua/git-clonar-repositorio-y-manejo-de-ramas/' />
+<meta name='shareaholic:keywords' content='git, github, repositorio, , tutorial' />
+<meta name='shareaholic:article_published_time' content='2013-05-22T17:11:39+00:00' />
+<meta name='shareaholic:article_modified_time' content='2014-10-07T06:44:28+00:00' />
+<meta name='shareaholic:shareable_page' content='true' />
+<meta name='shareaholic:article_author_name' content='No Todo Código' />
+<meta name='shareaholic:site_id' content='6f6e9d9e8eb2b3fa13bb3a0c65031e98' />
+<meta name='shareaholic:wp_version' content='7.0.0.10' />
+<meta name='shareaholic:image' content='http://www.notodocodigo.com/wp-content/uploads/2013/05/Git-logo.png' />
+<!-- Shareaholic Content Tags End -->
+
+<!-- Shareaholic Open Graph Tags -->
+<meta property='og:image' content='http://www.notodocodigo.com/wp-content/uploads/2013/05/Git-logo.png' />
+<!-- Shareaholic Open Graph Tags End -->
+<link rel='stylesheet' id='crayon-css'  href='http://www.notodocodigo.com/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=2.6.5' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-theme-monokai-css'  href='http://www.notodocodigo.com/wp-content/plugins/crayon-syntax-highlighter/themes/monokai/monokai.css?ver=2.6.5' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-font-monaco-css'  href='http://www.notodocodigo.com/wp-content/plugins/crayon-syntax-highlighter/fonts/monaco.css?ver=2.6.5' type='text/css' media='all' />
+<link rel='stylesheet' id='temperas-css'  href='http://www.notodocodigo.com/wp-content/themes/tempera/style.css?ver=3.9.2' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.notodocodigo.com/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+<script type='text/javascript' src='http://www.notodocodigo.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"2.6.5","is_admin":"0","ajaxurl":"http:\/\/www.notodocodigo.com\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Presiona %s para copiar y %s para pegar","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.notodocodigo.com/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=2.6.5'></script>
+<script type='text/javascript' src='http://www.notodocodigo.com/wp-content/themes/tempera/js/frontend.js?ver=3.9.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.notodocodigo.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.notodocodigo.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Git y Github' href='http://www.notodocodigo.com/integracion-continua/git-y-github/' />
+<link rel='next' title='Componentes, conversión y validación' href='http://www.notodocodigo.com/introduccion-a-jsf/componentes-conversion-y-validacion/' />
+<meta name="generator" content="WordPress 3.9.2" />
+<link rel='shortlink' href='http://www.notodocodigo.com/?p=1421' />
+<link rel="icon" type="image/png" href="http://www.notodocodigo.com/wp-content/uploads/2014/05/icon.png">
+<!-- All in One SEO Pack 2.1.7 by Michael Torbert of Semper Fi Web Design[46,96] -->
+<meta name="description" content="Git clonar repositorio y manejo de ramas" />
+
+<meta name="keywords" content="git, repositorio, github, tutorial,github,repositorio" />
+
+<link rel="canonical" href="http://www.notodocodigo.com/integracion-continua/git-clonar-repositorio-y-manejo-de-ramas/" />
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-40460068-1']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+<!-- /all in one seo pack -->
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url('http://www.notodocodigo.com/wp-content/uploads/2014/05/fondoNuevo1.jpg'); background-repeat: no-repeat; background-position: top center; background-attachment: fixed; }
+</style>
+<style type="text/css"> #header, #main, #topbar-inner { max-width: 1120px; } /*#header-full, #footer { min-width: 1120px; } */ #container.one-column { } #container.two-columns-right #secondary { width:270px; float:right; } #container.two-columns-right #content { width:760px; float:left; } /*fallback*/ #container.two-columns-right #content { width:calc(100% - 300px); float:left; } #container.two-columns-left #primary { width:270px; float:left; } #container.two-columns-left #content { width:760px; float:right; } /*fallback*/ #container.two-columns-left #content { width:-moz-calc(100% - 300px); float:right; width:-webkit-calc(100% - 300px); width:calc(100% - 300px); } #container.three-columns-right .sidey { width:135px; float:left; } #container.three-columns-right #primary { margin-left:30px; margin-right:30px; } #container.three-columns-right #content { width:730px; float:left; } /*fallback*/ #container.three-columns-right #content { width:-moz-calc(100% - 330px); float:left; width:-webkit-calc(100% - 330px); width:calc(100% - 330px);} #container.three-columns-left .sidey { width:135px; float:left; } #container.three-columns-left #secondary {margin-left:30px; margin-right:30px; } #container.three-columns-left #content { width:730px; float:right;} /*fallback*/ #container.three-columns-left #content { width:-moz-calc(100% - 330px); float:right; width:-webkit-calc(100% - 330px); width:calc(100% - 330px); } #container.three-columns-sided .sidey { width:135px; float:left; } #container.three-columns-sided #secondary { float:right; } #container.three-columns-sided #content { width:730px; float:right; /*fallback*/ width:-moz-calc(100% - 330px); float:right; width:-webkit-calc(100% - 330px); float:right; width:calc(100% - 330px); float:right; margin: 0 165px 0 -1060px; } #footer-widget-area {width:1060px;} body { font-family: Ubuntu; } #content h1.entry-title a, #content h2.entry-title a, #content h1.entry-title , #content h2.entry-title { font-family: Yanone Kaffeesatz Regular; } .widget-title, .widget-title a { line-height: normal; font-family: Open Sans Light; } .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6, #comments #reply-title, .nivo-caption h2, #front-text1 h1, #front-text2 h1, .column-header-image { font-family: Open Sans Light; } #site-title span a { font-family: Yanone Kaffeesatz Regular; } #access ul li a, #access ul li a span { font-family: Droid Sans; } body { color: #444444; background-color: #171717 } a { color: #1693A5; } a:hover,.entry-meta span a:hover, .comments-link a:hover { color: #D6341D; } #header { background-color: ; } #site-title span a { color:#1693A5; } #site-description { color:#999999; } .socials a { background-color: #1693A5; } .socials-hover { background-color: #D6341D; } /* Main menu top level */ #access a { color: #333333; } #access {background-color: #EAEAEA; } #access > .menu > ul > li > a > span { border-right-color: #cccccc; -moz-box-shadow: 1px 0 0 #ffffff; -webkit-box-shadow: 1px 0 0 #ffffff; box-shadow: 1px 0 0 #ffffff; } #access a:hover {background-color: #f7f7f7; } #access ul li.current_page_item > a, #access ul li.current-menu-item > a, #access ul li.current_page_ancestor > a, #access ul li.current-menu-ancestor > a { background-color: #f7f7f7; } /* Main menu Submenus */ #access > .menu > ul > li > ul:before {border-bottom-color:#2D2D2D;} #access ul ul ul:before { border-right-color:#2D2D2D;} #access ul ul li { background-color:#2D2D2D; border-top-color:#3b3b3b; border-bottom-color:#222222} #access ul ul li a{color:#BBBBBB} #access ul ul li a:hover{background:#3b3b3b} #access ul ul li.current_page_item > a, #access ul ul li.current-menu-item > a { background-color:#3b3b3b; } #topbar { display:none; } .topmenu ul li a { color: #CCCCCC; } .topmenu ul li a:hover { color: #EEEEEE; border-bottom-color: #1693A5; } #main { background-color: #FFFFFF; } #author-info, #entry-author-info, .page-title { border-color: #1693A5; background: #F7F7F7; } #entry-author-info #author-avatar, #author-info #author-avatar { border-color: #EEEEEE; } .sidey .widget-container { color: #333333; background-color: ; } .sidey .widget-title { color: #666666; background-color: #F7F7F7;border-color:#cfcfcf;} .sidey .widget-container a {color:;} .sidey .widget-container a:hover {color:;} .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 { color: #444444; } .sticky .entry-header {border-color:#1693A5 } .entry-title, .entry-title a { color: #444444; } .entry-title a:hover { color: #000000; } #content h3.entry-format { color: #333333; background-color: #EAEAEA; } #footer { color: #AAAAAA; background-color: ; } #footer2 { color: #AAAAAA; background-color: #F7F7F7; } #footer a { color: ; } #footer a:hover { color: ; } #footer2 a, .footermenu ul li:after { color: ; } #footer2 a:hover { color: ; } #footer .widget-container { color: #333333; background-color: ; } #footer .widget-title { color: #666666; background-color: #F7F7F7;border-color:#cfcfcf } a.continue-reading-link, #cryout_ajax_more_trigger { color:#333333 !important; background:#EAEAEA; border-bottom-color:#1693A5; } a.continue-reading-link:after { background-color:#D6341D; } a.continue-reading-link i.icon-right-dir {color:#1693A5} a.continue-reading-link:hover i.icon-right-dir {color:#D6341D} .page-link a, .page-link > span > em {border-color:#CCCCCC} .columnmore a {background:#D6341D;color:#F7F7F7} .columnmore a:hover {background:#1693A5;} .file, .button, #respond .form-submit input#submit, input[type=submit], input[type=reset] { background-color: #FFFFFF; border-color: #CCCCCC; box-shadow: 0 -10px 10px 0 #F7F7F7 inset; } .file:hover, .button:hover, #respond .form-submit input#submit:hover { background-color: #F7F7F7; } .entry-content tr th, .entry-content thead th { color: #444444; } .entry-content fieldset, #content tr td,#content tr th,#content thead th { border-color: #CCCCCC; } #content tr.even td { background-color: #F7F7F7 !important; } hr { background-color: #CCCCCC; } input[type="text"], input[type="password"], input[type="email"], input[type="file"], textarea, select, input[type="color"],input[type="date"],input[type="datetime"],input[type="datetime-local"],input[type="month"],input[type="number"],input[type="range"], input[type="search"],input[type="tel"],input[type="time"],input[type="url"],input[type="week"] { background-color: #F7F7F7; border-color: #CCCCCC #EEEEEE #EEEEEE #CCCCCC; color: #444444; } input[type="submit"], input[type="reset"] { color: #444444; background-color: #FFFFFF; border-color: #CCCCCC; box-shadow: 0 -10px 10px 0 #F7F7F7 inset; } input[type="text"]:hover, input[type="password"]:hover, input[type="email"]:hover, textarea:hover, input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="range"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover { background-color: rgba(247,247,247,0.4); } .entry-content code { border-color: #CCCCCC; border-bottom-color:#1693A5;} .entry-content pre { border-color: #CCCCCC; background-color:#F7F7F7;} .entry-content blockquote { border-color: #EEEEEE; } abbr, acronym { border-color: #444444; } .comment-meta a { color: #444444; } #respond .form-allowed-tags { color: #999999; } .reply a{ background-color: #F7F7F7; border-color: #EEEEEE; } .reply a:hover { background-color: #EAEAEA;color: #1693A5; } .entry-meta .icon-metas:before {color:#CCCCCC;} .entry-meta span a, .comments-link a {color:#666666;} .entry-meta span a:hover, .comments-link a:hover {color:;} .nav-next a:hover {} .nav-previous a:hover { } .pagination { border-color:#ededed;} .pagination span, .pagination a { background:#F7F7F7; border-left-color:#dddddd; border-right-color:#ffffff; } .pagination a:hover { background: #ffffff; } #searchform input[type="text"] {color:#999999;} .caption-accented .wp-caption { background-color:rgba(22,147,165,0.8); color:#FFFFFF} .tempera-image-one .entry-content img[class*='align'],.tempera-image-one .entry-summary img[class*='align'], .tempera-image-two .entry-content img[class*='align'],.tempera-image-two .entry-summary img[class*='align'] { border-color:#1693A5;} #content p, #content ul, #content ol, #content, #frontpage blockquote { text-align:Default ; } #content p, #content ul, #content ol, .sidey, .sidey a, table, table td { font-size:15px; word-spacing:Default; letter-spacing:Default; } #content p, #content ul, #content ol, .sidey, .sidey a { line-height:1.7em; } #content h1.entry-title, #content h2.entry-title { font-size:34px ;} .widget-title, .widget-title a { font-size:18px ;} #content .entry-content h1 { font-size: 38px;} #content .entry-content h2 { font-size: 34px;} #content .entry-content h3 { font-size: 29px;} #content .entry-content h4 { font-size: 24px;} #content .entry-content h5 { font-size: 19px;} #content .entry-content h6 { font-size: 14px;} #site-title span a { font-size:38px ;} #access ul li a { font-size:14px ;} #access ul ul ul a {font-size:12px;} .nocomments, .nocomments2 {display:none;} #header-container > div { margin:40px 0 0 0px;} #content p, #content ul, #content ol, #content dd, #content pre, #content hr { margin-bottom: 1.0em; } #toTop {background:#FFFFFF;margin-left:1270px;} #toTop:hover .icon-back2top:before {color:#D6341D;} #main {margin-top:20px; } #forbottom {margin-left: 30px; margin-right: 30px;} #branding { height:120px; } </style> 
+<style type="text/css">/* Tempera Custom CSS */</style>
+
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<link rel='stylesheet' id='tempera_style_mobile'  href='http://www.notodocodigo.com/wp-content/themes/tempera/styles/style-mobile.css' type='text/css' media='all' /><script type="text/javascript">var cryout_global_content_width = 850;var cryout_toTop_offset = 1120;</script><!--[if lt IE 9]>
+<script>
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+document.createElement('footer');
+</script>
+<![endif]-->
+<script type="text/javascript">
+function makeDoubleDelegate(function1, function2) {
+	// concatenate functions
+    return function() { if (function1) function1(); if (function2) function2(); }
+}
+
+function tempera_onload() {
+    // Add responsive videos
+     jQuery(".entry-content").fitVids();
+	}; // tempera_onload
+
+jQuery(document).ready(function(){
+	// Add select navigation to small screens
+     jQuery("#access > .menu > ul").tinyNav({
+          	header: ' = Menu = ' // Show header instead of the active item
+			});
+});
+
+// make sure not to lose previous onload events
+window.onload = makeDoubleDelegate(window.onload, tempera_onload );
+</script>
+</head>
+<body class="page page-id-1421 page-child parent-pageid-738 page-template-default custom-background tempera-image-one caption-dark">
+
+
+<div id="wrapper" class="hfeed">
+<div id="topbar" ><div id="topbar-inner">  </div></div>
+<div class="socials" id="srights">
+			<a  target="_blank"  rel="nofollow" href="http://es.linkedin.com/pub/carlos-garc%C3%ADa-hernando/67/b61/4aa"
+			class="socialicons social-LinkedIn" title="Sobre mi">
+				<img alt="LinkedIn" src="http://www.notodocodigo.com/wp-content/themes/tempera/images/socials/LinkedIn.png" />
+			</a></div>
+<div id="header-full">
+	<header id="header">
+		<div id="masthead">
+			<div id="branding" role="banner" >
+				<img id="bg_image" alt="" title="" src="http://www.notodocodigo.com/wp-content/uploads/2014/06/cropped-004.jpg"  /><div id="header-container">
+<a href="http://www.notodocodigo.com/" id="linky"></a></div>								<div style="clear:both;"></div>
+			</div><!-- #branding -->
+			<nav id="access" role="navigation">
+				<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+<div class="menu"><ul id="prime_nav" class="menu"><li id="menu-item-889" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-889"><a href="http://www.notodocodigo.com/" ><span>Blog</span></a></li>
+<li id="menu-item-409" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-409"><a href="http://www.notodocodigo.com/maven/" ><span>Maven</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-414" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-414"><a href="http://www.notodocodigo.com/maven/instalacion-y-primeros-pasos-con-maven/" ><span>Instalación y primeros pasos con Maven</span></a></li>
+	<li id="menu-item-413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-413"><a href="http://www.notodocodigo.com/maven/maven-en-eclipse/" ><span>Maven en Eclipse</span></a></li>
+	<li id="menu-item-412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-412"><a href="http://www.notodocodigo.com/maven/principales-comandos/" ><span>Principales comandos</span></a></li>
+	<li id="menu-item-411" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-411"><a href="http://www.notodocodigo.com/maven/gestion-de-dependencias/" ><span>Gestión de dependencias</span></a></li>
+	<li id="menu-item-410" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-410"><a href="http://www.notodocodigo.com/maven/proyecto-multimodulo/" ><span>Proyecto multimódulo</span></a></li>
+	<li id="menu-item-442" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-442"><a href="http://www.notodocodigo.com/maven/perfiles/" ><span>Perfiles</span></a></li>
+	<li id="menu-item-465" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-465"><a href="http://www.notodocodigo.com/maven/filtros-y-gestion-multientorno/" ><span>Filtros y gestión multientorno</span></a></li>
+	<li id="menu-item-481" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-481"><a href="http://www.notodocodigo.com/maven/repositorios/" ><span>Repositorios</span></a></li>
+	<li id="menu-item-519" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-519"><a href="http://www.notodocodigo.com/maven/nexus/" ><span>Nexus</span></a></li>
+	<li id="menu-item-628" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-628"><a href="http://www.notodocodigo.com/maven/releases-y-snapshots/" ><span>Publicar releases y snapshots</span></a></li>
+</ul>
+</li>
+<li id="menu-item-737" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-737"><a href="http://www.notodocodigo.com/blog/integracion-continua-con-jenkins/" ><span>Integración Continua</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-715" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-715"><a href="http://www.notodocodigo.com/maven/crear-el-site/" ><span>Crear el Site</span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-740" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-page-parent menu-item-740"><a href="http://www.notodocodigo.com/integracion-continua/" ><span>Camino hacia la integración continua</span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-1386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1386"><a href="http://www.notodocodigo.com/integracion-continua/control-de-versiones-con-git/" ><span>Control de versiones con Git</span></a></li>
+	<li id="menu-item-1420" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1420"><a href="http://www.notodocodigo.com/integracion-continua/git-y-github/" ><span>Git y Github</span></a></li>
+	<li id="menu-item-1438" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1421 current_page_item menu-item-1438"><a href="http://www.notodocodigo.com/integracion-continua/git-clonar-repositorio-y-manejo-de-ramas/" ><span>Git, clonar repositorio y manejo de ramas</span></a></li>
+	<li id="menu-item-1710" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1710"><a href="http://www.notodocodigo.com/blog/instalacion-y-primeros-pasos-con-jenkins/" ><span>Instalación y primeros pasos con Jenkins</span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-747" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-747"><a href="http://www.notodocodigo.com/blog/java-server-faces/" ><span>JS Faces</span></a>
+		<ul class="sub-menu">
+			<li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://www.notodocodigo.com/introduccion-a-jsf/" ><span>Introducción a JSF</span></a></li>
+			<li id="menu-item-1134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1134"><a href="http://www.notodocodigo.com/introduccion-a-jsf/el-ciclo-de-vida-de-una-peticion-jsf/" ><span>El ciclo de vida de una petición JSF</span></a></li>
+			<li id="menu-item-1185" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1185"><a href="http://www.notodocodigo.com/introduccion-a-jsf/facelets/" ><span>Facelets</span></a></li>
+			<li id="menu-item-1200" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1200"><a href="http://www.notodocodigo.com/introduccion-a-jsf/manejando-beans/" ><span>Manejando Beans</span></a></li>
+			<li id="menu-item-1255" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1255"><a href="http://www.notodocodigo.com/introduccion-a-jsf/flujos-de-navegacion-jsf-en-eclipse/" ><span>Flujos de navegación JSF en Eclipse</span></a></li>
+			<li id="menu-item-1459" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1459"><a href="http://www.notodocodigo.com/introduccion-a-jsf/componentes-conversion-y-validacion/" ><span>Componentes, conversión y validación</span></a></li>
+			<li id="menu-item-1470" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1470"><a href="http://www.notodocodigo.com/introduccion-a-jsf/internacionalizacion/" ><span>Internacionalización</span></a></li>
+			<li id="menu-item-1481" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1481"><a href="http://www.notodocodigo.com/introduccion-a-jsf/eventos/" ><span>Eventos</span></a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-749" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-749"><a href="http://www.notodocodigo.com/blog/spring/" ><span>Spring</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-768" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-768"><a href="http://www.notodocodigo.com/spring/" ><span>Empezando con Spring</span></a></li>
+	<li id="menu-item-775" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-775"><a href="http://www.notodocodigo.com/spring/spel/" ><span>SpEL</span></a></li>
+	<li id="menu-item-796" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-796"><a href="http://www.notodocodigo.com/spring/conexion-automatica-de-beans/" ><span>Conexión automática de beans</span></a></li>
+	<li id="menu-item-1730" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1730"><a href="http://www.notodocodigo.com/blog/externalizar-la-configuracion/" ><span>Externalizar la configuración</span></a></li>
+	<li id="menu-item-1883" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1883"><a href="http://www.notodocodigo.com/colecciones-y-reemplazo-de-metodos/" ><span>Colecciones, reemplazo de métodos y herencia</span></a></li>
+	<li id="menu-item-1890" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1890"><a href="http://www.notodocodigo.com/blog/applicationcontext-factorybeans-propertyeditors-y-ciclo-de-vida-de-beans/" ><span>ApplicationContext, FactoryBeans, PropertyEditors, y ciclo de vida</span></a></li>
+	<li id="menu-item-1899" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1899"><a href="http://www.notodocodigo.com/blog/spring-aop/" ><span>Spring AOP</span></a></li>
+</ul>
+</li>
+<li id="menu-item-865" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-865"><a href="http://www.notodocodigo.com/blog/mongodb/" ><span>MongoDB</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-1005" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1005"><a href="http://www.notodocodigo.com/introduccion-a-mongodb/" ><span>Introducción a MongoDB</span></a></li>
+	<li id="menu-item-1150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1150"><a href="http://www.notodocodigo.com/introduccion-a-mongodb/instalar-y-desinstalar-mongodb/" ><span>Instalar y desinstalar mongoDB</span></a></li>
+	<li id="menu-item-1044" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1044"><a href="http://www.notodocodigo.com/introduccion-a-mongodb/crear-documentos/" ><span>Crear documentos</span></a></li>
+	<li id="menu-item-1006" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1006"><a href="http://www.notodocodigo.com/introduccion-a-mongodb/busquedas-en-mongodb/" ><span>Búsqueda</span></a></li>
+	<li id="menu-item-1024" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1024"><a href="http://www.notodocodigo.com/introduccion-a-mongodb/actualizacion-de-datos/" ><span>Actualización</span></a></li>
+	<li id="menu-item-1030" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1030"><a href="http://www.notodocodigo.com/introduccion-a-mongodb/eliminar-datos/" ><span>Eliminar datos</span></a></li>
+	<li id="menu-item-1045" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1045"><a href="http://www.notodocodigo.com/introduccion-a-mongodb/disenar-el-esquema-de-datos/" ><span>Diseñar el esquema de datos</span></a></li>
+	<li id="menu-item-1065" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1065"><a href="http://www.notodocodigo.com/introduccion-a-mongodb/indices/" ><span>Índices</span></a></li>
+	<li id="menu-item-1074" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1074"><a href="http://www.notodocodigo.com/introduccion-a-mongodb/funciones-de-agregacion/" ><span>Funciones de agregación</span></a></li>
+	<li id="menu-item-1090" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1090"><a href="http://www.notodocodigo.com/introduccion-a-mongodb/fragmentacion-y-replicacion/" ><span>Fragmentación y replicación</span></a></li>
+	<li id="menu-item-1104" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1104"><a href="http://www.notodocodigo.com/introduccion-a-mongodb/mongo-en-java/" ><span>Mongo en Java</span></a></li>
+</ul>
+</li>
+<li id="menu-item-1264" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1264"><a href="http://www.notodocodigo.com/blog/uml-con-enterprise-architect/" ><span>UML</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-1285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1285"><a href="http://www.notodocodigo.com/blog/primeros-pasos-con-enterprise-architect/" ><span>Primeros pasos con EA</span></a></li>
+	<li id="menu-item-1322" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1322"><a href="http://www.notodocodigo.com/blog/introduccion-a-uml/" ><span>Introducción a UML</span></a></li>
+	<li id="menu-item-1352" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1352"><a href="http://www.notodocodigo.com/blog/paradigma-orientado-a-objetos/" ><span>Paradigma orientado a objetos</span></a></li>
+	<li id="menu-item-1491" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1491"><a href="http://www.notodocodigo.com/blog/casos-de-uso/" ><span>Casos de uso</span></a></li>
+	<li id="menu-item-1510" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1510"><a href="http://www.notodocodigo.com/blog/diagrama-de-estado/" ><span>Diagrama de estado</span></a></li>
+	<li id="menu-item-1525" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1525"><a href="http://www.notodocodigo.com/blog/secuencia-comunicaciones-y-actividades/" ><span>Secuencia, comunicaciones y actividades</span></a></li>
+	<li id="menu-item-1654" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1654"><a href="http://www.notodocodigo.com/blog/diagrama-de-componentes-y-diagrama-de-distribucion/" ><span>Diagrama de componentes y diagrama de distribucion</span></a></li>
+</ul>
+</li>
+<li id="menu-item-1780" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1780"><a href="http://www.notodocodigo.com/blog/test/" ><span>Testing</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-1781" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1781"><a href="http://www.notodocodigo.com/blog/uso-de-junit/" ><span>Junit</span></a></li>
+	<li id="menu-item-1782" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1782"><a href="http://www.notodocodigo.com/blog/uso-de-dbunit/" ><span>DBUnit</span></a></li>
+	<li id="menu-item-1795" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1795"><a href="http://www.notodocodigo.com/blog/spring-dbunit/" ><span>Spring DBUnit</span></a></li>
+	<li id="menu-item-1908" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1908"><a href="http://www.notodocodigo.com/blog/testng/" ><span>TestNG</span></a></li>
+	<li id="menu-item-1922" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1922"><a href="http://www.notodocodigo.com/blog/selenium-y-selenium-grid/" ><span>Selenium</span></a></li>
+</ul>
+</li>
+<li id="menu-item-1768" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1768"><a href="http://www.notodocodigo.com/sobre-mi/" ><span>Sobre mí</span></a></li>
+</ul></div>			</nav><!-- #access -->
+		</div><!-- #masthead -->
+	</header><!-- #header -->
+</div><!-- #header-full -->
+
+<div style="clear:both;height:0;"> </div>
+
+<div id="main">
+		<div id="toTop"><i class="icon-back2top"></i> </div>	<div  id="forbottom" >
+		
+		<div style="clear:both;"> </div>
+
+				<section id="container" class="two-columns-right">
+
+			<div id="content" role="main">
+			<div class="breadcrumbs"><a href="http://www.notodocodigo.com"><i class="icon-homebread"></i></a><i class='icon-angle-right'></i> <a href="http://www.notodocodigo.com/integracion-continua/">Camino hacia la integración continua<i class='icon-angle-right'></i> </a>Git, clonar repositorio y manejo de ramas</div>
+				
+				<div id="post-1421" class="post-1421 page type-page status-publish has-post-thumbnail hentry tag-git tag-github tag-repositorio">
+											<h1 class="entry-title">Git, clonar repositorio y manejo de ramas</h1>
+					
+					<div class="entry-content">
+						<div class='shareaholic-canvas' data-app-id='16900' data-app='share_buttons' data-title='Git, clonar repositorio y manejo de ramas' data-link='http://www.notodocodigo.com/integracion-continua/git-clonar-repositorio-y-manejo-de-ramas/' data-summary=''></div><p style="text-align: justify;">Hasta ahora hemos visto como subir nuestro proyecto al repositorio de <strong>Github</strong>.&nbsp;Para que&nbsp;el resto de desarrolladores de nuestro equipo&nbsp;puedan trabajar con el proyecto que acabamos de subir, deben clonar el repositorio.</p>
+<h3 style="text-align: justify;">Clonar el repositorio</h3>
+<p style="text-align: justify;">Como hemos comentado, en Github, cuando subimos un proyecto tenemos tres métodos de acceso.</p>
+<ul>
+<li style="text-align: justify;"><strong>HTTP</strong>&nbsp;→ Nos pide contraseña de la cuenta de Github para bajar el proyecto. No es necesaria para bajarlo, pero si para subir cambios.</li>
+<li style="text-align: justify;"><strong>SSH</strong>&nbsp;→ Con un par de claves ssh</li>
+<li style="text-align: justify;"><strong>Git-Read Only</strong>&nbsp;→ Acceso de solo lectura.</li>
+</ul>
+<div id="attachment_1397" style="width: 577px" class="wp-caption aligncenter"><a href="http://www.notodocodigo.com/wp-content/uploads/2013/05/Git13.jpg" ><img class="size-full wp-image-1397" alt="Acceso al repositorio" src="http://www.notodocodigo.com/wp-content/uploads/2013/05/Git13.jpg" width="567" height="125" /></a><p class="wp-caption-text">Acceso al repositorio (pinchar para agrandar)</p></div>
+<p>Nosotros vamos a utilizar SSH, así que ejecutamos el siguiente comando:</p>
+<p></p><!-- Crayon Syntax Highlighter v2.6.5 -->
+
+		<div id="crayon-54360c8135c65945605287" class="crayon-syntax crayon-theme-monokai crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+$ git clone git@github.com:Notodocodigo/EjemploJsf.git
+Cloning into 'EjemploJsf'...
+Enter passphrase for key '/c/Users/Conan/.ssh/id_rsa':
+remote: Counting objects: 27, done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 27 (delta 3), reused 27 (delta 3)
+Receiving objects: 100% (27/27), 4.12 KiB, done.
+Resolving deltas: 100% (3/3), done.</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-54360c8135c65945605287-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-54360c8135c65945605287-2">2</div><div class="crayon-num" data-line="crayon-54360c8135c65945605287-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-54360c8135c65945605287-4">4</div><div class="crayon-num" data-line="crayon-54360c8135c65945605287-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-54360c8135c65945605287-6">6</div><div class="crayon-num" data-line="crayon-54360c8135c65945605287-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-54360c8135c65945605287-8">8</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-54360c8135c65945605287-1"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">git </span><span class="crayon-r">clone</span><span class="crayon-h"> </span><span class="crayon-v">git</span><span class="crayon-sy">@</span><span class="crayon-v">github</span><span class="crayon-e">.com</span><span class="crayon-o">:</span><span class="crayon-v">Notodocodigo</span><span class="crayon-o">/</span><span class="crayon-v">EjemploJsf</span><span class="crayon-e">.git</span></div><div class="crayon-line crayon-striped-line" id="crayon-54360c8135c65945605287-2"><span class="crayon-e">Cloning </span><span class="crayon-i">into</span><span class="crayon-h"> </span><span class="crayon-s">'EjemploJsf'</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span></div><div class="crayon-line" id="crayon-54360c8135c65945605287-3"><span class="crayon-e">Enter </span><span class="crayon-e">passphrase </span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-i">key</span><span class="crayon-h"> </span><span class="crayon-s">'/c/Users/Conan/.ssh/id_rsa'</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="crayon-54360c8135c65945605287-4"><span class="crayon-v">remote</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-e">Counting </span><span class="crayon-v">objects</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">27</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-st">done</span><span class="crayon-sy">.</span></div><div class="crayon-line" id="crayon-54360c8135c65945605287-5"><span class="crayon-v">remote</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-e">Compressing </span><span class="crayon-v">objects</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">100</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">14</span><span class="crayon-o">/</span><span class="crayon-cn">14</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-st">done</span><span class="crayon-sy">.</span></div><div class="crayon-line crayon-striped-line" id="crayon-54360c8135c65945605287-6"><span class="crayon-v">remote</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-i">Total</span><span class="crayon-h"> </span><span class="crayon-cn">27</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-r">delta</span><span class="crayon-h"> </span><span class="crayon-cn">3</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">reused</span><span class="crayon-h"> </span><span class="crayon-cn">27</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-r">delta</span><span class="crayon-h"> </span><span class="crayon-cn">3</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="crayon-54360c8135c65945605287-7"><span class="crayon-e">Receiving </span><span class="crayon-v">objects</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">100</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">27</span><span class="crayon-o">/</span><span class="crayon-cn">27</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">4.12</span><span class="crayon-h"> </span><span class="crayon-v">KiB</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-st">done</span><span class="crayon-sy">.</span></div><div class="crayon-line crayon-striped-line" id="crayon-54360c8135c65945605287-8"><span class="crayon-e">Resolving </span><span class="crayon-v">deltas</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">100</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">3</span><span class="crayon-o">/</span><span class="crayon-cn">3</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-st">done</span><span class="crayon-sy">.</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0039 seconds] -->
+<p></p>
+<p style="text-align: justify;">Como se puede ver nos ha bajado el repositorio. Si nos movemos a la carpeta del proyecto ”<em>EjemploJsf</em>” y ejecutamos “<strong>git log</strong>”, observamos que tenemos todo el historial de cambios.</p>
+<p></p><!-- Crayon Syntax Highlighter v2.6.5 -->
+
+		<div id="crayon-54360c8135c76026556044" class="crayon-syntax crayon-theme-monokai crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+$ cd EjemploJsf
+
+$ git log
+commit 162d1a37e912be2f715413c0bbf27eb0d31821cc
+Author: Notodocodigo &lt;notodocodigo@notodocodigo.com&gt;
+Date:   Tue May 21 14:43:44 2013 +0200
+
+    Segundo commit
+
+commit 56b6dd29f3b15b063e04b8ced789735c56544012
+Author: Notodocodigo &lt;notodocodigo@notodocodigo.com&gt;
+Date:   Tue May 21 14:32:20 2013 +0200
+
+    Commit inicial </textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-54360c8135c76026556044-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-54360c8135c76026556044-2">2</div><div class="crayon-num" data-line="crayon-54360c8135c76026556044-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-54360c8135c76026556044-4">4</div><div class="crayon-num" data-line="crayon-54360c8135c76026556044-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-54360c8135c76026556044-6">6</div><div class="crayon-num" data-line="crayon-54360c8135c76026556044-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-54360c8135c76026556044-8">8</div><div class="crayon-num" data-line="crayon-54360c8135c76026556044-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-54360c8135c76026556044-10">10</div><div class="crayon-num" data-line="crayon-54360c8135c76026556044-11">11</div><div class="crayon-num crayon-striped-num" data-line="crayon-54360c8135c76026556044-12">12</div><div class="crayon-num" data-line="crayon-54360c8135c76026556044-13">13</div><div class="crayon-num crayon-striped-num" data-line="crayon-54360c8135c76026556044-14">14</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-54360c8135c76026556044-1"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-r">cd</span><span class="crayon-h"> </span><span class="crayon-i">EjemploJsf</span></div><div class="crayon-line crayon-striped-line" id="crayon-54360c8135c76026556044-2">&nbsp;</div><div class="crayon-line" id="crayon-54360c8135c76026556044-3"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">git </span><span class="crayon-e">log</span></div><div class="crayon-line crayon-striped-line" id="crayon-54360c8135c76026556044-4"><span class="crayon-i">commit</span><span class="crayon-h"> </span><span class="crayon-cn">162d1a37e912be2f715413c0bbf27eb0d31821cc</span></div><div class="crayon-line" id="crayon-54360c8135c76026556044-5"><span class="crayon-v">Author</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">Notodocodigo</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-v">notodocodigo</span><span class="crayon-sy">@</span><span class="crayon-v">notodocodigo</span><span class="crayon-e">.com</span><span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-54360c8135c76026556044-6"><span class="crayon-r">Date</span><span class="crayon-o">:</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-e">Tue </span><span class="crayon-i">May</span><span class="crayon-h"> </span><span class="crayon-cn">21</span><span class="crayon-h"> </span><span class="crayon-cn">14</span><span class="crayon-o">:</span><span class="crayon-cn">43</span><span class="crayon-o">:</span><span class="crayon-cn">44</span><span class="crayon-h"> </span><span class="crayon-cn">2013</span><span class="crayon-h"> </span><span class="crayon-o">+</span><span class="crayon-cn">0200</span></div><div class="crayon-line" id="crayon-54360c8135c76026556044-7">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-54360c8135c76026556044-8"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">Segundo </span><span class="crayon-e">commit</span></div><div class="crayon-line" id="crayon-54360c8135c76026556044-9">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-54360c8135c76026556044-10"><span class="crayon-i">commit</span><span class="crayon-h"> </span><span class="crayon-cn">56b6dd29f3b15b063e04b8ced789735c56544012</span></div><div class="crayon-line" id="crayon-54360c8135c76026556044-11"><span class="crayon-v">Author</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">Notodocodigo</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-v">notodocodigo</span><span class="crayon-sy">@</span><span class="crayon-v">notodocodigo</span><span class="crayon-e">.com</span><span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-54360c8135c76026556044-12"><span class="crayon-r">Date</span><span class="crayon-o">:</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-e">Tue </span><span class="crayon-i">May</span><span class="crayon-h"> </span><span class="crayon-cn">21</span><span class="crayon-h"> </span><span class="crayon-cn">14</span><span class="crayon-o">:</span><span class="crayon-cn">32</span><span class="crayon-o">:</span><span class="crayon-cn">20</span><span class="crayon-h"> </span><span class="crayon-cn">2013</span><span class="crayon-h"> </span><span class="crayon-o">+</span><span class="crayon-cn">0200</span></div><div class="crayon-line" id="crayon-54360c8135c76026556044-13">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-54360c8135c76026556044-14"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">Commit </span><span class="crayon-i">inicial</span><span class="crayon-h"> </span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0027 seconds] -->
+<p></p>
+<p style="text-align: justify;">Para clonar un repositorio en Eclipse, desde la vista de “<strong><em>Git Repository Exploring</em></strong>” seleccionamos “<em><strong>Clone a Git Repository</strong></em>”.</p>
+<div id="attachment_1373" style="width: 263px" class="wp-caption aligncenter"><a href="http://www.notodocodigo.com/wp-content/uploads/2013/05/Git3.jpg" ><img class="size-full wp-image-1373" alt="Explorador de repositorios" src="http://www.notodocodigo.com/wp-content/uploads/2013/05/Git3.jpg" width="253" height="112" /></a><p class="wp-caption-text">Explorador de repositorios</p></div>
+<p>Si tenemos copiada la url en el portapapeles, automáticamente nos lo parsea:</p>
+<div id="attachment_1424" style="width: 535px" class="wp-caption aligncenter"><a href="http://www.notodocodigo.com/wp-content/uploads/2013/05/Git26.jpg" ><img class="size-full wp-image-1424" alt="Clonar repositorio en EGit" src="http://www.notodocodigo.com/wp-content/uploads/2013/05/Git26.jpg" width="525" height="532" /></a><p class="wp-caption-text">Clonar repositorio en EGit</p></div>
+<p style="text-align: justify;">Pulsamos en “<em><strong>Next</strong></em>” y nos muestra las ramas que tiene, en este caso una, le damos a “<em><strong>Next</strong></em>” y nos dice donde colocará el proyecto. Curiosamente, <strong>por defecto, no baja el proyecto al workspace</strong><b>, </b>&nbsp;sino que lo coloca en una carpeta del home del usuario. Así que si queremos tener el proyecto en el workspace, tenemos que seleccionarlo:</p>
+<div id="attachment_1425" style="width: 535px" class="wp-caption aligncenter"><a href="http://www.notodocodigo.com/wp-content/uploads/2013/05/Git27.jpg" ><img class="size-full wp-image-1425" alt="Destino local" src="http://www.notodocodigo.com/wp-content/uploads/2013/05/Git27.jpg" width="525" height="534" /></a><p class="wp-caption-text">Destino local</p></div>
+<p style="text-align: justify;">Pulsamos en “<strong>Finish</strong>”. Ahora ya podemos importarlo como un proyecto más. En los proyectos Maven, es mejor importarlos como un proyecto genérico y configurarlos después como proyecto Maven pulsando con el botón derecho sobre el proyecto “<strong>Configure &gt;&gt; Maven Proyect</strong>”.</p>
+<div id="attachment_1427" style="width: 463px" class="wp-caption aligncenter"><a href="http://www.notodocodigo.com/wp-content/uploads/2013/05/Git28.jpg" ><img class="size-full wp-image-1427" alt="Importar proyecto" src="http://www.notodocodigo.com/wp-content/uploads/2013/05/Git28.jpg" width="453" height="377" /></a><p class="wp-caption-text">Importar proyecto</p></div>
+<h3>Manejando ramas (branch)&nbsp;en Git</h3>
+<p style="text-align: justify;">Se puede crear una rama a partir de un punto determinado de la vida de un proyecto. Desde ese momento, existirán dos copias de ese proyecto que se desarrollarán por separado. Del mismo modo, se puede tomar el camino inverso y juntar dos ramas, de modo que se haga un “<strong>merge</strong>”. La rama por defecto en Git es la rama “<em>master</em>”, que se usa como rama principal. Vamos a ver algunos comandos:</p>
+<p>Para conocer las ramas existentes</p>
+<p></p><!-- Crayon Syntax Highlighter v2.6.5 -->
+
+		<div id="crayon-54360c8135c82001136447" class="crayon-syntax crayon-theme-monokai crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+$ git branch –a</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-54360c8135c82001136447-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-54360c8135c82001136447-1"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">git </span><span class="crayon-i">branch</span><span class="crayon-h"> </span>–<span class="crayon-v">a</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0004 seconds] -->
+<p></p>
+<p>Con el modificador –a, vemos tanto las ramas legales como remotas. Nos mostrará un * para marcar la rama en la que estamos.</p>
+<p style="text-align: justify;">Para crear una rama en el repositorio local</p>
+<p></p><!-- Crayon Syntax Highlighter v2.6.5 -->
+
+		<div id="crayon-54360c8135c89039118420" class="crayon-syntax crayon-theme-monokai crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+$ git branch miNuevaRama</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-54360c8135c89039118420-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-54360c8135c89039118420-1"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">git </span><span class="crayon-e">branch </span><span class="crayon-v">miNuevaRama</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0003 seconds] -->
+<p></p>
+<p>Para borrar una rama del repositorio local, añadimos la opción –d o -D</p>
+<p></p><!-- Crayon Syntax Highlighter v2.6.5 -->
+
+		<div id="crayon-54360c8135c8f432766418" class="crayon-syntax crayon-theme-monokai crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+$ git branch -d miNuevaRama</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-54360c8135c8f432766418-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-54360c8135c8f432766418-1"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">git </span><span class="crayon-v">branch</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">d</span><span class="crayon-h"> </span><span class="crayon-v">miNuevaRama</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0004 seconds] -->
+<p></p>
+<p>Para cambiar a la nueva rama hacemos “checkout” de la rama. Podemos hacer las dos cosas en un único paso, esto es, crear la rama y posicionarnos en ella. Para ello añadimos la opción –b al comando “checkout”</p>
+<p></p><!-- Crayon Syntax Highlighter v2.6.5 -->
+
+		<div id="crayon-54360c8135c95281694789" class="crayon-syntax crayon-theme-monokai crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+$ git checkout –b miNuevaRama</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-54360c8135c95281694789-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-54360c8135c95281694789-1"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">git </span><span class="crayon-i">checkout</span><span class="crayon-h"> </span>–<span class="crayon-i">b</span><span class="crayon-h"> </span><span class="crayon-v">miNuevaRama</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0005 seconds] -->
+<p></p>
+<p>Para mezclar dos ramas, nos colocamos en la rama que nos interese y luego hacemos “<strong>merge</strong>”.</p>
+<p></p><!-- Crayon Syntax Highlighter v2.6.5 -->
+
+		<div id="crayon-54360c8135c9b873317256" class="crayon-syntax crayon-theme-monokai crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+$ git checkout master
+Switched to branch ‘master’
+$ git merge miNuevaRama</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-54360c8135c9b873317256-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-54360c8135c9b873317256-2">2</div><div class="crayon-num" data-line="crayon-54360c8135c9b873317256-3">3</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-54360c8135c9b873317256-1"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">git </span><span class="crayon-e">checkout </span><span class="crayon-e">master</span></div><div class="crayon-line crayon-striped-line" id="crayon-54360c8135c9b873317256-2"><span class="crayon-e">Switched </span><span class="crayon-st">to</span><span class="crayon-h"> </span><span class="crayon-i">branch</span><span class="crayon-h"> </span>‘<span class="crayon-i">master</span>’</div><div class="crayon-line" id="crayon-54360c8135c9b873317256-3"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">git </span><span class="crayon-e">merge </span><span class="crayon-v">miNuevaRama</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0007 seconds] -->
+<p></p>
+<p>Para subir la nueva rama al repositorio, hacemos un “<strong>push</strong>”</p>
+<p></p><!-- Crayon Syntax Highlighter v2.6.5 -->
+
+		<div id="crayon-54360c8135ca2234286154" class="crayon-syntax crayon-theme-monokai crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+$ git push origin miNuevaRama</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-54360c8135ca2234286154-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-54360c8135ca2234286154-1"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">git </span><span class="crayon-e">push </span><span class="crayon-e">origin </span><span class="crayon-v">miNuevaRama</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0004 seconds] -->
+<p></p>
+<p>Para tener conocimiento de las ramas que han subido otros desarrolladores, ejecutamos</p>
+<p></p><!-- Crayon Syntax Highlighter v2.6.5 -->
+
+		<div id="crayon-54360c8135ca8126460864" class="crayon-syntax crayon-theme-monokai crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+$ git fetch origin</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-54360c8135ca8126460864-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-54360c8135ca8126460864-1"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">git </span><span class="crayon-e">fetch </span><span class="crayon-v">origin</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0003 seconds] -->
+<p></p>
+<p>Si nos queremos traer una de las ramas que nos muestra “<strong>fetch</strong>”, tenemos que crear una nueva rama local a partir de la rama remota, por ejemplo:</p>
+<p></p><!-- Crayon Syntax Highlighter v2.6.5 -->
+
+		<div id="crayon-54360c8135cae878881348" class="crayon-syntax crayon-theme-monokai crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+$ git checkout –b nuevaBranch origin/nuevaBranch</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-54360c8135cae878881348-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-54360c8135cae878881348-1"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">git </span><span class="crayon-i">checkout</span><span class="crayon-h"> </span>–<span class="crayon-i">b</span><span class="crayon-h"> </span><span class="crayon-e">nuevaBranch </span><span class="crayon-v">origin</span><span class="crayon-o">/</span><span class="crayon-v">nuevaBranch</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0006 seconds] -->
+<p></p>
+<p>Recordar que <em>origin</em> es el alias que pusimos a nuestro repositorio remoto.</p>
+<p style="text-align: justify;">Para borrar una rama local, ejecutamos lo siguiente</p>
+<p></p><!-- Crayon Syntax Highlighter v2.6.5 -->
+
+		<div id="crayon-54360c8135cb4798935324" class="crayon-syntax crayon-theme-monokai crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+$ git branch –D miNuevaRama</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-54360c8135cb4798935324-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-54360c8135cb4798935324-1"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">git </span><span class="crayon-i">branch</span><span class="crayon-h"> </span>–<span class="crayon-i">D</span><span class="crayon-h"> </span><span class="crayon-v">miNuevaRama</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0005 seconds] -->
+<p></p>
+<p>Para borrar una rama del servidor</p>
+<p></p><!-- Crayon Syntax Highlighter v2.6.5 -->
+
+		<div id="crayon-54360c8135cba032689122" class="crayon-syntax crayon-theme-monokai crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+$ git push origin :miNuevaRama
+Enter passphrase for key '/c/Users/Conan/.ssh/id_rsa':
+To git@github.com:Notodocodigo/EjemploJsf.git
+ - [deleted]         miNuevaRama</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-54360c8135cba032689122-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-54360c8135cba032689122-2">2</div><div class="crayon-num" data-line="crayon-54360c8135cba032689122-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-54360c8135cba032689122-4">4</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-line" id="crayon-54360c8135cba032689122-1"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">git </span><span class="crayon-e">push </span><span class="crayon-v">origin</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-e">miNuevaRama</span></div><div class="crayon-line crayon-striped-line" id="crayon-54360c8135cba032689122-2"><span class="crayon-e">Enter </span><span class="crayon-e">passphrase </span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-i">key</span><span class="crayon-h"> </span><span class="crayon-s">'/c/Users/Conan/.ssh/id_rsa'</span><span class="crayon-o">:</span></div><div class="crayon-line" id="crayon-54360c8135cba032689122-3"><span class="crayon-st">To</span><span class="crayon-h"> </span><span class="crayon-v">git</span><span class="crayon-sy">@</span><span class="crayon-v">github</span><span class="crayon-e">.com</span><span class="crayon-o">:</span><span class="crayon-v">Notodocodigo</span><span class="crayon-o">/</span><span class="crayon-v">EjemploJsf</span><span class="crayon-e">.git</span></div><div class="crayon-line crayon-striped-line" id="crayon-54360c8135cba032689122-4"><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-v">deleted</span><span class="crayon-sy">]</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-v">miNuevaRama</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0013 seconds] -->
+<p></p>
+<p>En Eclipse podemos ver las ramas locales y remotas directamente en el explorador de repositorios. Para crear una nueva rama, haríamos clic derecho “<strong><em>Switch to &gt;&gt; New Branch</em></strong>”.</p>
+<div id="attachment_1429" style="width: 588px" class="wp-caption aligncenter"><a href="http://www.notodocodigo.com/wp-content/uploads/2013/05/Git29.jpg" ><img class="size-full wp-image-1429" alt="Cambiar de rama" src="http://www.notodocodigo.com/wp-content/uploads/2013/05/Git29.jpg" width="578" height="189" /></a><p class="wp-caption-text">Cambiar de rama</p></div>
+<p style="text-align: justify;">Le damos un nombre y aceptamos. Por defecto nos cambia a esa rama.</p>
+<p style="text-align: justify;">Para mezclar dos ramas, hacemos clic derecho y seleccionamos “<strong><em>Merge</em></strong>”, nos preguntará la rama con la que queremos hacer “<em>merge</em>”, la seleccionamos y aceptamos. Si consultamos el histórico, nos muestra que se ha mezclado las dos ramas:</p>
+<div id="attachment_1430" style="width: 765px" class="wp-caption aligncenter"><a href="http://www.notodocodigo.com/wp-content/uploads/2013/05/Git30.jpg" ><img class="size-full wp-image-1430" alt="Historial" src="http://www.notodocodigo.com/wp-content/uploads/2013/05/Git30.jpg" width="755" height="131" /></a><p class="wp-caption-text">Historial</p></div>
+<p style="text-align: justify;">Una vez que hemos hecho el merge, podemos eliminar el branch si queremos con “<strong>delete</strong>”.</p>
+<p style="text-align: justify;">Para subir una rama al repositorio de Github, hacemos clic derecho en la rama y seleccionamos “<strong>Push Branch…</strong>”. Indicamos el path para la nueva rama y pulsamos en finalizar.</p>
+<div id="attachment_1432" style="width: 535px" class="wp-caption aligncenter"><a href="http://www.notodocodigo.com/wp-content/uploads/2013/05/Git31.jpg" ><img class="size-full wp-image-1432" alt="Subir una rama al repositorio de Github" src="http://www.notodocodigo.com/wp-content/uploads/2013/05/Git31.jpg" width="525" height="294" /></a><p class="wp-caption-text">Subir una rama al repositorio de Github</p></div>
+<p style="text-align: justify;">Si lo que queremos es crear una rama local, a partir de una rama remota, la seleccionaremos con botón derecho y pulsaremos en “<strong>Create Branch</strong>”.</p>
+<p style="text-align: justify;">Finalmente si lo que queremos es borrar una rama remota desde Eclipse, con EGit podemos seleccionar &#8220;delete&#8221;, que nos eliminará la rama&nbsp;remota de Eclipse, pero no nos lo eliminará del repositorio remoto.&nbsp;Para eliminar una rama del repositorio remoto, tendremos que hacerlo por línea de comandos, tal y como explicamos anteriormente.&nbsp;</p>
+<p style="text-align: justify;">Aquí termina este artículo y con el terminamos de hablar sobre Git. Espero que os haya sido útil. En los próximos artículos continuaremos analizando herramientas que nos permitan completar nuestro sistema de integración continua.</p>
+<div class='shareaholic-canvas' data-app-id='16856' data-app='share_buttons' data-title='Git, clonar repositorio y manejo de ramas' data-link='http://www.notodocodigo.com/integracion-continua/git-clonar-repositorio-y-manejo-de-ramas/' data-summary=''></div>						<div style="clear:both;"></div>
+																	</div><!-- .entry-content -->
+				</div><!-- #post-## -->
+
+				 <div id="comments" class=""> 								<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Deja un comentario <small><a rel="nofollow" id="cancel-comment-reply-link" href="/integracion-continua/git-clonar-repositorio-y-manejo-de-ramas/#respond" style="display:none;">Cancelar respuesta</a></small></h3>
+									<form action="http://www.notodocodigo.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Tu dirección de correo electrónico no será publicada. Los campos necesarios están marcados <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name<span class="required">*</span></label> <input id="author" placeholder="Name" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email<span class="required">*</span></label> <input id="email" placeholder="Email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label><input id="url" placeholder="Website" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label><textarea placeholder="Comment" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">Puedes usar las siguientes etiquetas y atributos <abbr title="HyperText Markup Language">HTML</abbr>:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code class=&quot;&quot; title=&quot;&quot; data-url=&quot;&quot;&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; &lt;pre class=&quot;&quot; title=&quot;&quot; data-url=&quot;&quot;&gt; &lt;span class=&quot;&quot; title=&quot;&quot; data-url=&quot;&quot;&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Publicar comentario" />
+							<input type='hidden' name='comment_post_ID' value='1421' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="7422dfbfe5" /></p><script type='text/javascript' src='http://www.notodocodigo.com/wp-content/plugins/akismet/_inc/form.js?ver=3.0.0'></script>
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="231"/></p>					</form>
+							</div><!-- #respond -->
+			        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                jQuery('#commentform').submit(function () {
+                    _gaq.push(
+                            ['_setAccount', 'UA-40460068-1'],
+                            ['_trackEvent', 'comment', 'submit']
+                    );
+                });
+            });
+        </script>
+		</div><!-- #comments -->
+
+						</div><!-- #content -->
+					<div id="secondary" class="widget-area sidey" role="complementary">
+		
+			<ul class="xoxo">
+								<li id="search-2" class="widget-container widget_search"> 
+<form method="get" id="searchform"
+action="http://www.notodocodigo.com//">
+<input type="text" value="Search"
+name="s" id="s"
+onblur="if (this.value == '')
+{this.value = 'Search';}"
+onfocus="if (this.value == 'Search')
+{this.value = '';}" />
+<input type="submit" id="searchsubmit" value="&#xe816;" />
+</form></li><li id="calendar-2" class="widget-container widget_calendar"><div id="calendar_wrap"><table id="wp-calendar">
+	<caption>octubre 2014</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Lunes">L</th>
+		<th scope="col" title="Martes">M</th>
+		<th scope="col" title="Miércoles">X</th>
+		<th scope="col" title="Jueves">J</th>
+		<th scope="col" title="Viernes">V</th>
+		<th scope="col" title="Sábado">S</th>
+		<th scope="col" title="Domingo">D</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://www.notodocodigo.com/2014/07/" title="Ver entradas para julio 2014">&laquo; jul</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="2" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+	</tr>
+	<tr>
+		<td>6</td><td>7</td><td>8</td><td id="today">9</td><td>10</td><td>11</td><td>12</td>
+	</tr>
+	<tr>
+		<td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+	</tr>
+	<tr>
+		<td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
+	</tr>
+	<tr>
+		<td>27</td><td>28</td><td>29</td><td>30</td><td>31</td>
+		<td class="pad" colspan="2">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></li><li id="text-2" class="widget-container widget_text"><h3 class="widget-title">Webs Amigas</h3>			<div class="textwidget"><a href="http://www.mongodbspain.com/" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.mongodbspain.com']);" title='MongoDb Spain'  target="_blank"><b>MongoDb Spain</b></a></div>
+		</li><li id="tag_cloud-2" class="widget-container widget_tag_cloud"><h3 class="widget-title">Etiquetas</h3><div class="tagcloud"><a href='http://www.notodocodigo.com/tag/big-data/' class='tag-link-69' title='1 tema' style='font-size: 8pt;'>big data</a>
+<a href='http://www.notodocodigo.com/tag/configuracion/' class='tag-link-35' title='5 temas' style='font-size: 15.636363636364pt;'>configuración</a>
+<a href='http://www.notodocodigo.com/tag/dependencia/' class='tag-link-40' title='1 tema' style='font-size: 8pt;'>dependencia</a>
+<a href='http://www.notodocodigo.com/tag/derby/' class='tag-link-77' title='4 temas' style='font-size: 14.363636363636pt;'>derby</a>
+<a href='http://www.notodocodigo.com/tag/eclipse/' class='tag-link-28' title='10 temas' style='font-size: 19.772727272727pt;'>eclipse</a>
+<a href='http://www.notodocodigo.com/tag/enterprise-architect/' class='tag-link-74' title='8 temas' style='font-size: 18.340909090909pt;'>Enterprise Architect</a>
+<a href='http://www.notodocodigo.com/tag/faces/' class='tag-link-67' title='2 temas' style='font-size: 10.863636363636pt;'>faces</a>
+<a href='http://www.notodocodigo.com/tag/framework/' class='tag-link-13' title='2 temas' style='font-size: 10.863636363636pt;'>framework</a>
+<a href='http://www.notodocodigo.com/tag/git/' class='tag-link-75' title='4 temas' style='font-size: 14.363636363636pt;'>git</a>
+<a href='http://www.notodocodigo.com/tag/github/' class='tag-link-76' title='3 temas' style='font-size: 12.772727272727pt;'>github</a>
+<a href='http://www.notodocodigo.com/tag/instalacion/' class='tag-link-25' title='6 temas' style='font-size: 16.75pt;'>instalación</a>
+<a href='http://www.notodocodigo.com/tag/instalar/' class='tag-link-34' title='5 temas' style='font-size: 15.636363636364pt;'>instalar</a>
+<a href='http://www.notodocodigo.com/tag/integracion-continua/' class='tag-link-65' title='2 temas' style='font-size: 10.863636363636pt;'>integración contínua</a>
+<a href='http://www.notodocodigo.com/tag/java/' class='tag-link-4' title='11 temas' style='font-size: 20.409090909091pt;'>Java</a>
+<a href='http://www.notodocodigo.com/tag/jenkins/' class='tag-link-64' title='3 temas' style='font-size: 12.772727272727pt;'>jenkins</a>
+<a href='http://www.notodocodigo.com/tag/js/' class='tag-link-72' title='1 tema' style='font-size: 8pt;'>js</a>
+<a href='http://www.notodocodigo.com/tag/jsf/' class='tag-link-66' title='10 temas' style='font-size: 19.772727272727pt;'>jsf</a>
+<a href='http://www.notodocodigo.com/tag/junit/' class='tag-link-59' title='5 temas' style='font-size: 15.636363636364pt;'>JUnit</a>
+<a href='http://www.notodocodigo.com/tag/linux/' class='tag-link-17' title='4 temas' style='font-size: 14.363636363636pt;'>linux</a>
+<a href='http://www.notodocodigo.com/tag/m2eclipse/' class='tag-link-29' title='4 temas' style='font-size: 14.363636363636pt;'>m2eclipse</a>
+<a href='http://www.notodocodigo.com/tag/maven-2/' class='tag-link-24' title='14 temas' style='font-size: 22pt;'>maven</a>
+<a href='http://www.notodocodigo.com/tag/mongodb/' class='tag-link-70' title='11 temas' style='font-size: 20.409090909091pt;'>mongoDB</a>
+<a href='http://www.notodocodigo.com/tag/multientorno/' class='tag-link-50' title='1 tema' style='font-size: 8pt;'>multientorno</a>
+<a href='http://www.notodocodigo.com/tag/multimodulo/' class='tag-link-39' title='1 tema' style='font-size: 8pt;'>multimodulo</a>
+<a href='http://www.notodocodigo.com/tag/nexus/' class='tag-link-52' title='2 temas' style='font-size: 10.863636363636pt;'>nexus</a>
+<a href='http://www.notodocodigo.com/tag/oraclexe/' class='tag-link-79' title='1 tema' style='font-size: 8pt;'>OracleXE</a>
+<a href='http://www.notodocodigo.com/tag/perfiles/' class='tag-link-48' title='2 temas' style='font-size: 10.863636363636pt;'>perfiles</a>
+<a href='http://www.notodocodigo.com/tag/plugin/' class='tag-link-30' title='1 tema' style='font-size: 8pt;'>plugin</a>
+<a href='http://www.notodocodigo.com/tag/proyecto/' class='tag-link-42' title='1 tema' style='font-size: 8pt;'>proyecto</a>
+<a href='http://www.notodocodigo.com/tag/release/' class='tag-link-57' title='1 tema' style='font-size: 8pt;'>release</a>
+<a href='http://www.notodocodigo.com/tag/repositorio/' class='tag-link-51' title='5 temas' style='font-size: 15.636363636364pt;'>repositorio</a>
+<a href='http://www.notodocodigo.com/tag/site/' class='tag-link-43' title='2 temas' style='font-size: 10.863636363636pt;'>site</a>
+<a href='http://www.notodocodigo.com/tag/snapshot/' class='tag-link-58' title='1 tema' style='font-size: 8pt;'>snapshot</a>
+<a href='http://www.notodocodigo.com/tag/spark/' class='tag-link-71' title='1 tema' style='font-size: 8pt;'>spark</a>
+<a href='http://www.notodocodigo.com/tag/spel/' class='tag-link-68' title='1 tema' style='font-size: 8pt;'>SpEL</a>
+<a href='http://www.notodocodigo.com/tag/spring/' class='tag-link-5' title='9 temas' style='font-size: 19.136363636364pt;'>Spring</a>
+<a href='http://www.notodocodigo.com/tag/test/' class='tag-link-84' title='2 temas' style='font-size: 10.863636363636pt;'>test</a>
+<a href='http://www.notodocodigo.com/tag/testing/' class='tag-link-83' title='2 temas' style='font-size: 10.863636363636pt;'>testing</a>
+<a href='http://www.notodocodigo.com/tag/tomcat/' class='tag-link-56' title='1 tema' style='font-size: 8pt;'>tomcat</a>
+<a href='http://www.notodocodigo.com/tag/tutorial/' class='tag-link-63' title='2 temas' style='font-size: 10.863636363636pt;'>tutorial</a>
+<a href='http://www.notodocodigo.com/tag/ubuntu-2/' class='tag-link-16' title='2 temas' style='font-size: 10.863636363636pt;'>ubuntu</a>
+<a href='http://www.notodocodigo.com/tag/uml/' class='tag-link-73' title='8 temas' style='font-size: 18.340909090909pt;'>UML</a>
+<a href='http://www.notodocodigo.com/tag/vmware/' class='tag-link-61' title='1 tema' style='font-size: 8pt;'>VMWare</a>
+<a href='http://www.notodocodigo.com/tag/windows/' class='tag-link-31' title='2 temas' style='font-size: 10.863636363636pt;'>windows</a>
+<a href='http://www.notodocodigo.com/tag/que-es-maven-2/' class='tag-link-2' title='1 tema' style='font-size: 8pt;'>¿Qué es Maven?</a></div>
+</li><li id="recent-comments-2" class="widget-container widget_recent_comments"><h3 class="widget-title">Comentarios recientes</h3><ul id="recentcomments"><li class="recentcomments">naruto en <a href="http://www.notodocodigo.com/introduccion-a-jsf/eventos/#comment-6155">Eventos</a></li><li class="recentcomments">pedro en <a href="http://www.notodocodigo.com/introduccion-a-mongodb/busquedas-en-mongodb/#comment-6136">Búsquedas en mongoDB</a></li><li class="recentcomments">Miguel en <a href="http://www.notodocodigo.com/blog/uso-de-dbunit/#comment-5652">Uso de DBUnit</a></li><li class="recentcomments">Julio Cortorreal en <a href="http://www.notodocodigo.com/introduccion-a-jsf/componentes-conversion-y-validacion/#comment-5543">Componentes, conversión y validación</a></li><li class="recentcomments">cesar en <a href="http://www.notodocodigo.com/maven/maven-en-eclipse/#comment-5349">Maven en Eclipse</a></li><li class="recentcomments">KUra en <a href="http://www.notodocodigo.com/introduccion-a-jsf/facelets/#comment-5337">Facelets</a></li><li class="recentcomments">Clonathan en <a href="http://www.notodocodigo.com/integracion-continua/control-de-versiones-con-git/#comment-5303">Control de versiones con Git</a></li><li class="recentcomments"><a href="http://www.notodocodigo.com"   rel='external nofollow' class='url'>No Todo Código</a> en <a href="http://www.notodocodigo.com/introduccion-a-jsf/el-ciclo-de-vida-de-una-peticion-jsf/#comment-5301">El ciclo de vida de una petición JSF</a></li></ul></li>			</ul>
+
+			
+		</div>
+		</section><!-- #container -->
+
+
+<div style="clear:both;"></div>
+	</div> <!-- #forbottom -->
+	<footer id="footer" role="contentinfo">
+		<div id="colophon">
+			
+		</div><!-- #colophon -->
+		<div id="footer2">
+						<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.es_ES" rel="license"><img src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" style="border-width:0" alt="Licencia de Creative Commons"></img></a>
+			<span style="display:block;float:right;text-align:right;padding:5px 20px 5px;text-transform:uppercase;font-size:11px;">
+          <a href="http://www.notodocodigo.com/sobre-mi/">Contacto</a> - <a href="http://www.notodocodigo.com/mapa-web/">Mapa web</a> - <a href="http://www.notodocodigo.com/aviso-legal-y-condiciones-de-uso/">Aviso legal</a>
+     	</span>
+		</div><!-- #footer2 -->
+	</footer><!-- #footer -->
+	</div><!-- #main -->
+</div><!-- #wrapper -->
+<script type='text/javascript' src='http://www.notodocodigo.com/wp-includes/js/comment-reply.min.js?ver=3.9.2'></script>
+</body>
+</html>

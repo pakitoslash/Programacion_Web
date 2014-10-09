@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/francisco/Descargas/ProyectoLinux.zip" added="2014-09-13T14:39:05Z" modified="2014-09-13T14:39:05Z" visited="2014-09-13T14:39:05Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2014-09-13T14:39:05Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/ProyectoLinux.zip" added="2014-09-13T14:39:23Z" modified="2014-09-13T14:39:34Z" visited="2014-09-13T14:39:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2014-09-13T14:39:34Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Descargas/sublime-text_build-3065_amd64.deb" added="2014-09-27T14:11:35Z" modified="2014-09-27T14:14:18Z" visited="2014-09-27T14:11:35Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-deb"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2014-09-27T14:11:35Z" count="1"/>
+          <bookmark:application name="nautilus" exec="&apos;/usr/bin/software-center %u&apos;" modified="2014-09-27T14:14:18Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Programas/cat.c" added="2014-09-27T14:20:17Z" modified="2014-09-27T14:20:17Z" visited="2014-09-27T14:20:17Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-09-27T14:20:17Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Programas/hola.txt" added="2014-09-27T14:21:36Z" modified="2014-09-27T14:21:36Z" visited="2014-09-27T14:21:36Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-09-27T14:21:36Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Programas/cut.c" added="2014-09-27T14:25:57Z" modified="2014-09-27T14:25:57Z" visited="2014-09-27T14:25:57Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-09-27T14:25:57Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Programas/wc.c" added="2014-09-27T14:29:31Z" modified="2014-09-27T14:29:31Z" visited="2014-09-27T14:29:31Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-09-27T14:29:31Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///media/francisco/VBOXADDITIONS_4.3.16_95972/64Bit/Readme.txt" added="2014-09-27T14:39:36Z" modified="2014-09-27T14:39:38Z" visited="2014-09-27T14:39:36Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;gedit %U&apos;" modified="2014-09-27T14:39:36Z" count="1"/>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2014-09-27T14:39:38Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///media/francisco/VBOXADDITIONS_4.3.16_95972" added="2014-09-27T14:39:43Z" modified="2014-10-07T18:53:42Z" visited="2014-09-27T14:39:43Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;nautilus-autorun-software %u&apos;" modified="2014-10-07T18:53:42Z" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_2/fork.c" added="2014-09-27T16:47:41Z" modified="2014-09-27T16:47:41Z" visited="2014-09-27T16:47:41Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-09-27T16:47:41Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_2/ejercicio1.c" added="2014-09-27T17:05:31Z" modified="2014-09-27T17:05:31Z" visited="2014-09-27T17:05:31Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-09-27T17:05:31Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Descargas/google-chrome-37-0-2062-94-64-bits-multi-ubu.deb" added="2014-09-27T17:30:38Z" modified="2014-09-27T17:32:33Z" visited="2014-09-27T17:30:38Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-deb"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2014-09-27T17:30:38Z" count="1"/>
+          <bookmark:application name="nautilus" exec="&apos;/usr/bin/software-center %u&apos;" modified="2014-09-27T17:32:33Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_2/ejercicio2" added="2014-09-27T17:48:18Z" modified="2014-09-27T17:48:18Z" visited="2014-09-27T17:48:18Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-09-27T17:48:18Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_2/ejercicio2.c" added="2014-09-27T17:48:48Z" modified="2014-09-27T17:48:48Z" visited="2014-09-27T17:48:48Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-09-27T17:48:48Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_2/ejercicio3" added="2014-09-27T18:19:46Z" modified="2014-09-27T18:19:46Z" visited="2014-09-27T18:19:46Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-09-27T18:19:46Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_2/ejercicio3.c" added="2014-09-27T18:20:14Z" modified="2014-09-27T18:20:14Z" visited="2014-09-27T18:20:14Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-09-27T18:20:14Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_2.tar.gz" added="2014-10-03T14:10:20Z" modified="2014-10-04T11:29:17Z" visited="2014-10-03T14:10:20Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-compressed-tar"/>
+        <bookmark:applications>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2014-10-04T11:29:17Z" count="2"/>
+          <bookmark:application name="google-chrome-stable" exec="&apos;google-chrome-stable %u&apos;" modified="2014-10-03T14:21:53Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_2/Programa3" added="2014-10-04T03:44:10Z" modified="2014-10-04T03:44:10Z" visited="2014-10-04T03:44:10Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-10-04T03:44:10Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_2/Programa3.c" added="2014-10-04T03:58:50Z" modified="2014-10-04T03:58:50Z" visited="2014-10-04T03:58:51Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-10-04T03:58:50Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_2/Programa1.c" added="2014-10-04T04:27:14Z" modified="2014-10-04T04:27:14Z" visited="2014-10-04T04:27:14Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-10-04T04:27:14Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_2/C.tar.gz" added="2014-10-04T06:45:08Z" modified="2014-10-04T11:29:27Z" visited="2014-10-04T06:45:08Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-compressed-tar"/>
+        <bookmark:applications>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2014-10-04T11:29:27Z" count="2"/>
+          <bookmark:application name="google-chrome-stable" exec="&apos;google-chrome-stable %u&apos;" modified="2014-10-04T06:46:55Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_2/Clase_2.tar.gz" added="2014-10-04T11:29:46Z" modified="2014-10-04T11:38:51Z" visited="2014-10-04T11:29:46Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-compressed-tar"/>
+        <bookmark:applications>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2014-10-04T11:38:51Z" count="2"/>
+          <bookmark:application name="google-chrome-stable" exec="&apos;google-chrome-stable %u&apos;" modified="2014-10-04T11:37:51Z" count="1"/>
+          <bookmark:application name="nautilus" exec="&apos;file-roller %U&apos;" modified="2014-10-04T11:38:50Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_2/Tarea.tar.gz" added="2014-10-04T11:39:15Z" modified="2014-10-04T11:40:21Z" visited="2014-10-04T11:39:15Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-compressed-tar"/>
+        <bookmark:applications>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2014-10-04T11:39:15Z" count="1"/>
+          <bookmark:application name="google-chrome-stable" exec="&apos;google-chrome-stable %u&apos;" modified="2014-10-04T11:40:21Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Descargas/ArreglosClientes.java" added="2014-10-09T04:18:33Z" modified="2014-10-09T04:18:33Z" visited="2014-10-09T04:18:33Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-java"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2014-10-09T04:18:33Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Pagina_Web.zip" added="2014-10-09T16:47:50Z" modified="2014-10-09T16:47:50Z" visited="2014-10-09T16:47:50Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2014-10-09T16:47:50Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

@@ -1,0 +1,429 @@
+{
+	"folder_history":
+	[
+	],
+	"last_version": 3065,
+	"last_window_id": 1,
+	"log_indexing": false,
+	"settings":
+	{
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"str",
+						"strcpy"
+					],
+					[
+						"m",
+						"mkdir"
+					],
+					[
+						"e",
+						"e"
+					],
+					[
+						"for",
+						"for	For Loop"
+					],
+					[
+						"ma",
+						"main	main()"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/home/francisco/Escritorio/Clase_2/fork.c",
+					"settings":
+					{
+						"buffer_size": 454,
+						"line_ending": "Unix",
+						"name": "#include <stdio.h>"
+					}
+				},
+				{
+					"file": "/home/francisco/Escritorio/Clase_2/Programa3.c",
+					"settings":
+					{
+						"buffer_size": 261,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/francisco/Escritorio/Clase_2/Programa1.c",
+					"settings":
+					{
+						"buffer_size": 925,
+						"line_ending": "Unix",
+						"name": "/*"
+					}
+				},
+				{
+					"file": "/home/francisco/Escritorio/Clase_2/ejercicio1.c",
+					"settings":
+					{
+						"buffer_size": 137,
+						"line_ending": "Unix",
+						"name": "#include <stdio.h>"
+					}
+				},
+				{
+					"file": "/home/francisco/Escritorio/Clase_2/ejercicio2.c",
+					"settings":
+					{
+						"buffer_size": 223,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"contents": "#include <stdio.h>\n#include <sys/types.h>\n\nmain()\n{\n	int e, i;\n\n	for (i=1; i<=3; ++i)\n	{\n		if (fork()!=0)\n		{\n			wait(&e);\n		}\n		printf(\"%d\\n\", i);\n	}\n}",
+					"file": "/home/francisco/Escritorio/Clase_2/ejercicio3.c",
+					"file_size": 152,
+					"file_write_time": 130568681991635505,
+					"settings":
+					{
+						"buffer_size": 152,
+						"line_ending": "Unix"
+					}
+				}
+			],
+			"build_system": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/francisco/Escritorio/Programas/wc.c",
+				"/home/francisco/Escritorio/Programas/cut.c",
+				"/home/francisco/Escritorio/Programas/hola.txt",
+				"/home/francisco/Escritorio/Programas/cat.c"
+			],
+			"find":
+			{
+				"height": 0.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"groups":
+			[
+				{
+					"selected": 5,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/home/francisco/Escritorio/Clase_2/fork.c",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 454,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										125,
+										125
+									]
+								],
+								"settings":
+								{
+									"auto_name": "#include <stdio.h>",
+									"syntax": "Packages/C++/C++.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/home/francisco/Escritorio/Clase_2/Programa3.c",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 261,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										189,
+										189
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/C++/C++.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 51.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 3,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/home/francisco/Escritorio/Clase_2/Programa1.c",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 925,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										546,
+										546
+									]
+								],
+								"settings":
+								{
+									"auto_name": "/*",
+									"syntax": "Packages/C++/C++.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 408.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 3,
+							"file": "/home/francisco/Escritorio/Clase_2/ejercicio1.c",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 137,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										123,
+										123
+									]
+								],
+								"settings":
+								{
+									"auto_name": "#include <stdio.h>",
+									"syntax": "Packages/C++/C++.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 5,
+							"type": "text"
+						},
+						{
+							"buffer": 4,
+							"file": "/home/francisco/Escritorio/Clase_2/ejercicio2.c",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 223,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										18,
+										18
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/C++/C++.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 4,
+							"type": "text"
+						},
+						{
+							"buffer": 5,
+							"file": "/home/francisco/Escritorio/Clase_2/ejercicio3.c",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 152,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										126,
+										126
+									]
+								],
+								"settings":
+								{
+									"auto_name": "",
+									"syntax": "Packages/C++/C++.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 0.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"position": "0,1,0,0,0,0,0,0,0,1366,664",
+			"project": "",
+			"replace":
+			{
+				"height": 0.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 1,
+			"workspace_name": ""
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+		]
+	}
+}

@@ -1,0 +1,254 @@
+var isIE	 = navigator.userAgent.indexOf('MSIE')>=0?true:false; 
+var isFF	 = navigator.userAgent.indexOf('Firefox')>=0?true:false;		
+var isNS	 = navigator.userAgent.indexOf('Netscape')>=0?true:false;
+var isOP  	 = window.opera?true:false;
+var browser	 = isIE?'Iternet Explorer':(isOP?'Opera':(isFF?'Firefox':(isNS?'Netscape':'Navegador')));
+var isMAC	 = navigator.platform.indexOf('Mac')>=0?true:false;
+var isLIN	 = navigator.platform.indexOf('Linux')>=0?true:false;
+var isWIN	 = navigator.platform.indexOf('Win')>=0?true:false;
+var isVer 	 =  navigator.appVersion;
+var isREXP = (window.RegExp) ? true : false;
+if(isVer+"" != "NaN" && isREXP){ if(isIE){	isVer.match(/(MSIE)(\s*)([0-9].[0-9]+)/ig);	isVer = RegExp.$3;	} }
+//versiones de IE
+isIE4 =isIE?(isVer>=4.0 && isVer < 5.0?true:false):false;
+isIE5 =isIE?(isVer>=5.0 && isVer < 6.0?true:false):false;
+isIE6 =isIE?(isVer>=6.0 && isVer < 7.0?true:false):false;
+isIE7 =isIE?(isVer>=7.0 && isVer < 8.0?true:false):false;
+isIE7m=isIE?(isVer>=7.0?true:false):false;
+
+var mmMenuContent= '';
+var mmHeadContent= '';
+var mmFootContent= '';
+var byElementos  = '';
+var mmInclude	 = new Array();
+
+function eObject(id)
+{  	if (document.getElementById)return document.getElementById(id);
+	else if(document.all)return document.all[id];
+	else if(document.layers[id]) return document.layers[id];
+	else return null;
+}
+function eSetValue(id,text)
+	{	if (document.getElementById){var idLayer = document.getElementById(id);	idLayer.innerHTML = '';	idLayer.innerHTML = text;}
+		else if (document.all){	var idLayer = document.all[id];	idLayer.innerHTML = text; }	
+		else if (document.layers){	var idLayer = document.layers[id];	idLayer.document.open(); idLayer.document.write(text); idLayer.document.close();}	
+	}	
+function eGetValue(id){	return eObject(id).innerHTML; }		
+function eStyle(id){ var cId =eObject(id); return (cId?((document.getElementById || document.all)?cId.style:cId):null); }
+function eVisibility(id,ty){ var cId =eStyle(id); if(cId)cId.visibility=document.layers?(ty?'show':'hide'):(ty?'visible':'hidden');	}	
+function eDisplay(id,ty){ var cId =eStyle(id); if(cId)cId.display=document.layers?(ty?'':'none'):(ty?'':'none');	}	
+
+function eTop(id,valor){ var cId =eStyle(id); if(cId)cId.top=valor+'px'; else return false; return true;	}
+function eLeft(id,valor){ var cId =eStyle(id); if(cId)cId.left=valor+'px'; else return false; return true;	}	
+function eWinHeight()
+{	if (self.innerWidth)return self.innerHeight;
+	else if (document.documentElement && document.documentElement.clientHeight) return document.documentElement.clientHeight;
+	else if (document.body) return document.body.clientHeight;
+	else if (screen.height) return screen.height;
+	else return;
+}
+function eCursor(obj,cur){ try{ obj.style.cursor = cur?cur:"pointer"; } catch(e){ obj.style.cursor = "hand"; } }
+function eCancelEvent(e)
+{	if (!e || isIE)	{ window.event.returnValue = false;  window.event.cancelBubble = true; return window.event; }
+	else{ e.stopPropagation(); e.preventDefault(); 	return e; }
+}
+function eCancelEvent2(e)
+{	if (!e || isIE){	window.event.cancelBubble = true;	return window.event; }
+	else{ 	if (e.target.type == 'submit'){ e.target.form.submit();	} e.stopPropagation(); return e;}
+}
+function eOLeft(elm){ var left = elm.offsetLeft; while((elm = elm.offsetParent) != null)left += elm.offsetLeft;	return left; }
+function eOTop(elm){ var top = elm.offsetTop; while((elm = elm.offsetParent) != null)top += elm.offsetTop; return top; }
+function eVoid(){ };
+function eNull(){ };
+
+function collapse(id,num)
+{	if (!isREXP) return false;
+	num =num?num:0;
+	img = eObject("cimg_" + id); obj = eObject("cobj_" + id);
+	if(img)img.src = img.src.indexOf('_min.')!=-1?img.src.replace((new RegExp("_min\\.gif$")), '_max.gif'):img.src.replace((new RegExp("_max\\.gif$")), '_min.gif');
+	if(obj)obj.style.display = obj.style.display=="none"?"":"none";
+	for(i=1; i<=num; i++)
+	{	idT = id + (num>1?i:'');
+		obj = eObject("cobj_" + idT);
+		img = eObject("cimg_" + idT);
+		if (!obj){ if(img)img.style.display = "none";	return false; }
+		obj.style.display = obj.style.display=="none"?"":"none";
+		if(img)img.src = obj.style.display=="none"?
+					 img.src.replace((new RegExp("_min\\.gif$")), '_max.gif'):
+					 img.src.replace((new RegExp("_max\\.gif$")), '_min.gif');
+	}	
+	return false;
+}
+
+function ClassImages()
+{   this.aImages = new Array;   
+	this.imgLoad = 'small.gif';
+	this.loader = function(divLoading)
+	 { eVisibility(divLoading,false);//ocultar la capa de carga 
+	   for(var i = 0; i < this.aImages.length; i++ )this.loading(this.aImages[i]);	   
+	   if(byElementos!='')oAjax.send(null,byElementos,actionInfo);		   
+	  
+	 }
+	this.add = function(id,src,alt,opt)
+	{ 	this.aImages[this.aImages.length]=id+'|'+src+'|'+alt; 
+		document.write('<img id="'+id+'" src="'+this.imgLoad+'" alt="Cargando imagen..." '+(opt?opt:'')+'/>');
+	}	
+	this.loading = function(image)
+	{  var oImage = new Image;		
+	   var arr=image.split('|');
+	   var oImg=eObject(arr[0]);
+	   oImg.src = this.imgLoad;
+	   oImage.onload = function(){ oImg.src=this.src; oImg.alt=arr[2]; } 	   
+	   //oImage.onerror = function(){oImg.src='error.gif'; }
+	   //oImage.onabort = function(){}
+	   oImage.src=arr[1];
+	}
+	this.preLoading=function()
+	{	var img=new Array();
+		for (i=0; i<arguments.length; i++){	img[i]=new Image();	img[i].src=arguments[i]; }
+		return img;
+	}
+}
+
+function viewPrint(ty)
+{	var cont=eObject('idx_contenido');
+	if(cont)
+	{	eObject('idx_footer').style.display=ty?'none':'';
+		eObject('idx_header').style.display=ty?'none':'';
+		eObject('idx_menuRight').style.display=ty?'none':'';
+		eObject('printHead').style.display=ty?'block':'none';
+		//eObject('printFoot').style.display=ty?'block':'none'
+		cont.style.width=ty?'100%':'605px';		
+	}
+}
+
+function addFavoritos(url,title)
+{ 	var url=url?url:"http://www.mygnet.com/"; 
+	var nombre=title?title:" myGnet v2 - Comunidad de programacion"; 	
+	if (isIE)window.external.AddFavorite(url,nombre); 	 
+	else { 	if(isNS || isFF)
+			{ 	if(window.sidebar)window.sidebar.addPanel(nombre, url, "");
+				else alert ("Presione Crtl+D para agregar como marcador(Bookmarks)");
+			}
+			else alert('Esta operación no esta permitida por su navegador '+browser);	
+		 }	 
+} 
+
+function addInicio()
+{ if(isIE)
+	{	document.body.style.behavior='url(#default#homepage)';
+		document.body.setHomePage('http://www.mygnet.com');
+	}
+	else alert(browser+': No admite esta operacion' );	
+} 
+
+/*Implementacion para los tabs */
+function tabOnclick(li,op,func)
+ {	var parent 	= li.parentNode;
+ 	var child	= parent.childNodes;
+	for (i=0; i<child.length; i++){ if(child[i].className=='left' ||child[i].className=='right')continue; child[i].className=''; }
+	li.className='current'; if(func)func(parent.id,op);
+ }
+ 
+function opPopup(div,id,ele)
+{	eObject(div).style.width='320px';
+	oAjax.send(div,ele);
+}
+
+function setCookie( sName, sValue, nDays ) 
+{	nDays =356;
+	var expires = "";
+	if ( nDays ) { var d = new Date();d.setTime( d.getTime() + nDays * 24 * 60 * 60 * 1000 ); expires = "; expires=" + d.toGMTString(); }
+	document.cookie = sName + "=" + sValue + expires + "; path=/";
+};
+function delCookie(name) {
+	var exp = new Date();
+	exp.setTime(exp.getTime()-1);
+	document.cookie = name + "=null; expires=" + exp.toGMTString();
+}
+function getCookie(name) {
+    var dc = document.cookie;
+    var prefix = name + "=";
+    var begin = dc.indexOf("; " + prefix);
+    if (begin == -1) {
+        begin = dc.indexOf(prefix);
+        if (begin != 0) return null;
+    } else {
+        begin += 2;
+    }
+    var end = document.cookie.indexOf(";", begin);
+    if (end == -1) {
+        end = dc.length;
+    }
+    return unescape(dc.substring(begin + prefix.length, end));
+}
+
+function onWin(URL,para){ var w1=window.open(URL,"ventana1",para?para:"width=700,height=500,scrollbars=NO"); w1.focus(); } 
+
+function opSendMail(div,ff)
+{	if(!oValid.email(ff.email)){ alert('Falta introducir tu correo electronico'); ff.email.focus(); return false; }
+	if(!oValid.email(ff.email2)){ alert('Falta introducir el correo electronico a quien lo vas enviar'); ff.email2.focus(); return false; }
+	oAjax.send(div,'do=op&action=sendmail&op=insert&from='+ff.email.value+'&to='+ff.email2.value);
+	return false;		
+}
+
+function opRecupera_result(div,result)
+{	if(result==''){	oPopup.close();	alert('Se envio a tu correo la nueva contraseña...'); }
+	else{ alert(result); oPopup.show(true);	}
+}
+function opRecupera(div,ff)
+{	if(!oValid.email(ff.correo)){ alert('Falta introducir tu correo electronico correctamente'); ff.correo.focus(); return false; }
+	oPopup.show(false);
+	oAjax.send(null,'div='+div+'&do=user&action=recupera&correo='+ff.correo.value,opRecupera_result);
+	return false;		
+}
+
+function opRegistro_result(id,result)
+{ 	if(result=='T'){ oPopup.close(); alert('Gracias por registrate, ya puede iniciar su session...');/* mRestart();*/ }
+	else{ var re = result.split('|');	eSetValue(id,re[0]); alert(re[1]); }	
+}
+function opRegistro(div,ff)
+{	if(ff.nombre.value==''){ alert('Falta introducir tu nombre completo'); ff.nombre.focus(); return false; }
+	if(ff.correo.value==''){ alert('Falta introducir tu correo electronico'); ff.correo.focus(); return false; }
+	if(ff.genero.selectedIndex==0){ alert('Falta seleccionar tu genero'); ff.genero.focus(); return false; }
+	if(ff.pais.selectedIndex==0){ alert('Falta seleccionar tu pais'); ff.pais.focus(); return false; }
+	if(ff.dia.value=='' || ff.dia.value=='DD' ){ alert('Falta introducir el día de nacimiento'); ff.dia.focus(); return false; }
+	if(ff.mes.value=='' || ff.mes.value=='MM' ){ alert('Falta introducir el mes de nacimiento'); ff.mes.focus(); return false; }
+	if(ff.anio.value=='' || ff.anio.value=='AAAA' ){ alert('Falta introducir la fecha de nacimiento'); ff.anio.focus(); return false; }
+	if(ff.login.value==''){ alert('Falta introducir el nombre de usuario(Login)'); ff.login.focus(); return false; }
+	if(ff.clave.value==''){ alert('Falta introducir tu clave'); ff.clave.focus(); return false; }
+	if(ff.clave.value!=ff.clave2.value){ alert('Las clave no son iguales, Introducelas de nuevo'); ff.clave.value=''; ff.clave2.value=''; ff.clave.focus(); return false; }
+	if(ff.codigo.value==''){ alert('Falta introducir el codigo de verificacion'); ff.codigo.focus(); return false; }
+	var clave = hex_md5(ff.clave.value);
+	var para  = 'nombre='+encode(ff.nombre.value)+'&correo='+ff.correo.value+'&genero='+ff.genero.options[ff.genero.selectedIndex].value+'&pais='+ff.pais.options[ff.pais.selectedIndex].value+'&dia='+ff.dia.value+'&mes='+ff.mes.value+'&anio='+ff.anio.value+'&login='+encode(ff.login.value)+'&clave='+clave+'&codigo='+ff.codigo.value;
+	oAjax.send('regResult','div='+div+'&do=user&action=insert&'+para,opRegistro_result);
+	return false;		
+}
+
+function validVisit(div,ff)
+{	if(ff.edad.selectedIndex==0){ alert('Falta seleccionar tu edad?'); ff.edad.focus(); return false; }
+	if(ff.sexo.selectedIndex==0){ alert('Falta seleccionar quien eres?'); ff.sexo.focus(); return false; }
+	if(ff.viCorreo.value==''){ alert('Falta introducir tu correo electronico'); ff.viCorreo.focus(); return false; }
+	if(ff.actividad.selectedIndex==0){ alert('Falta seleccionar tu actividad?'); ff.actividad.focus(); return false; }
+	var para  = 'sexo='+ff.sexo.options[ff.sexo.selectedIndex].value +'&edad='+ff.edad.options[ff.edad.selectedIndex].value+'&actividad='+ff.actividad.options[ff.actividad.selectedIndex].value+'&mas='+encode(ff.viMas.value)+'&correo='+encode(ff.viCorreo.value);
+	oAjax.send(div,'do=visit&action=insert&'+para);
+	return false;		
+}
+
+function include_once(src)
+{	if(mmInclude.toString().indexOf(src)==-1 )
+	{	var jsE = document.createElement('SCRIPT');
+			jsE.type = 'text/javascript';
+			jsE.src  = src;
+			document.body.appendChild (jsE);
+		mmInclude[mmInclude.length]=src;
+	}//else alert('Ya ha sido incluida este archivo');
+}•µÉŠÒ              :TPÂU$†!   %:http://mygnet.net/js/class.mygnet.js request-method GET response-head HTTP/1.1 200 OK
+Server: Apache/2.2
+Content-Type: application/x-javascript
+Date: Sat, 27 Sep 2014 14:16:13 GMT
+Accept-Ranges: bytes
+Last-Modified: Sat, 20 Jun 2009 20:52:41 GMT
+Content-Length: 11793
+X-Cache-Info: cached
+ uncompressed-len 0   .

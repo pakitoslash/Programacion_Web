@@ -1,0 +1,20 @@
+logrotate state -- version 2
+"/home/francisco/.cache/upstart/unity-settings-daemon.log" 2014-10-9-11:39:33
+"/home/francisco/.cache/upstart/hud.log" 2014-10-9-11:39:33
+"/home/francisco/.cache/upstart/unity7.log" 2014-10-9-11:39:33
+"/home/francisco/.cache/upstart/at-spi2-registryd.log" 2014-10-9-11:39:33
+"/home/francisco/.cache/upstart/dbus.log" 2014-10-9-11:39:33
+"/home/francisco/.cache/upstart/indicator-bluetooth.log" 2014-10-9-11:39:33
+"/home/francisco/.cache/upstart/unity-panel-service-lockscreen.log" 2014-10-7-13:49:41
+"/home/francisco/.cache/upstart/indicator-session.log" 2014-9-24-14:14:58
+"/home/francisco/.cache/upstart/unity-panel-service.log" 2014-10-9-11:39:33
+"/home/francisco/.cache/upstart/indicator-power.log" 2014-10-9-11:39:33
+"/home/francisco/.cache/upstart/indicator-sound.log" 2014-10-9-11:39:33
+"/home/francisco/.cache/upstart/update-notifier-release.log" 2014-10-9-11:39:33
+"/home/francisco/.cache/upstart/update-notifier-cds.log" 2014-10-3-9:10:3
+"/home/francisco/.cache/upstart/update-notifier-crash-_var_crash__sbin_plymouthd.0.crash.log" 2014-9-24-14:14:58
+"/home/francisco/.cache/upstart/upstart-event-bridge.log" 2014-10-3-9:10:3
+"/home/francisco/.cache/upstart/gnome-session-Unity.log" 2014-10-9-11:39:33
+"/home/francisco/.cache/upstart/window-stack-bridge.log" 2014-10-9-11:39:33
+"/home/francisco/.cache/upstart/im-config.log" 2014-10-9-11:39:33
+"/home/francisco/.cache/upstart/indicator-printers.log" 2014-10-9-11:39:33

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<searchresults total_results="6">
+                    <addon id="8884">
+  <name>Spanish (Chile) Language pack</name>
+  <type id="5">Language Pack (Application)</type>
+  <guid>langpack-es-CL@firefox.mozilla.org</guid>
+  <slug>spanish-chile-language-pack</slug>
+  <version>32.0</version>
+  <status id="4">Fully Reviewed</status>
+  <authors>
+        <author id="55008">
+      <name>Emilio Sepulveda</name>
+      <link>https://addons.mozilla.org/en-US/firefox/user/emilio-sepulveda/?src=api</link>
+    </author><author id="1463128">
+      <name>PaBLoX_CL</name>
+      <link>https://addons.mozilla.org/en-US/firefox/user/pablox_cl/?src=api</link>
+    </author><author id="4757633">
+      <name>Mozilla</name>
+      <link>https://addons.mozilla.org/en-US/firefox/user/mozilla/?src=api</link>
+    </author>      </authors>
+  <summary>Spanish (Chile) Language pack for Firefox 3.0.x</summary>
+  <description>Spanish (Chile) Language pack, preview version. May contain untranslated strings and/or translation errors.</description><license>
+    <name>License</name>
+    <url>http://www.mozilla.org/MPL/MPL-1.1.html</url>
+  </license>  <icon size="64"></icon>
+  <icon size="32"></icon>
+  <compatible_applications><application>
+      <name>Firefox</name>
+      <application_id>1</application_id>
+      <min_version>32.0</min_version>
+      <max_version>32.*</max_version>
+      <appID>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</appID>
+    </application></compatible_applications>
+  <all_compatible_os><os>ALL</os></all_compatible_os>
+  <eula></eula><previews></previews><rating>4</rating>
+  <learnmore>https://addons.mozilla.org/en-US/firefox/addon/spanish-chile-language-pack/?src=api</learnmore><install hash="sha256:e86cbafdae067edd9aa651bc8b081df0c278838b2762d9b287a9b4747d77abb6"
+    os="ALL"
+    size="367774">https://addons.mozilla.org/firefox/downloads/file/274452/pack_de_idioma_espanol_chile-32.0-fx.xpi?src=api</install>
+  <developer_comments></developer_comments>
+    <reviews num="7">
+      https://addons.mozilla.org/en-US/firefox/addon/spanish-chile-language-pack/reviews/?src=api
+    </reviews>
+    <total_downloads>41202</total_downloads>
+    <weekly_downloads>573</weekly_downloads>
+    <daily_users>41202</daily_users>
+    <created epoch="1221524511">
+      2008-09-16T00:21:51Z
+    </created>
+    <last_updated epoch="1409682740">
+      2014-09-02T18:32:20Z
+    </last_updated>
+    <homepage>http://www.chilemoz.org</homepage>
+    <support></support>
+    <featured>0</featured>
+        <performance>
+      </performance>
+    </addon>
+
+                  <addon id="6180">
+  <name>English (South African) Language Pack</name>
+  <type id="5">Language Pack (Application)</type>
+  <guid>langpack-en-ZA@firefox.mozilla.org</guid>
+  <slug>english-south-african-language</slug>
+  <version>32.0</version>
+  <status id="4">Fully Reviewed</status>
+  <authors>
+        <author id="169373">
+      <name>Dwayne Bailey</name>
+      <link>https://addons.mozilla.org/en-US/firefox/user/dwayne-bailey/?src=api</link>
+    </author><author id="182568">
+      <name>Translate.org.za</name>
+      <link>https://addons.mozilla.org/en-US/firefox/user/translateorgza/?src=api</link>
+    </author><author id="4757633">
+      <name>Mozilla</name>
+      <link>https://addons.mozilla.org/en-US/firefox/user/mozilla/?src=api</link>
+    </author>      </authors>
+  <summary>Adds South African English language support to the Firefox browser. All interfaces will be translated into South African English.</summary>
+  <description>Translation of the Firefox user interface into South African English by &lt;a href=&#34;http://outgoing.mozilla.org/v1/ebf7b3ba66c87e5449a05dcf913d243b92346271/http%3A//translate.org.za.&#34;&gt;http://translate.org.za.&lt;/a&gt;
+
+If you find missing translations or incorrect translations then visit &lt;a href=&#34;http://outgoing.mozilla.org/v1/145f17ae8f2887d14fb2ee13dfd3452575bcb599/http%3A//pootle.translate.org.za&#34;&gt;http://pootle.translate.org.za&lt;/a&gt; and please contribute a correction.</description><license>
+    <name>License</name>
+    <url>http://www.mozilla.org/MPL/MPL-1.1.html</url>
+  </license>  <icon size="64">https://addons.cdn.mozilla.net/user-media/addon_icons/6/6180-64.png?modified=1358380391</icon>
+  <icon size="32">https://addons.cdn.mozilla.net/user-media/addon_icons/6/6180-32.png?modified=1358380391</icon>
+  <compatible_applications><application>
+      <name>Firefox</name>
+      <application_id>1</application_id>
+      <min_version>32.0</min_version>
+      <max_version>32.*</max_version>
+      <appID>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</appID>
+    </application></compatible_applications>
+  <all_compatible_os><os>ALL</os></all_compatible_os>
+  <eula></eula><previews></previews><rating>0</rating>
+  <learnmore>https://addons.mozilla.org/en-US/firefox/addon/english-south-african-language/?src=api</learnmore><install hash="sha256:0f667230b837a9c2bc210b9805bc491f51b84483228a26b9ae7934da0f2fe06b"
+    os="ALL"
+    size="416399">https://addons.mozilla.org/firefox/downloads/file/274446/english_south_african_language_pack-32.0-fx.xpi?src=api</install>
+  <developer_comments></developer_comments>
+    <reviews num="0">
+      https://addons.mozilla.org/en-US/firefox/addon/english-south-african-language/reviews/?src=api
+    </reviews>
+    <total_downloads>85737</total_downloads>
+    <weekly_downloads>112</weekly_downloads>
+    <daily_users>85737</daily_users>
+    <created epoch="1197461163">
+      2007-12-12T12:06:03Z
+    </created>
+    <last_updated epoch="1409682734">
+      2014-09-02T18:32:14Z
+    </last_updated>
+    <homepage>http://translate.org.za/content/view/15/31/lang,en/</homepage>
+    <support></support>
+    <featured>0</featured>
+        <performance>
+      </performance>
+    </addon>
+
+                  <addon id="8343">
+  <name>Spanish (Mexico) Language Pack</name>
+  <type id="5">Language Pack (Application)</type>
+  <guid>langpack-es-MX@firefox.mozilla.org</guid>
+  <slug>spanish-mexico-language-pack</slug>
+  <version>32.0</version>
+  <status id="4">Fully Reviewed</status>
+  <authors>
+        <author id="4757633">
+      <name>Mozilla</name>
+      <link>https://addons.mozilla.org/en-US/firefox/user/mozilla/?src=api</link>
+    </author>      </authors>
+  <summary>The Mozilla Mexican Community publish the Language Pack in Mexican Spanish (es-MX) for Mozilla Firefox.</summary>
+  <description>If you can&#39;t see any change on the Firefox interface; open a new Tab and type &#34;about:config&#34; then find the &#34;general.useragent.locale&#34; property and change it&#39;s current value for this: &#34;es-MX&#34;, restart Firefox and now you must see the Language Pack in action. Enjoy!</description><license>
+    <name>License</name>
+    <url>http://www.mozilla.org/MPL/MPL-1.1.html</url>
+  </license>  <icon size="64">https://addons.cdn.mozilla.net/user-media/addon_icons/8/8343-64.png?modified=1368472825</icon>
+  <icon size="32">https://addons.cdn.mozilla.net/user-media/addon_icons/8/8343-32.png?modified=1368472825</icon>
+  <compatible_applications><application>
+      <name>Firefox</name>
+      <application_id>1</application_id>
+      <min_version>32.0</min_version>
+      <max_version>32.*</max_version>
+      <appID>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</appID>
+    </application></compatible_applications>
+  <all_compatible_os><os>ALL</os></all_compatible_os>
+  <eula></eula><previews><preview position="1">
+      <full type="image/png" width="644" height="512">
+        https://addons.cdn.mozilla.net/user-media/previews/full/24/24155.png?src=api&amp;modified=1331247702
+      </full>
+      <thumbnail type="image/png" width="188" height="150">
+        https://addons.cdn.mozilla.net/user-media/previews/thumbs/24/24155.png?src=api&amp;modified=1331247702
+      </thumbnail></preview></previews><rating>5</rating>
+  <learnmore>https://addons.mozilla.org/en-US/firefox/addon/spanish-mexico-language-pack/?src=api</learnmore><install hash="sha256:f44a65ecbb5e1fe76fce28ea221f8c53be2c3ee0989bbbf434a99dd6f2140581"
+    os="ALL"
+    size="428897">https://addons.mozilla.org/firefox/downloads/file/274456/espanol_mexico_language_pack-32.0-fx.xpi?src=api</install>
+  <developer_comments></developer_comments>
+    <reviews num="98">
+      https://addons.mozilla.org/en-US/firefox/addon/spanish-mexico-language-pack/reviews/?src=api
+    </reviews>
+    <total_downloads>93171</total_downloads>
+    <weekly_downloads>1257</weekly_downloads>
+    <daily_users>90748</daily_users>
+    <created epoch="1217637280">
+      2008-08-02T00:34:40Z
+    </created>
+    <last_updated epoch="1409682743">
+      2014-09-02T18:32:23Z
+    </last_updated>
+    <homepage>http://mozilla-mexico.sf.net</homepage>
+    <support>http://mozilla-mexico.sourceforge.net/foros/viewforum.php?f=13</support>
+    <featured>0</featured>
+        <performance>
+      </performance>
+    </addon>
+
+                  <addon id="417168">
+  <name>English (GB) Language Pack</name>
+  <type id="5">Language Pack (Application)</type>
+  <guid>langpack-en-GB@firefox.mozilla.org</guid>
+  <slug>english-gb-language-pack</slug>
+  <version>32.0</version>
+  <status id="4">Fully Reviewed</status>
+  <authors>
+        <author id="4757633">
+      <name>Mozilla</name>
+      <link>https://addons.mozilla.org/en-US/firefox/user/mozilla/?src=api</link>
+    </author>      </authors>
+  <summary></summary>
+  <description></description>  <icon size="64"></icon>
+  <icon size="32"></icon>
+  <compatible_applications><application>
+      <name>Firefox</name>
+      <application_id>1</application_id>
+      <min_version>32.0</min_version>
+      <max_version>32.*</max_version>
+      <appID>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</appID>
+    </application></compatible_applications>
+  <all_compatible_os><os>ALL</os></all_compatible_os>
+  <eula></eula><previews></previews><rating>3</rating>
+  <learnmore>https://addons.mozilla.org/en-US/firefox/addon/english-gb-language-pack/?src=api</learnmore><install hash="sha256:d2707bbeeca0976b10639656e1c9a84562568cd7a599258e3d2198fce57c2cec"
+    os="ALL"
+    size="417180">https://addons.mozilla.org/firefox/downloads/file/274442/english_gb_language_pack-32.0-fx.xpi?src=api</install>
+  <developer_comments></developer_comments>
+    <reviews num="22">
+      https://addons.mozilla.org/en-US/firefox/addon/english-gb-language-pack/reviews/?src=api
+    </reviews>
+    <total_downloads>339153</total_downloads>
+    <weekly_downloads>5355</weekly_downloads>
+    <daily_users>339153</daily_users>
+    <created epoch="1358459080">
+      2013-01-17T21:44:40Z
+    </created>
+    <last_updated epoch="1409682728">
+      2014-09-02T18:32:08Z
+    </last_updated>
+    <homepage></homepage>
+    <support></support>
+    <featured>0</featured>
+        <performance>
+      </performance>
+    </addon>
+
+                  <addon id="417170">
+  <name>Espa√±ol (AR) Language Pack</name>
+  <type id="5">Language Pack (Application)</type>
+  <guid>langpack-es-AR@firefox.mozilla.org</guid>
+  <slug>espa√±ol-ar-language-pack</slug>
+  <version>32.0</version>
+  <status id="4">Fully Reviewed</status>
+  <authors>
+        <author id="4757633">
+      <name>Mozilla</name>
+      <link>https://addons.mozilla.org/en-US/firefox/user/mozilla/?src=api</link>
+    </author>      </authors>
+  <summary></summary>
+  <description></description>  <icon size="64"></icon>
+  <icon size="32"></icon>
+  <compatible_applications><application>
+      <name>Firefox</name>
+      <application_id>1</application_id>
+      <min_version>32.0</min_version>
+      <max_version>32.*</max_version>
+      <appID>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</appID>
+    </application></compatible_applications>
+  <all_compatible_os><os>ALL</os></all_compatible_os>
+  <eula></eula><previews></previews><rating>5</rating>
+  <learnmore>https://addons.mozilla.org/en-US/firefox/addon/espa%C3%B1ol-ar-language-pack/?src=api</learnmore><install hash="sha256:0e8e735d4a8ef73f4259a815e6ee61862dec19a44bef39916f752f8b9a643803"
+    os="ALL"
+    size="426556">https://addons.mozilla.org/firefox/downloads/file/274450/espanol_ar_language_pack-32.0-fx.xpi?src=api</install>
+  <developer_comments></developer_comments>
+    <reviews num="2">
+      https://addons.mozilla.org/en-US/firefox/addon/espa%C3%B1ol-ar-language-pack/reviews/?src=api
+    </reviews>
+    <total_downloads>45334</total_downloads>
+    <weekly_downloads>612</weekly_downloads>
+    <daily_users>45334</daily_users>
+    <created epoch="1358459087">
+      2013-01-17T21:44:47Z
+    </created>
+    <last_updated epoch="1409682738">
+      2014-09-02T18:32:18Z
+    </last_updated>
+    <homepage></homepage>
+    <support></support>
+    <featured>0</featured>
+        <performance>
+      </performance>
+    </addon>
+
+                  <addon id="417172">
+  <name>Espa√±ol (Espa√±a) Language Pack</name>
+  <type id="5">Language Pack (Application)</type>
+  <guid>langpack-es-ES@firefox.mozilla.org</guid>
+  <slug>espa√±ol-espa√±a-language-pac</slug>
+  <version>32.0</version>
+  <status id="4">Fully Reviewed</status>
+  <authors>
+        <author id="4757633">
+      <name>Mozilla</name>
+      <link>https://addons.mozilla.org/en-US/firefox/user/mozilla/?src=api</link>
+    </author>      </authors>
+  <summary></summary>
+  <description></description>  <icon size="64"></icon>
+  <icon size="32"></icon>
+  <compatible_applications><application>
+      <name>Firefox</name>
+      <application_id>1</application_id>
+      <min_version>32.0</min_version>
+      <max_version>32.*</max_version>
+      <appID>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</appID>
+    </application></compatible_applications>
+  <all_compatible_os><os>ALL</os></all_compatible_os>
+  <eula></eula><previews></previews><rating>3</rating>
+  <learnmore>https://addons.mozilla.org/en-US/firefox/addon/espa%C3%B1ol-espa%C3%B1a-language-pac/?src=api</learnmore><install hash="sha256:ec514c53c92a86993abad9d0bdc21091aa5ec19d29d621106cd02c6c0453675c"
+    os="ALL"
+    size="360676">https://addons.mozilla.org/firefox/downloads/file/274454/espanol_espana_language_pack-32.0-fx.xpi?src=api</install>
+  <developer_comments></developer_comments>
+    <reviews num="1">
+      https://addons.mozilla.org/en-US/firefox/addon/espa%C3%B1ol-espa%C3%B1a-language-pac/reviews/?src=api
+    </reviews>
+    <total_downloads>128634</total_downloads>
+    <weekly_downloads>1941</weekly_downloads>
+    <daily_users>128634</daily_users>
+    <created epoch="1358459217">
+      2013-01-17T21:46:57Z
+    </created>
+    <last_updated epoch="1409682742">
+      2014-09-02T18:32:22Z
+    </last_updated>
+    <homepage></homepage>
+    <support></support>
+    <featured>0</featured>
+        <performance>
+      </performance>
+    </addon>
+
+          </searchresults>·ÓKÌ&              :TOs      ˇ:https://services.addons.mozilla.org/en-US/firefox/api/1.5/search/guid:webapps-team%40lists.launchpad.net,ubufox%40ubuntu.com,%7B2e1445b0-2682-11e1-bfc2-0800200c9a66%7D,online-accounts%40lists.launchpad.net,%7B972ce4c6-7e08-4474-a285-3208198ce6fd%7D,langpack-es-AR%40firefox.mozilla.org,langpack-en-GB%40firefox.mozilla.org,langpack-es-ES%40firefox.mozilla.org,langpack-es-CL%40firefox.mozilla.org,langpack-es-MX%40firefox.mozilla.org,langpack-en-ZA%40firefox.mozilla.org?src=firefox&appOS=Linux&appVersion=32.0 security-info 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 request-method GET request-User-Agent Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:32.0) Gecko/20100101 Firefox/32.0 response-head HTTP/1.1 200 OK
+Server: nginx
+Date: Sat, 27 Sep 2014 14:09:42 GMT
+Content-Type: text/xml; charset=utf-8
+Vary: X-Mobile, User-Agent
+X-Frame-Options: DENY
+Strict-Transport-Security: max-age=31536000
+X-Backend-Server: web8
+ uncompressed-len 0   9X

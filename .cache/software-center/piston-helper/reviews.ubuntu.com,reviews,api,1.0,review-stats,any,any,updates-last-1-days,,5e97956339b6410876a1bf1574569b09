@@ -1,0 +1,181 @@
+status: 200
+content-length: 4268
+via: 1.1 papeda.canonical.com:3128 (squid/2.7.STABLE7)
+content-location: http://reviews.ubuntu.com/reviews/api/1.0/review-stats/any/any/updates-last-1-days/
+x-cache: HIT from papeda.canonical.com
+age: 120
+expires: Sat, 27 Sep 2014 21:45:36 GMT
+vary: Accept,Accept-Encoding
+server: Apache/2.2.22 (Ubuntu)
+last-modified: Sat, 27 Sep 2014 17:45:36 GMT
+connection: close
+-content-encoding: gzip
+cache-control: max-age=14400
+date: Sat, 27 Sep 2014 17:45:36 GMT
+content-type: application/json; charset=utf-8
+x-cache-lookup: HIT from papeda.canonical.com:3128
+-varied-accept-encoding: gzip, deflate
+
+[
+    {
+        "ratings_total": 26, 
+        "ratings_average": "3.35", 
+        "app_name": "", 
+        "package_name": "lightspark", 
+        "histogram": "[4, 4, 6, 3, 9]"
+    }, 
+    {
+        "ratings_total": 44, 
+        "ratings_average": "4.36", 
+        "app_name": "", 
+        "package_name": "blobby", 
+        "histogram": "[0, 1, 6, 13, 24]"
+    }, 
+    {
+        "ratings_total": 15, 
+        "ratings_average": "2.67", 
+        "app_name": "", 
+        "package_name": "pct-listen", 
+        "histogram": "[8, 1, 0, 0, 6]"
+    }, 
+    {
+        "ratings_total": 36, 
+        "ratings_average": "4.61", 
+        "app_name": "", 
+        "package_name": "cherrytree", 
+        "histogram": "[1, 1, 2, 3, 29]"
+    }, 
+    {
+        "ratings_total": 6, 
+        "ratings_average": "3.67", 
+        "app_name": "", 
+        "package_name": "notes-app", 
+        "histogram": "[0, 1, 1, 3, 1]"
+    }, 
+    {
+        "ratings_total": 109, 
+        "ratings_average": "4.59", 
+        "app_name": "", 
+        "package_name": "indicator-multiload", 
+        "histogram": "[5, 0, 4, 17, 83]"
+    }, 
+    {
+        "ratings_total": 155, 
+        "ratings_average": "4.66", 
+        "app_name": "", 
+        "package_name": "steam-launcher", 
+        "histogram": "[5, 5, 4, 9, 132]"
+    }, 
+    {
+        "ratings_total": 47, 
+        "ratings_average": "4.26", 
+        "app_name": "", 
+        "package_name": "xiphos", 
+        "histogram": "[6, 0, 3, 5, 33]"
+    }, 
+    {
+        "ratings_total": 5, 
+        "ratings_average": "4.20", 
+        "app_name": "", 
+        "package_name": "uif2iso", 
+        "histogram": "[1, 0, 0, 0, 4]"
+    }, 
+    {
+        "ratings_total": 515, 
+        "ratings_average": "4.86", 
+        "app_name": "", 
+        "package_name": "gparted", 
+        "histogram": "[4, 2, 6, 40, 463]"
+    }, 
+    {
+        "ratings_total": 8, 
+        "ratings_average": "2.38", 
+        "app_name": "", 
+        "package_name": "flumotion", 
+        "histogram": "[4, 1, 0, 2, 1]"
+    }, 
+    {
+        "ratings_total": 223, 
+        "ratings_average": "3.88", 
+        "app_name": "", 
+        "package_name": "evince", 
+        "histogram": "[12, 19, 43, 58, 91]"
+    }, 
+    {
+        "ratings_total": 11, 
+        "ratings_average": "4.45", 
+        "app_name": "", 
+        "package_name": "okular-backend-odp", 
+        "histogram": "[0, 1, 1, 1, 8]"
+    }, 
+    {
+        "ratings_total": 30, 
+        "ratings_average": "3.13", 
+        "app_name": "", 
+        "package_name": "2xclient", 
+        "histogram": "[13, 0, 1, 2, 14]"
+    }, 
+    {
+        "ratings_total": 597, 
+        "ratings_average": "3.63", 
+        "app_name": "", 
+        "package_name": "rhythmbox", 
+        "histogram": "[98, 56, 76, 107, 260]"
+    }, 
+    {
+        "ratings_total": 65, 
+        "ratings_average": "1.40", 
+        "app_name": "", 
+        "package_name": "unity-webapps-youtube", 
+        "histogram": "[53, 5, 3, 1, 3]"
+    }, 
+    {
+        "ratings_total": 1113, 
+        "ratings_average": "4.63", 
+        "app_name": "", 
+        "package_name": "gimp", 
+        "histogram": "[33, 18, 33, 159, 870]"
+    }, 
+    {
+        "ratings_total": 2, 
+        "ratings_average": "1.00", 
+        "app_name": "", 
+        "package_name": "webdev", 
+        "histogram": "[2, 0, 0, 0, 0]"
+    }, 
+    {
+        "ratings_total": 71, 
+        "ratings_average": "4.31", 
+        "app_name": "", 
+        "package_name": "neverball", 
+        "histogram": "[4, 5, 1, 16, 45]"
+    }, 
+    {
+        "ratings_total": 1870, 
+        "ratings_average": "4.77", 
+        "app_name": "", 
+        "package_name": "vlc", 
+        "histogram": "[36, 18, 45, 149, 1622]"
+    }, 
+    {
+        "ratings_total": 28, 
+        "ratings_average": "4.36", 
+        "app_name": "", 
+        "package_name": "bless", 
+        "histogram": "[0, 1, 3, 9, 15]"
+    }, 
+    {
+        "ratings_total": 637, 
+        "ratings_average": "2.81", 
+        "app_name": "", 
+        "package_name": "flashplugin-installer", 
+        "histogram": "[225, 80, 82, 91, 159]"
+    }, 
+    {
+        "ratings_total": 509, 
+        "ratings_average": "4.67", 
+        "app_name": "", 
+        "package_name": "audacity", 
+        "histogram": "[17, 6, 11, 61, 414]"
+    }
+]
