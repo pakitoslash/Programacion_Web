@@ -1608,6 +1608,10 @@
                }
             },
             "lh3.googleusercontent.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "protocol_str": "quic"
+               },
                "settings": {
                   "4": 100,
                   "5": 7,
@@ -1624,10 +1628,6 @@
                "supports_spdy": true
             },
             "lh5.googleusercontent.com:443": {
-               "alternate_protocol": {
-                  "port": 443,
-                  "protocol_str": "quic"
-               },
                "settings": {
                   "4": 100,
                   "5": 32,
