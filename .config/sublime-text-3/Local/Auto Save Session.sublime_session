@@ -40,18 +40,24 @@
 			"buffers":
 			[
 				{
+					"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n	<meta charset=\"UTF-8\">\n	<link rel=\"stylesheet\" href=\"css/tarea_5_css.css\">\n	<title>Prebe 28</title>\n\n</head>\n<body background=\"img/fondo.jpg\">\n<font color=\"white\">\n	<header>\n		<h1>Menu</h1>\n	</header>\n	<nav>\n		<ul>\n			<li><a href=\"#discos\">Discos</a></li>\n			<li><a href=\"#carros\">Carros Deportivos</a></li>\n			<li><a href=\"#videojuegos\">VideoJuegos</a></li>\n		</ul>\n	</nav>\n	<section>\n		<article> <!--Con article se secciona la página en mini páginas-->\n			<header>\n				<hgroup>\n					<h1><a name=\"discos\">Discografía de la banda MUSE</a></h1>\n					<h2>Estos son los discos más bendidos y populares de la gran banda MUSE</h2>\n				</hgroup>	\n			</header>\n			\n			<table>\n				<caption><b><h1>MUSE</b></caption>\n\n				<thead bgcolor=\"green\">\n					<th>Absolution</th>\n					<th>Absolution Tour</th>\n					<th>Haarp</th>\n					<th>Origin of Symmetry</th>\n					<th>Showbiz</th>\n					<th>The 2nd Law</th>\n					<th>The Resistence</th>\n				</thead>\n\n				<tbody align=\"center\">					<!--Indica al navegador que ese es el cuerpo de la tabla-->\n					<tr bgcolor=\"white\">\n						<td><a href=\"https://www.youtube.com/watch?v=dzii-muncy4\"></a><img class=\"imagen\" src=\"img/discos/absolution.jpg\"></td>\n						<td><a href=\"\"></a><img src=\"img/discos/absolution_tour.jpg\"></td>\n						<td><img src=\"img/discos/haarp.jpg\"></td>\n						<td><img src=\"img/discos/origin_of_symmetry.jpg\"></td>\n						<td><img src=\"img/discos/showbiz.jpg\"></td>\n						<td><img src=\"img/discos/the_2nd_law.jpg\"></td>\n						<td><img src=\"img/discos/the_resistence.jpg\"></td>\n					</tr>\n\n			</table><br><br><br><br><br>\n\n		</article>\n		<article> <!--Con article se secciona la página en mini páginas-->\n			<header>\n				<hgroup>\n					<h1 id=\"carros\">Carros Deportivos</h1>\n					<h2>Carros Deportivos m&aacutes Hermosos que puedes encontrar</h2>\n				</hgroup>	\n			</header>\n			\n			<table>\n				<caption><b><h1>Carros Deportivos</b></caption>\n\n				<thead bgcolor=\"green\">\n					<th>Audi</th>\n					<th>Clasico de Clasicos</th>\n					<th>San Ferrari</th>\n					<th>Lamborghini</th>\n					<th>Mustang</th>\n					\n				</thead>\n\n				<tbody align=\"center\">					<!--Indica al navegador que ese es el cuerpo de la tabla-->\n					<tr bgcolor=\"white\">\n						<td><img src=\"img/carros/audi.jpg\"></td>\n						<td><img src=\"img/carros/clasico.jpg\"></td>\n						<td><img src=\"img/carros/ferrari.jpg\"></td>\n						<td><img src=\"img/carros/lamborghini.jpg\"></td>\n						<td><img src=\"img/carros/mustang.jpg\"></td>\n						\n					</tr>\n\n			</table><br><br><br><br><br>\n\n		</article>\n		<article> <!--Con article se secciona la página en mini páginas-->\n			<header>\n				<hgroup>\n					<h1 id=\"videojuegos\">VideoJuegos</h1>\n					<h2>VideoJuegos m&aacutes Importantes que impactaron a la Industria del VideoJuego</h2>\n				</hgroup>	\n			</header>\n\n			<table>\n				<caption><b><h1>XBOX</b></caption>\n\n				<thead bgcolor=\"green\">\n					<th>Call of Duty 4</th>\n					<th>Dead Space</th>\n					<th>Gears of War</th>\n					<th>GTA IV</th>\n					<th>Halo 4</th>\n					<th>Halo Reach</th>\n					\n				</thead>\n\n				<tbody align=\"center\">					<!--Indica al navegador que ese es el cuerpo de la tabla-->\n					<tr bgcolor=\"white\">\n						<td><img src=\"img/videojuegos/call_of_duty_4.jpg\"></td>\n						<td><img src=\"img/videojuegos/dead_space.jpg\"></td>\n						<td><img src=\"img/videojuegos/gears_of_war.jpg\"></td>\n						<td><img src=\"img/videojuegos/gta_4.jpg\"></td>\n						<td><img src=\"img/videojuegos/halo_4.jpg\"></td>\n						<td><img src=\"img/videojuegos/halo_reach.jpg\"></td>\n						\n					</tr>\n\n			</table><br><br><br><br><br>\n			\n		</article>\n		<aside>\n			<blockquote>Mensaje 1</blockquote>\n			<blockquote>Mensaje 2</blockquote>\n		</aside>\n	</section>\n	<footer><h1>\n		Derechos de autor\n	</footer></h1>\n	</font>\n</body>\n</html>",
 					"file": "/home/francisco/Escritorio/Programacion_Web/Tareas/Tarea_5/Pagina_Web/Tarea_5.html",
+					"file_size": -1,
+					"file_write_time": -1,
 					"settings":
 					{
-						"buffer_size": 3681,
+						"buffer_size": 3754,
 						"line_ending": "Windows"
 					}
 				},
 				{
+					"contents": "	nav\n	{\n		text-align: center;\n		color: orange;\n	}\n\n	h1 \n	{\n		text-align: center;\n		color: #2EFE64;\n	}\n\n	h1:hover:nth-child(even) \n	{\n		text-align: center;\n		color: #00FF00;\n		font-size: 30px;\n	}\n\n	h2 \n	{\n		text-align: center;\n		color: orange\n\n	}\n\n	th:hover\n	{\n		font-size: 20px;\n		background: radial-gradient(orange,yellow,green);		\n	}\n\n	th\n	{	\n		width: 135px; \n		height: 40px; \n	}\n\n\n	img\n	{\n		width: 100px;\n		\n	}\n\n	img:hover\n	{\n		transform: scale(1.1)\n\n	}\n\n	table\n	{\n		border: 20px solid YELLOW;\n		margin: auto;\n		border-spacing: 0;	\n		text-align: =\"center\";\n\n	}\n\n	td:hover\n	{\n		background: radial-gradient(red,blue,green);		\n	}\n\n	a\n	{\n		\n	}",
 					"file": "/home/francisco/Escritorio/Programacion_Web/Tareas/Tarea_5/Pagina_Web/css/tarea_5_css.css",
+					"file_size": 692,
+					"file_write_time": 130574353781369882,
 					"settings":
 					{
-						"buffer_size": 629,
+						"buffer_size": 642,
 						"line_ending": "Windows"
 					}
 				}
@@ -127,7 +133,7 @@
 			"groups":
 			[
 				{
-					"selected": 1,
+					"selected": 0,
 					"sheets":
 					[
 						{
@@ -136,15 +142,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 3681,
+								"buffer_size": 3754,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										0,
-										0
+										1239,
+										1239
 									]
 								],
 								"settings":
@@ -156,7 +162,7 @@
 								"translation.y": 510.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 1,
+							"stack_index": 0,
 							"type": "text"
 						},
 						{
@@ -165,15 +171,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 629,
+								"buffer_size": 642,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										382,
-										382
+										639,
+										639
 									]
 								],
 								"settings":
@@ -182,10 +188,10 @@
 									"translate_tabs_to_spaces": false
 								},
 								"translation.x": 0.0,
-								"translation.y": 391.0,
+								"translation.y": 901.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 0,
+							"stack_index": 1,
 							"type": "text"
 						}
 					]

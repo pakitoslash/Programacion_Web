@@ -43,3 +43,6 @@ WARN  2014-10-10 12:15:34 unity.iconloader IconLoader.cpp:755 Unable to load ico
 Se creó una nueva ventana en la sesión existente del navegador.
 
 ** (zeitgeist-datahub:2165): WARNING **: recent-manager-provider.vala:132: Desktop file for "file:///home/francisco/Escritorio/Clase_2/Tarea.tar.gz" was not found, exec: google-chrome-stable, mime_type: application/x-compressed-tar
+[WARNING:flash/platform/pepper/pep_module.cpp(63)] SANDBOXED
+[2237:2237:1010/123225:ERROR:CONSOLE(0)] "Application Cache Error event: Manifest fetch failed (6) https://www.google.com.mx/_/chrome/newtab/manifest?espv=2&ie=UTF-8", source: https://www.google.com.mx/_/chrome/newtab?espv=2&ie=UTF-8 (0)
+ERROR 2014-10-10 12:32:44 unity.settings UnitySettings.cpp:366 Invalid monitor index: -1. Returning index 0 monitor instead.
