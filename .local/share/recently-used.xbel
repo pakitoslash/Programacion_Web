@@ -267,7 +267,7 @@
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///home/francisco/CursoWeb/Asistencia.txt" added="2014-10-09T16:58:44Z" modified="2014-10-09T16:58:48Z" visited="2014-10-09T16:58:45Z">
+  <bookmark href="file:///home/francisco/CursoWeb/Asistencia.txt" added="2014-10-09T16:58:44Z" modified="2014-10-10T14:32:25Z" visited="2014-10-09T16:58:45Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="text/plain"/>
@@ -275,13 +275,13 @@
           <bookmark:group>gedit</bookmark:group>
         </bookmark:groups>
         <bookmark:applications>
-          <bookmark:application name="nautilus" exec="&apos;gedit %U&apos;" modified="2014-10-09T16:58:44Z" count="1"/>
-          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2014-10-09T16:58:48Z" count="1"/>
+          <bookmark:application name="nautilus" exec="&apos;gedit %U&apos;" modified="2014-10-10T14:32:23Z" count="2"/>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2014-10-10T14:32:25Z" count="2"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///home/francisco/Im%C3%A1genes/Captura%20de%20pantalla%20de%202014-10-09%2012%3A41%3A50.png" added="2014-10-09T17:41:55Z" modified="2014-10-09T17:41:55Z" visited="2014-10-09T17:41:55.198167Z">
+  <bookmark href="file:///home/francisco/Im%C3%A1genes/Captura%20de%20pantalla%20de%202014-10-09%2012%3A41%3A50.png" added="2014-10-09T17:41:55Z" modified="2014-10-09T17:41:55Z" visited="2014-10-09T17:41:55Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="image/png"/>
@@ -290,6 +290,36 @@
         </bookmark:groups>
         <bookmark:applications>
           <bookmark:application name="GNOME Screenshot" exec="&apos;eog %u&apos;" modified="2014-10-09T17:41:55Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Descargas/Pagina_Web.zip" added="2014-10-10T15:03:27Z" modified="2014-10-10T15:03:27Z" visited="2014-10-10T15:03:27Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2014-10-10T15:03:27Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Programacion_Web.zip" added="2014-10-10T17:14:43Z" modified="2014-10-10T17:14:43Z" visited="2014-10-10T17:14:43Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2014-10-10T17:14:43Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Programacion_Web/Tareas/Tarea_5/Pagina_Web/Tarea_5.html" added="2014-10-10T17:16:01Z" modified="2014-10-10T17:16:01Z" visited="2014-10-10T17:16:01.957782Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;/usr/bin/google-chrome-stable %U&apos;" modified="2014-10-10T17:16:01Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>

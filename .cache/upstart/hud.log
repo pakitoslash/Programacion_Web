@@ -1,2 +1,0 @@
-[31mvoid DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher*)[0m: "No existe tal interfaz «com.canonical.dbusmenu» en ruta de objeto /com/canonical/menu/460005E" 
-[31mvoid DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher*)[0m: "No existe tal interfaz «com.canonical.dbusmenu» en ruta de objeto /com/canonical/menu/4600061" 

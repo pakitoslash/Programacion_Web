@@ -25,8 +25,8 @@
          "initialized": true
       },
       "autoupdate": {
-         "last_check": "13057229815989469",
-         "next_check": "13057355635925490"
+         "last_check": "13057434734334692",
+         "next_check": "13057452610679828"
       },
       "chrome_url_overrides": {
          "bookmarks": [ "chrome-extension://eemcgdkfndhakfknompkggombfjjjeno/main.html" ]
@@ -63,7 +63,7 @@
             },
             "initial_keybindings_set": true,
             "install_time": "13056819037190933",
-            "lastpingday": "13057225199555817",
+            "lastpingday": "13057398000236921",
             "location": 1,
             "manifest": {
                "api_console_project_id": "889782162350",
@@ -174,7 +174,7 @@
             },
             "initial_keybindings_set": true,
             "install_time": "13056819044206904",
-            "lastpingday": "13057225199555817",
+            "lastpingday": "13057398000236921",
             "location": 1,
             "manifest": {
                "api_console_project_id": "619683526622",
@@ -235,7 +235,7 @@
 
             },
             "install_time": "13056819037507828",
-            "lastpingday": "13057225199555817",
+            "lastpingday": "13057398000236921",
             "location": 1,
             "manifest": {
                "app": {
@@ -299,7 +299,7 @@
 
             },
             "install_time": "13056819053913773",
-            "lastpingday": "13057225199555817",
+            "lastpingday": "13057398000236921",
             "location": 1,
             "manifest": {
                "app": {
@@ -362,7 +362,7 @@
 
             },
             "install_time": "13056819043653216",
-            "lastpingday": "13057225199555817",
+            "lastpingday": "13057398000236921",
             "location": 1,
             "manifest": {
                "app": {
@@ -526,7 +526,7 @@
             },
             "initial_keybindings_set": true,
             "install_time": "13056819039381209",
-            "lastpingday": "13057225199555817",
+            "lastpingday": "13057398000236921",
             "location": 1,
             "manifest": {
                "api_console_project_id": "1083656409722",
@@ -1003,7 +1003,7 @@
             },
             "initial_keybindings_set": true,
             "install_time": "13056819036874641",
-            "lastpingday": "13057225199555817",
+            "lastpingday": "13057398000236921",
             "location": 10,
             "manifest": {
                "app": {
@@ -1070,7 +1070,7 @@
 
             },
             "install_time": "13056819040772342",
-            "lastpingday": "13057225199555817",
+            "lastpingday": "13057398000236921",
             "location": 1,
             "manifest": {
                "app": {
@@ -1122,6 +1122,19 @@
    "net": {
       "http_server_properties": {
          "servers": {
+            "0-channel-proxy-13-prn1.facebook.com:443": {
+               "supports_spdy": true
+            },
+            "0.client-channel.google.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "protocol_str": "quic"
+               },
+               "settings": {
+                  "4": 100
+               },
+               "supports_spdy": true
+            },
             "1-channel-proxy-06-ash2.facebook.com:443": {
                "supports_spdy": true
             },
@@ -1218,7 +1231,7 @@
                },
                "settings": {
                   "4": 100,
-                  "5": 16,
+                  "5": 24,
                   "6": 0
                },
                "supports_spdy": true
@@ -1266,7 +1279,7 @@
                },
                "settings": {
                   "4": 100,
-                  "5": 42,
+                  "5": 47,
                   "6": 0
                },
                "supports_spdy": true
@@ -1321,7 +1334,7 @@
                },
                "supports_spdy": true
             },
-            "clients5.google.com:443": {
+            "clients4.google.com:443": {
                "alternate_protocol": {
                   "port": 443,
                   "protocol_str": "quic"
@@ -1333,7 +1346,7 @@
                },
                "supports_spdy": true
             },
-            "clients6.google.com:443": {
+            "clients5.google.com:443": {
                "alternate_protocol": {
                   "port": 443,
                   "protocol_str": "quic"
@@ -1342,6 +1355,18 @@
                   "4": 100,
                   "5": 22,
                   "6": 3
+               },
+               "supports_spdy": true
+            },
+            "clients6.google.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "protocol_str": "quic"
+               },
+               "settings": {
+                  "4": 100,
+                  "5": 24,
+                  "6": 0
                },
                "supports_spdy": true
             },
@@ -1358,7 +1383,7 @@
                },
                "settings": {
                   "4": 100,
-                  "5": 32,
+                  "5": 15,
                   "6": 0
                },
                "supports_spdy": true
@@ -1561,7 +1586,7 @@
                "settings": {
                   "4": 100,
                   "5": 22,
-                  "6": 5
+                  "6": 0
                },
                "supports_spdy": true
             },
@@ -1572,6 +1597,18 @@
                }
             },
             "graph.facebook.com:443": {
+               "supports_spdy": true
+            },
+            "groups.google.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "protocol_str": "quic"
+               },
+               "settings": {
+                  "4": 100,
+                  "5": 38,
+                  "6": 0
+               },
                "supports_spdy": true
             },
             "i2.wp.com:443": {
@@ -1608,13 +1645,9 @@
                }
             },
             "lh3.googleusercontent.com:443": {
-               "alternate_protocol": {
-                  "port": 443,
-                  "protocol_str": "quic"
-               },
                "settings": {
                   "4": 100,
-                  "5": 7,
+                  "5": 9,
                   "6": 0
                },
                "supports_spdy": true
@@ -1636,10 +1669,14 @@
                "supports_spdy": true
             },
             "mail-attachment.googleusercontent.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "protocol_str": "quic"
+               },
                "settings": {
                   "4": 10,
-                  "5": 59,
-                  "6": 0
+                  "5": 3,
+                  "6": 13
                },
                "supports_spdy": true
             },
@@ -1650,8 +1687,8 @@
                },
                "settings": {
                   "4": 10,
-                  "5": 9,
-                  "6": 0
+                  "5": 5,
+                  "6": 10
                },
                "supports_spdy": true
             },
@@ -1716,7 +1753,7 @@
             "oauth.googleusercontent.com:443": {
                "settings": {
                   "4": 100,
-                  "5": 24,
+                  "5": 18,
                   "6": 0
                },
                "supports_spdy": true
@@ -1743,7 +1780,7 @@
                },
                "settings": {
                   "4": 100,
-                  "5": 56,
+                  "5": 20,
                   "6": 0
                },
                "supports_spdy": true
@@ -1838,7 +1875,9 @@
                   "protocol_str": "quic"
                },
                "settings": {
-                  "4": 100
+                  "4": 100,
+                  "5": 9,
+                  "6": 0
                },
                "supports_spdy": true
             },
@@ -1937,8 +1976,8 @@
                },
                "settings": {
                   "4": 100,
-                  "5": 32,
-                  "6": 0
+                  "5": 15,
+                  "6": 19
                },
                "supports_spdy": true
             },
@@ -1955,7 +1994,7 @@
                },
                "settings": {
                   "4": 100,
-                  "5": 42,
+                  "5": 22,
                   "6": 0
                },
                "supports_spdy": true
@@ -1973,7 +2012,7 @@
                },
                "settings": {
                   "4": 100,
-                  "5": 29,
+                  "5": 14,
                   "6": 0
                },
                "supports_spdy": true
@@ -2021,7 +2060,7 @@
                },
                "settings": {
                   "4": 100,
-                  "5": 31,
+                  "5": 37,
                   "6": 0
                },
                "supports_spdy": true
@@ -2082,15 +2121,15 @@
          "extensions": {
             "known_disabled": "D72B9877BE1FADE48E4DA5A859FFB65E33D7AC54C7FDF9BB7BC2E03590DF8299",
             "settings": {
-               "aapocclcgogkmnckokdopfmhonfmgoek": "870E48575E629B6DCDFEF7EE66DB470F738322DC49C3DDF0E1A31DCD4A6FE0D6",
+               "aapocclcgogkmnckokdopfmhonfmgoek": "E46FACD55AD9696CF28FA8D26E6ABB2DE279B92C98AC2267073E88099E40874A",
                "ahfgeienlihckogmohjhadlkjgocpleb": "B34AC2258AD5BD09573307D67C376510247BF37536B31C5CE4A9050CFB95DF96",
-               "aohghmighlieiainnegkcijnfilokake": "76E702D878DDFE6F78388829F7EDD6B9EC9BCF24332E81E5BBC29D357EB1D5E9",
-               "apdfllckaahabafndbhieahigkjlhalf": "B71A9E51AA7178BBBDC292CDDFEA44EF53F68894F58E5475D651B606A1B1ECCE",
-               "blpcfgokakmgnkcojhhkbfbldkacnbeo": "CF5A6C715606731FE761820337B86C24C3C937F2C593953BDB50A725664D4D53",
-               "coobgpohoikkiipiblmjeljniedjpjpf": "41EE9250C82D7B0AF0D62F4C801961708D56A40FAB40511A5C725153C209CAE8",
+               "aohghmighlieiainnegkcijnfilokake": "5CD97C3C9B53C01209A9C189B80F5F5C6D110065810E614F3074647BAA7A4586",
+               "apdfllckaahabafndbhieahigkjlhalf": "4AC6C4FD5A58EB55E813D71D27B72872B556DDFAA59AD76CD76EA3D6D591756B",
+               "blpcfgokakmgnkcojhhkbfbldkacnbeo": "F09306473523EE1C2FED24933FB28E1B292FA04F6F99BBB363A59CEC1E3667B9",
+               "coobgpohoikkiipiblmjeljniedjpjpf": "626A7E276324A65282EA30667AC3FFA43EFD735CF192C7A04A5F48F7738338C3",
                "eemcgdkfndhakfknompkggombfjjjeno": "8636A82393B7AB15DD0BBF974DEECC4E1E432E1FE136CC664F261C6AB7F63E4C",
                "ennkphjdgehloodpbhlhldgbnhmacadg": "52AA69A491D5DD565F0569AEBE9AB5457394C8C3862A8C258E8C02C61CA527A2",
-               "felcaaldnbdncclmgdcncolpebgiejap": "91F391491316B4DEBBF2053C878788A800F9F5E062F305B0F44DFD31E45226F9",
+               "felcaaldnbdncclmgdcncolpebgiejap": "09E11AB428D829FB8E2D2BE2CE0B0D7427F1B6826AC9A635A5EA55949DA2D263",
                "gfdkimpbcpahaombhbimeihdjnejgicl": "0055B6C95E519710CDD137C7243A2280B6B3DD2A809C87353D33E148BC93DB3C",
                "kmendfapggjehodndflmmgagdbamhnfd": "97938E811E0254FF5197B41A66477EF497990CBD271F3D289E8CB2E3A4400617",
                "mfehgcgbbipciphmccgaenjidiccnmng": "46EB6900CBC7D705591E07E50AFC5038B8B40404672726ABFB85AF1CDE3DA07F",
@@ -2098,8 +2137,8 @@
                "mgndgikekgjfcpckkfioiadnlibdjbkf": "77630CF41FD539AC4AA15C164804454ACA53038EFD90A1F4ACAB4C1B82CE1680",
                "neajdppkdcdipfabeoofebfddakdcjhd": "D5C4A3964574035A37AF920087D7FB4A099BA950AA7E7BA16990FB00600A07CA",
                "nkeimhogjdpnpccoofpliimaahmaaome": "0360883201F0DD9A3106AB618026E1C4EDBE428B965CF7AECA8545B9D57FE7D2",
-               "nmmhkkegccagdldgiimedpiccmgmieda": "874599B3AC568A034D0CDDF439B5FF25BC2EA08226B5494B030A32E1DCF155BE",
-               "pjkljhegncpnkpknbcohdijeoejaedia": "F8BE92B0E64BF824F59A2A1305C6CC3464BA3635F93EC4C995D7E3CC3EC17701"
+               "nmmhkkegccagdldgiimedpiccmgmieda": "3431D349E0586ED98A0C3288031D8836B95C3CE4C7864A878705F1A27074FFD5",
+               "pjkljhegncpnkpknbcohdijeoejaedia": "AFA7B312203B750BF54E9EE12A1AC64562A5003C3532EFF4C1B32851C5036C17"
             }
          },
          "google": {
@@ -2148,7 +2187,7 @@
    },
    "translate_blocked_languages": [ "es" ],
    "translate_denied_count": {
-      "en": 13,
+      "en": 14,
       "es": 2
    },
    "translate_whitelists": {

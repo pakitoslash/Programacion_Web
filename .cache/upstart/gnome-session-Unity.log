@@ -3,40 +3,43 @@ OpenGL Warning: Failed to connect to host. Make sure 3D acceleration is enabled 
 libGL error: core dri or dri2 extension not found
 libGL error: failed to load driver: vboxvideo
 ATTENTION: default value of option force_s3tc_enable overridden by environment.
-[2367:2367:1009/114020:ERROR:desktop_window_tree_host_x11.cc(1478)] Not implemented reached in void views::DesktopWindowTreeHostX11::MapWindow(ui::WindowShowState)
+[2237:2237:1010/120531:ERROR:desktop_window_tree_host_x11.cc(1478)] Not implemented reached in void views::DesktopWindowTreeHostX11::MapWindow(ui::WindowShowState)
 [WARNING:flash/platform/pepper/pep_module.cpp(63)] SANDBOXED
+ERROR 2014-10-10 12:11:21 unity <unknown>:0 atk_object_ref_state_set: assertion 'ATK_IS_OBJECT (accessible)' failed
+ERROR 2014-10-10 12:11:21 unity <unknown>:0 atk_state_set_contains_state: assertion 'ATK_IS_STATE_SET (set)' failed
+ERROR 2014-10-10 12:11:21 unityy <unknown>:0 g_object_unref: assertion 'G_IS_OBJECT (object)' failed
 
-** (zeitgeist-datahub:2193): WARNING **: downloads-directory-provider.vala:120: Couldn't process /home/francisco/Descargas/.com.google.Chrome.0KXCoa: Error when getting information for file '/home/francisco/Descargas/.com.google.Chrome.0KXCoa': No such file or directory
+** (zeitgeist-datahub:2165): WARNING **: downloads-directory-provider.vala:120: Couldn't process /home/francisco/Descargas/.com.google.Chrome.15ZgOA: Error when getting information for file '/home/francisco/Descargas/.com.google.Chrome.15ZgOA': No such file or directory
 
-** (zeitgeist-datahub:2193): WARNING **: zeitgeist-datahub.vala:212: Error during inserting events: GDBus.Error:org.gnome.zeitgeist.EngineError.InvalidArgument: Incomplete event: interpretation, manifestation and actor are required
-WARN  2014-10-09 11:47:50 unity <unknown>:0 Unable to fetch children: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No existe tal interfaz «org.ayatana.bamf.view» en ruta de objeto /org/ayatana/bamf/application/1385522938
+** (zeitgeist-datahub:2165): WARNING **: zeitgeist-datahub.vala:212: Error during inserting events: GDBus.Error:org.gnome.zeitgeist.EngineError.InvalidArgument: Incomplete event: interpretation, manifestation and actor are required
 
-WARN  2014-10-09 11:47:50 unity <unknown>:0 Failed to fetch path: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No existe tal interfaz «org.ayatana.bamf.application» en ruta de objeto /org/ayatana/bamf/application/1385522938
-WARN  2014-10-09 11:47:50 unity <unknown>:0 Failed to fetch path: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No existe tal interfaz «org.ayatana.bamf.application» en ruta de objeto /org/ayatana/bamf/application/1385522938
-WARN  2014-10-09 11:47:50 unity <unknown>:0 Failed to fetch path: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No existe tal interfaz «org.ayatana.bamf.application» en ruta de objeto /org/ayatana/bamf/application/1385522938
-WARN  2014-10-09 11:47:50 unity <unknown>:0 Failed to fetch path: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No existe tal interfaz «org.ayatana.bamf.application» en ruta de objeto /org/ayatana/bamf/application/1385522938
-WARN  2014-10-09 11:47:50 unity <unknown>:0 Failed to fetch path: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No existe tal interfaz «org.ayatana.bamf.application» en ruta de objeto /org/ayatana/bamf/application/1385522938
-WARN  2014-10-09 11:47:50 unity <unknown>:0 Failed to fetch path: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No existe tal interfaz «org.ayatana.bamf.application» en ruta de objeto /org/ayatana/bamf/application/1385522938
-WARN  2014-10-09 11:47:50 unity <unknown>:0 Unable to fetch children: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No existe tal interfaz «org.ayatana.bamf.view» en ruta de objeto /org/ayatana/bamf/application/1385522938
+** (zeitgeist-datahub:2165): WARNING **: zeitgeist-datahub.vala:212: Error during inserting events: GDBus.Error:org.gnome.zeitgeist.EngineError.InvalidArgument: Incomplete event: interpretation, manifestation and actor are required
 
-WARN  2014-10-09 11:47:50 unity <unknown>:0 Failed to fetch path: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No existe tal interfaz «org.ayatana.bamf.application» en ruta de objeto /org/ayatana/bamf/application/1385522938
+** (zeitgeist-datahub:2165): WARNING **: recent-manager-provider.vala:132: Desktop file for "file:///home/francisco/Escritorio/Clase_2/Tarea.tar.gz" was not found, exec: google-chrome-stable, mime_type: application/x-compressed-tar
 
-** (zeitgeist-datahub:2193): WARNING **: recent-manager-provider.vala:132: Desktop file for "file:///home/francisco/Escritorio/Clase_2/Tarea.tar.gz" was not found, exec: google-chrome-stable, mime_type: application/x-compressed-tar
+** (zeitgeist-datahub:2165): WARNING **: recent-manager-provider.vala:132: Desktop file for "file:///home/francisco/Escritorio/Clase_2/Tarea.tar.gz" was not found, exec: google-chrome-stable, mime_type: application/x-compressed-tar
+WARN  2014-10-10 12:15:04 unity.iconloader IconLoader.cpp:755 Unable to load icon file:/// at size -1x22: No se puede abrir el directorio
+WARN  2014-10-10 12:15:10 unity <unknown>:0 Failed to get active window: Se alcanzó el tiempo de expiración
+WARN  2014-10-10 12:15:11 unity <unknown>:0 Failed to get active window: Se alcanzó el tiempo de expiración
+WARN  2014-10-10 12:15:12 unity <unknown>:0 Failed to get active window: Se alcanzó el tiempo de expiración
+WARN  2014-10-10 12:15:20 unity.iconloader IconLoader.cpp:755 Unable to load icon https://3rdpartymedia.ubuntuone.com/7digital/static/img/sleeveart/00/003/859/0000385943_350.jpg at size 92x96: Cannot resolve hostname (3rdpartymedia.ubuntuone.com)
+WARN  2014-10-10 12:15:20 unity.iconloader IconLoader.cpp:755 Unable to load icon https://3rdpartymedia.ubuntuone.com/7digital/static/img/sleeveart/00/009/036/0000903644_350.jpg at size 92x96: Cannot resolve hostname (3rdpartymedia.ubuntuone.com)
+WARN  2014-10-10 12:15:20 unity.iconloader IconLoader.cpp:755 Unable to load icon https://3rdpartymedia.ubuntuone.com/7digital/static/img/sleeveart/00/003/820/0000382046_350.jpg at size 92x96: Cannot resolve hostname (3rdpartymedia.ubuntuone.com)
+WARN  2014-10-10 12:15:20 unity.iconloader IconLoader.cpp:755 Unable to load icon https://3rdpartymedia.ubuntuone.com/7digital/static/img/sleeveart/00/009/036/0000903661_350.jpg at size 92x96: Cannot resolve hostname (3rdpartymedia.ubuntuone.com)
+WARN  2014-10-10 12:15:20 unity.iconloader IconLoader.cpp:755 Unable to load icon https://3rdpartymedia.ubuntuone.com/7digital/static/img/sleeveart/00/009/036/0000903674_350.jpg at size 92x96: Cannot resolve hostname (3rdpartymedia.ubuntuone.com)
+WARN  2014-10-10 12:15:20 unity.iconloader IconLoader.cpp:755 Unable to load icon . UnityProtocolAnnotatedIcon %7B'base-icon':%20%3C'https://3rdpartymedia.ubuntuone.com/7digital/static/img/sleeveart/00/003/859/0000385943_350.jpg'%3E,%20'category':%20%3Cuint32%203%3E,%20'ribbon':%20%3C'£1.98'%3E%7D at size 96x96: 
+WARN  2014-10-10 12:15:20 unity.iconloader IconLoader.cpp:755 Unable to load icon . UnityProtocolAnnotatedIcon %7B'base-icon':%20%3C'https://3rdpartymedia.ubuntuone.com/7digital/static/img/sleeveart/00/009/036/0000903644_350.jpg'%3E,%20'category':%20%3Cuint32%203%3E,%20'ribbon':%20%3C'£2.49'%3E%7D at size 96x96: 
+WARN  2014-10-10 12:15:20 unity.iconloader IconLoader.cpp:755 Unable to load icon . UnityProtocolAnnotatedIcon %7B'base-icon':%20%3C'https://3rdpartymedia.ubuntuone.com/7digital/static/img/sleeveart/00/003/820/0000382046_350.jpg'%3E,%20'category':%20%3Cuint32%203%3E,%20'ribbon':%20%3C'£1.98'%3E%7D at size 96x96: 
+WARN  2014-10-10 12:15:20 unity.iconloader IconLoader.cpp:755 Unable to load icon . UnityProtocolAnnotatedIcon %7B'base-icon':%20%3C'https://3rdpartymedia.ubuntuone.com/7digital/static/img/sleeveart/00/009/036/0000903661_350.jpg'%3E,%20'category':%20%3Cuint32%203%3E,%20'ribbon':%20%3C'£2.49'%3E%7D at size 96x96: 
+WARN  2014-10-10 12:15:20 unity.iconloader IconLoader.cpp:755 Unable to load icon . UnityProtocolAnnotatedIcon %7B'base-icon':%20%3C'https://3rdpartymedia.ubuntuone.com/7digital/static/img/sleeveart/00/009/036/0000903674_350.jpg'%3E,%20'category':%20%3Cuint32%203%3E,%20'ribbon':%20%3C'£2.49'%3E%7D at size 96x96: 
+WARN  2014-10-10 12:15:30 unity.iconloader IconLoader.cpp:755 Unable to load icon https://productsearch.ubuntu.com/imgs/weatherchannel/weather-clouds.svg at size 96x96: Cannot resolve hostname (productsearch.ubuntu.com)
+WARN  2014-10-10 12:15:30 unity.iconloader IconLoader.cpp:755 Unable to load icon https://productsearch.ubuntu.com/imgs/weatherchannel/weather-few-clouds-night.svg at size 96x96: Cannot resolve hostname (productsearch.ubuntu.com)
+WARN  2014-10-10 12:15:30 unity.iconloader IconLoader.cpp:755 Unable to load icon https://productsearch.ubuntu.com/imgs/weatherchannel/weather-storm.svg at size 96x96: Cannot resolve hostname (productsearch.ubuntu.com)
+WARN  2014-10-10 12:15:30 unity.iconloader IconLoader.cpp:755 Unable to load icon https://productsearch.ubuntu.com/smartscopes/anonymiser?u=http%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F6%2F61%2FCaspar_David_Friedrich_-_Der_Wanderer_%25C3%25BCber_dem_Nebelmeer.jpg%2F96px-Caspar_David_Friedrich_-_Der_Wanderer_%25C3%25BCber_dem_Nebelmeer.jpg&s=B9xCQV-UfKJTeAZumInXfXpX01qDUhG5RiVKRg== at size 96x96: Cannot resolve hostname (productsearch.ubuntu.com)
+WARN  2014-10-10 12:15:34 unity.iconloader IconLoader.cpp:755 Unable to load icon https://3rdpartymedia.ubuntuone.com/7digital/static/img/sleeveart/00/002/451/0000245177_350.jpg at size 92x96: Cannot resolve hostname (3rdpartymedia.ubuntuone.com)
+WARN  2014-10-10 12:15:34 unity.iconloader IconLoader.cpp:755 Unable to load icon https://3rdpartymedia.ubuntuone.com/7digital/static/img/sleeveart/00/005/654/0000565457_350.jpg at size 92x96: Cannot resolve hostname (3rdpartymedia.ubuntuone.com)
+WARN  2014-10-10 12:15:34 unity.iconloader IconLoader.cpp:755 Unable to load icon . UnityProtocolAnnotatedIcon %7B'base-icon':%20%3C'https://3rdpartymedia.ubuntuone.com/7digital/static/img/sleeveart/00/002/451/0000245177_350.jpg'%3E,%20'category':%20%3Cuint32%203%3E,%20'ribbon':%20%3C'£9.99'%3E%7D at size 96x96: 
+WARN  2014-10-10 12:15:34 unity.iconloader IconLoader.cpp:755 Unable to load icon . UnityProtocolAnnotatedIcon %7B'base-icon':%20%3C'https://3rdpartymedia.ubuntuone.com/7digital/static/img/sleeveart/00/005/654/0000565457_350.jpg'%3E,%20'category':%20%3Cuint32%203%3E,%20'ribbon':%20%3C'£8.91'%3E%7D at size 96x96: 
+Se creó una nueva ventana en la sesión existente del navegador.
 
-** (zeitgeist-datahub:2193): WARNING **: recent-manager-provider.vala:132: Desktop file for "file:///home/francisco/Escritorio/Clase_2/Tarea.tar.gz" was not found, exec: google-chrome-stable, mime_type: application/x-compressed-tar
-WARN  2014-10-09 11:52:02 unity.dash.view DashView.cpp:1263 Search failed  ''=> Timed out waiting for scope proxy connection
-WARN  2014-10-09 11:52:02 unity.dash.scopeproxy ScopeProxy.cpp:516 Could not search '' on home.scope => Timed out waiting for scope proxy connection
-WARN  2014-10-09 11:52:03 unity.iconloader IconLoader.cpp:755 Unable to load icon file:/// at size -1x22: No se puede abrir el directorio
-[WARNING:flash/platform/pepper/pep_module.cpp(63)] SANDBOXED
-
-** (zeitgeist-datahub:2193): WARNING **: recent-manager-provider.vala:132: Desktop file for "file:///home/francisco/Escritorio/Clase_2/Tarea.tar.gz" was not found, exec: google-chrome-stable, mime_type: application/x-compressed-tar
-
-** (zeitgeist-datahub:2193): WARNING **: recent-manager-provider.vala:132: Desktop file for "file:///home/francisco/Escritorio/Clase_2/Tarea.tar.gz" was not found, exec: google-chrome-stable, mime_type: application/x-compressed-tar
-
-** (zeitgeist-datahub:2193): WARNING **: recent-manager-provider.vala:132: Desktop file for "file:///home/francisco/Escritorio/Clase_2/Tarea.tar.gz" was not found, exec: google-chrome-stable, mime_type: application/x-compressed-tar
-[2367:2367:1009/120447:ERROR:CONSOLE(0)] "Application Cache Error event: Manifest fetch failed (6) https://www.google.com.mx/_/chrome/newtab/manifest?espv=2&ie=UTF-8", source: https://www.google.com.mx/_/chrome/newtab?espv=2&ie=UTF-8 (0)
-ERROR 2014-10-09 12:24:22 unity.settings UnitySettings.cpp:366 Invalid monitor index: -1. Returning index 0 monitor instead.
-
-** (zeitgeist-datahub:2193): WARNING **: recent-manager-provider.vala:132: Desktop file for "file:///home/francisco/Escritorio/Clase_2/Tarea.tar.gz" was not found, exec: google-chrome-stable, mime_type: application/x-compressed-tar
-
-** (zeitgeist-datahub:2193): WARNING **: recent-manager-provider.vala:132: Desktop file for "file:///home/francisco/Escritorio/Clase_2/Tarea.tar.gz" was not found, exec: google-chrome-stable, mime_type: application/x-compressed-tar
+** (zeitgeist-datahub:2165): WARNING **: recent-manager-provider.vala:132: Desktop file for "file:///home/francisco/Escritorio/Clase_2/Tarea.tar.gz" was not found, exec: google-chrome-stable, mime_type: application/x-compressed-tar

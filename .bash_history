@@ -362,3 +362,57 @@ ls
 cd Programacion_Web/
 cp /home/francisco/Escritorio/Pagina_Web.zip Pagina_Web.zip
 ls
+git clone https://github.com/pakitoslash/Programacion_Web.git
+ls
+git clone https://github.com/pakitoslash/Programacion_Web.git
+ls
+git status
+git add -A
+git commit -m Hola este es mi archivo
+git commit -m "Hola este es mi archivo"
+git push
+git commit -m "Hola este es mi archivo"
+grit add -A
+git add -A
+git commit -m "ESte es mi pagina web"
+git push
+git add -A
+git commit -m "ESte es mi pagina web"
+git push
+git branch
+git push origin ramaPrebe28
+git clone https://github.com/pakitoslash/Programacion_Web.git
+ls
+cd Programacion_Web/
+ls
+git branch
+git branch 
+git checkout -b miRama28 
+git branch
+git clone https://github.com/pakitoslash/Programacion_Web.git
+cd..
+cd ..
+cd /homr
+cd /home
+ls
+cd francisco
+ls
+git clone https://github.com/pakitoslash/Programacion_Web.git
+ls
+cd Programacion_Web/
+ls
+git statua
+git status
+git checkout -b fix_readme 
+git checkout -b miRama
+git branch
+git status
+git add -A
+git commit -m "Mis archivos"
+git push
+git branch
+git push origin miRama
+git commit -m "Ya subi mi tarea de hoy viernes yupi ;)"
+git add -A
+git commit -m "Ya subi mi tarea de hoy viernes yupi ;)"
+git push origin miRama 
