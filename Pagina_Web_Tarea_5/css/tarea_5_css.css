@@ -27,11 +27,11 @@
 	th:hover
 	{
 		font-size: 20px;
+		background: radial-gradient(orange,yellow,green);		
 	}
 
 	th
 	{	
-
 		width: 135px; 
 		height: 40px; 
 	}
@@ -46,6 +46,7 @@
 	img:hover
 	{
 		transform: scale(1.1)
+
 	}
 
 	table
@@ -57,7 +58,7 @@
 
 	}
 
-	thead
+	td:hover
 	{
-		background: radial-gradient(red,blue,yellow);
+		background: radial-gradient(red,blue,green);		
 	}
