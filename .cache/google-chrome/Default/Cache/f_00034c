@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><!-- InstanceBegin template="/Templates/plantilla_php.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Procesos e hilos en C de Unix/Linux</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<!-- InstanceBeginEditable name="head" -->
+  
+  <meta name="GENERATOR"
+ content="Mozilla/4.5 [en] (Win98; I) [Netscape]" />
+  <meta name="Author" content="Chuidiang Roxas" />
+  <meta name="Description"
+ content="Ejemplo b&aacute;sico de proceso y de thread en c para linux" />
+  <meta name="Keywords"
+ content="procesos, hilos, threads, fork, c, linux" />
+  
+<!-- InstanceEndEditable -->
+<link href="/estilo_general.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<script type="text/javascript">window.___gcfg = {lang: 'es'};(function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = 'https://apis.google.com/js/plusone.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();</script><div id="cabecera"><h1><a href="http://www.chuidiang.com">Ejemplos java y C/linux</a> <g:plusone></g:plusone> <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="chuidiang" data-lang="es">Twittear</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script></h1><div id="busqueda_google"><!-- SiteSearch Google -->
+<form method="get" action="http://www.google.es/custom" target="_top">
+<table border="0" bgcolor="#ffffff">
+<tr><td nowrap="nowrap" valign="top" align="left" height="32">
+<a href="http://www.google.com/">
+<img src="http://www.google.com/logos/Logo_25wht.gif" border="0" alt="Google" align="middle"></img></a>
+</td>
+<td nowrap="nowrap">
+<input type="hidden" name="domains" value="chuidiang.com"></input>
+<label for="sbi" style="display: none">Introduzca los términos de búsqueda.</label>
+<input type="text" name="q" size="30" maxlength="255" value="" id="sbi"></input>
+<label for="sbb" style="display: none">Envíe el formulario de búsqueda</label>
+<input type="submit" name="sa" value="Búsqueda" id="sbb"></input>
+</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td nowrap="nowrap">
+<table>
+<tr>
+<td>
+<input type="radio" name="sitesearch" value="" checked="checked" id="ss0"></input>
+<label for="ss0" title="Buscar en la web"><font size="-1" color="#000000">Web</font></label></td>
+<td>
+<input type="radio" name="sitesearch" value="chuidiang.com" id="ss1"></input>
+<label for="ss1" title="Búsqueda chuidiang.com"><font size="-1" color="#000000">chuidiang.com</font></label></td>
+</tr>
+</table>
+<input type="hidden" name="client" value="pub-9287470222246340"></input>
+<input type="hidden" name="forid" value="1"></input>
+<input type="hidden" name="ie" value="ISO-8859-1"></input>
+<input type="hidden" name="oe" value="ISO-8859-1"></input>
+<input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;LH:100;LW:92;L:http://www.chuidiang.com/iconos/serpi.gif;S:http://www.chuidiang.com;LP:1;FORID:1"></input>
+<input type="hidden" name="hl" value="es"></input>
+</td></tr></table>
+</form>
+<!-- SiteSearch Google --></div></div><div id="barra_izquierda">	<h2>Tutoriales</h2>
+	<ul>
+		<li><a href="/java/index.php">Java</a></li>
+		<li><a href="/clinux/index.php">C/C++ de Linux</a></li>
+		<li><a href="/ood/index.php">MetodologÃ­as y diseÃ±o orientado a objetos</a></li>
+		<li><a href="/css/index.php">CSS</a></li>
+		<li style="list-style-type:none"><br/><script type="text/javascript"><!--
+google_ad_client = "pub-9287470222246340";
+google_ad_width = 120;
+google_ad_height = 240;
+google_ad_format = "120x240_as";
+google_ad_type = "text";
+//2006-12-16: blog_wordpress
+google_ad_channel = "0854862819";
+google_color_border = "ffffff";
+google_color_bg = "ffffff";
+google_color_link = "0066B3";
+google_color_text = "000000";
+google_color_url = "0066B3";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></li>
+	</ul><h2>Enlaces</h2>
+	<ul>
+		<li><a href="http://blog.chuidiang.com">Diario de Programaci&oacute;n</a></li>
+		<li><a href="http://chuidiang.org">M&aacute;s de Java</a></li>
+		<li><a href="http://chuwiki.chuidiang.org">Chuwiki</a></li>
+		<li><a href="http://micro-blog.chuidiang.org">Micro entradas</a></li>
+		<li><a href="http://foro.chuidiang.com">Foro de Java y C++</a></li>
+		<li><a href="http://proyectos.chuidiang.com">Mis proyectos</a></li>
+		<li><a href="http://www.chuidiang.com/varios/index.php">Pasatiempos</a></li>
+	</ul><h2>Licencia</h2>
+	<div class="postit"><!--Creative Commons License-->
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/deed.es">
+<img alt="Creative Commons License" style="border-width: 0" src="http://i.creativecommons.org/l/by-nc-sa/2.5/es/88x31.png"/>
+</a>
+<br/>Esta obra est&#225; bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/deed.es">licencia de Creative Commons</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+       <Work rdf:about="">
+               <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" />
+       <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+       </Work>
+       <License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> -->
+	   <br/>Para reconocer la autor&iacute;a debes poner el enlace <a href="http://www.chuidiang.com">http://www.chuidiang.com</a>
+</div></div>  <div id="contenedor">
+  	<div id="contenido"> 
+	<div id="barra_google"><script type="text/javascript"><!--
+google_ad_client = "pub-9287470222246340";
+google_ad_width = 468;
+google_ad_height = 15;
+google_ad_format = "468x15_0ads_al";
+//2006-10-30: barra
+google_ad_channel = "8560508614";
+google_color_border = "ffffff";
+google_color_bg = "ffffff";
+google_color_link = "0066B3";
+google_color_text = "663300";
+google_color_url = "0066B3";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>	<h3><!-- InstanceBeginEditable name="TituloArticulo" -->Procesos e Hilos en 
+      C de Unix/Linux<!-- InstanceEndEditable --></h3>
+	<!-- InstanceBeginEditable name="ParrafoInicial" -->
+    <p>Vamos a ver lo b&aacute;sico de hilos y procesos. Las diferencias entre 
+      ellos y alg&uacute;n ejemplo sencillo de cada. Vermos la funci&oacute;n 
+      <strong>fork()</strong> para procesos y los hilos de la librer&iacute;a 
+      <strong>POSIX</strong>.</p>
+    <ul><li><a href="#procesoshilos">Procesos y threads (hilos de ejecuci&oacute;n)</a></li> 
+      <li><a href="#procesos">Ejemplo de programaci&oacute;n de procesos</a></li> 
+      <li><a href="#hilos">Ejemplo de programaci&oacute;n de hilos</a></li> 
+    </ul>
+    <!-- InstanceEndEditable -->
+	<div id="anuncio_central"><script type="text/javascript"><!--
+google_ad_client = "pub-9287470222246340";
+/* 336x280, creado 15/06/10 principal */
+google_ad_slot = "6087327506";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9287470222246340";
+/* 336x280, creado 15/06/10 principal */
+google_ad_slot = "6087327506";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>	<!-- InstanceBeginEditable name="RestoArticulo" --> 
+    <h4> <a name="procesoshilos" id="procesoshilos"></a>Procesos y Threads (hilos 
+      de ejecuci&oacute;n) </h4>
+    <p> Si queremos que nuestro programa empiece a ejecutar varias cosas 
+      "a la vez", tenemos dos opciones. Por una parte podemos crear un nuevo proceso 
+      y por otra, podemos crear un nuevo hilo de ejecuci&oacute;n (un thread). 
+      En realidad nuestro ordenador, salvo que tenga varias cpu, no ejecutar&aacute; 
+      varias cosas a la vez. Cuando digo "a la vez", me refiero a que el sistema 
+      operativo ir&aacute; ejecutando cachos de programa por turnos (por rodajas 
+      de tiempo) de forma muy r&aacute;pida, dando la sensaci&oacute;n de simultaneidad. 
+    </p>
+    <h4>&iquest;Cual es la diferencia entre proceso e hilo? </h4>
+    <p> Un proceso de unix es cualquier programa en ejecuci&oacute;n y es 
+      totalmente independiente de otros procesos. El comando de unix ps nos lista 
+      los procesos en ejecuci&oacute;n en nuestra m&aacute;quina. Un proceso tiene 
+      su propia zona de memoria y se ejecuta "simult&aacute;neamente" a otros 
+      procesos. Es totalemente imposible en unix que un proceso se meta, a posta 
+      o por equivocaci&oacute;n, en la zona de memoria de otro proceso. Esta es 
+      una de las caracteristicas que hace de unix un sistema fiable. Un programa 
+      chapucero o malintencionado no puede fastidiar otros programas en ejecuci&oacute;n 
+      ni mucho menos a los del sistema operativo. Si el programa chapucero se 
+      cae, se cae s&oacute;lo &eacute;l. </p>
+    <p> Dentro de un proceso puede haber varios hilos de ejecuci&oacute;n 
+      (varios threads). Eso quiere decir que un proceso podr&iacute;a estar haciendo 
+      varias cosas "a la vez". Los hilos dentro de un proceso comparten todos 
+      la misma memoria. Eso quiere decir que si un hilo toca una variable, todos 
+      los dem&aacute;s hilos del mismo proceso ver&aacute;n el nuevo valor de 
+      la variable. Esto hace imprescindible el uso de <a href="../ipcs/semaforo.php">sem&aacute;foros</a> 
+      o mutex (EXclusi&oacute;n MUTua, que en ingl&eacute;s es al rev&eacute;s, 
+      funciones <strong>pthread_mutex...</strong>) para evitar que dos threads 
+      accedan a la vez a la misma estructura de datos. Tambi&eacute;n hace que 
+      si un hilo "se equivoca" y corrompe una zona de memoria, todos los dem&aacute;s 
+      hilos del mismo proceso vean la memoria corrompida. Un fallo en un hilo 
+      puede hacer fallar a todos los dem&aacute;s hilos del mismo proceso. 
+    </p>
+    <p> Un proceso es, por tanto,&nbsp; m&aacute;s costoso de lanzar, ya 
+      que se necesita crear una copia de toda la memoria de nuestro programa. 
+      Los hilos son m&aacute;s ligeros. </p>
+    <p> En cuanto a complejidad, en los hilos, al compartir la memoria y 
+      los recursos, es casi obligado el uso de mutex o <a href="../ipcs/semaforo.php">sem&aacute;foros</a>, 
+      as&iacute; que su programaci&oacute;n suele ser m&aacute;s complicada y 
+      se necesita ser m&aacute;s cuidadoso. Un proceso, en el momento de lanzarlo, 
+      se hace independiente del nuestro, as&iacute; que no deber&iacute;amos tener 
+      ning&uacute;n problema, salvo que necesitemos comunicaci&oacute;n entre 
+      ellos, que nos liar&iacute;amos a programar <a
+ href="../ipcs/mem_comp.php">memorias compartidas</a> (con sus correspondientes 
+      <a
+ href="../ipcs/semaforo.php">sem&aacute;foros</a>), <a href="../ipcs/colas.php">colas 
+      de mensajes</a>, <a href="../sockets/sockets_simp.php">sockets</a> o cualquier 
+      otro mecanismo de comunicaci&oacute;n entre procesos unix. </p>
+    <p>&nbsp;&iquest;Qu&eacute; elegimos? &iquest;Un proceso o un hilo?. 
+      Depende de muchos factores, pero yo (y es cosa mia, que tengo un PC obsoleto 
+      con linux), suelo elegir procesos cuando una vez lanzado el hijo no requiero 
+      demasiada comunicaci&oacute;n con &eacute;l. Elijo hilos cuando tienen que 
+      compartir y actualizarse datos. Por ah&iacute; he leido que para gestionar 
+      entradas/salidas es mejor procesos (atender simultaneamente a varias entradas 
+      de sockets, por ejemplo) y que para hacer programas con muchos c&aacute;lculos 
+      en paralelo con varias cpu es mejor hilos, siempre y cuando el sistema operativo 
+      sea capaz de repartir autom&aacute;ticamente los hilos en las distintas 
+      cpu en funci&oacute;n de su carga de trabajo.</p>
+    <h4><a name="procesos" id="procesos"></a>Ejemplo de programaci&oacute;n 
+      de procesos </h4>
+    <p> Vamos a hacer un peque&ntilde;o ejemplo de programaci&oacute;n de 
+      procesos. Intentaremos con el ejemplo, adem&aacute;s de lanzar un nuevo 
+      proceso, comprobar que efectivamente las variables "se duplican". M&aacute;s 
+      adelante veremos c&oacute;mo <a href="masprocesos.php">comunicar</a> padre 
+      e hijo. </p>
+    <p> La funci&oacute;n C que crea un nuevo proceso es <strong>fork()</strong>. 
+      &iexcl;Qu&eacute; suerte!, tiene mucha miga, pero no lleva par&aacute;metros 
+    </p>
+    <p> Cuando llamamos a <strong>fork()</strong>, en alg&uacute;n lugar 
+      dentro de la funci&oacute;n, se duplican los procesos y empiezan a correr 
+      por separado. Cuando llega el momento de retornar de dicha funci&oacute;n 
+      (y ya tenemos dos procesos), al proceso original le devuelve un identificador 
+      del proceso recien creado (el mismo numerito que vemos con el comando <strong>ps</strong> 
+      de una shell). Al proceso recien creado le devuelve 0. &Eacute;chale un 
+      ojo a la figura para entenderlo mejor. </p>
+    <div style="text-align:center;"> 
+      <div>Interioridades de fork() y creaci&oacute;n de un nuevo proceso</div>
+      <div><img src="fork.gif" alt="Grafico de tiempo de fork()"
+ height="500" width="500" /></div>
+      <div>En <font color="#FF0000">rojo</font> el c&oacute;digo que habr&iacute;a 
+        en nuestro programa. <br />
+        En <font color="#3333ff">azul </font>los procesos que ir&iacute;an corriendo 
+        (el tiempo transcurre de arriba a abajo).</div>
+    </div>
+    <p>El motivo de hacer esto as&iacute; es que cada proceso pueda saber si es 
+      el original (proceso padre) o el nuevo (proceso hijo) y poder hacer as&iacute; 
+      cosas distintas. Si metemos el <strong><u>fork()</u></strong> en un if, 
+      como en la figura, el proceso original sigue por la parte del <strong>else</strong> 
+      y el nuevo proceso por el <strong>then</strong>. De esta manera, el proceso 
+      original, por ejemplo, podr&iacute;a seguir atendiendo nuevos clientes que 
+      quieran conectarse a nuestro programa por un <a
+ href="../sockets/sockets_simp.php">socket</a>, mientras que el proceso hijo podr&iacute;a 
+      atender a un cliente que acaba de conectarse y que es el que ha provocado 
+      que lancemos el <strong>fork()</strong>.</p>
+    <p> A partir de aqu&iacute; ya podemos programar normalmente. Hay que 
+      tener en cuenta que se ha duplicado todo el espacio de memoria. Por ello, 
+      ambos procesos tienen todas las variables repetidas, pero distintas. Si 
+      el proceso original toca la variable "contador", el proceso hijo no ver&aacute; 
+      reflejado el cambio en su versi&oacute;n de "contador". </p>
+    <p> Otro tema a tener en cuenta es que si antes del <strong>fork()</strong> 
+      tenemos, por ejemplo, un fichero abierto (un fichero normal, un socket, 
+      una pipa o cualquier otra cosa), despu&eacute;s del <strong>fork()</strong> 
+      ambos procesos tendr&aacute;n abierto el mismo fichero y ambos podr&aacute;n 
+      escribir en &eacute;l. Es m&aacute;s, uno de los procesos puede cerrar el 
+      fichero mientras que el otro lo puede seguir teniendo abierto. </p>
+    <p> La funcion <strong>fork()</strong> tambi&eacute;n puede devolver 
+      <strong>-1</strong> en caso de error. Si esto ocurre, no se ha creado ning&uacute;n 
+      nuevo proceso. El ejemplo de la figura no ser&iacute;a v&aacute;lido, porque 
+      el <strong>if ( fork() )</strong>, en caso de devolver <strong>-1</strong>, 
+      se ir&iacute;a por el <strong>else</strong>, pero en realidad no se ha creado 
+      ning&uacute;n proceso hijo. Hay dos posibilidades: meter el <strong>fork()</strong> 
+      en un <strong>switch</strong> o guardarse la vuelta de <strong>fork()</strong> 
+      en una variable y luego hacer varios <strong>if</strong>. El ejemplo del 
+      <strong>switch</strong> ser&iacute;a </p>
+    <p class="codigo">switch (fork()) <br />
+      { <br />
+      &nbsp;&nbsp;&nbsp; case -1: <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* C&oacute;digo de error */ 
+      <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ... <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;<br />
+      &nbsp;&nbsp;&nbsp; case 0: <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* C&oacute;digo del proceso 
+      hijo */ <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ... <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;<br />
+      &nbsp;&nbsp;&nbsp; default: <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ... <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* C&oacute;digo del proceso 
+      original */ <br />
+      } </p>
+    <p><a name="wait" id="wait"></a>Una vez lanzado el proceso hijo, el padre 
+      puede "esperar" que el hijo termine. Para ello tenemos la funci&oacute;n 
+      <strong>wait()</strong>. A la funci&oacute;n <strong>wait()</strong> se 
+      le pasa la direcci&oacute;n de un entero para que nos lo devuelva relleno. 
+      La funci&oacute;n <strong>wait()</strong> deja dormido al proceso que la 
+      llama hasta que alguno de sus procesos hijo termina, es decir, si llamamos 
+      a <strong>wait()</strong>, nos quedamos ah&iacute; parados hasta que el 
+      hijo termine. A la salid, en el entero tendremos guardada informaci&oacute;n 
+      de c&oacute;mo ha terminado el hijo (ha llamado a un <strong>exit()</strong>, 
+      alguien le ha matado, se ha caido, etc). </p>
+    <p> En el ejemplo, al llamar a <strong>wait()</strong> ... </p>
+    <p class="codigo">int estadoHijo; <br />
+      ... <br />
+      wait (&amp;estadoHijo); </p>
+    <p> ... el proceso original (padre), se queda dormido hasta que el nuevo 
+      proceso (hijo) termina. </p>
+    <p> Una vez que salimos del <strong>wait()</strong>, tenemos unas macros 
+      que nos permiten evaluar el contenido de <strong>estadoHijo</strong>. Hay 
+      varias, pero un par de ellas m&aacute;s o menos &uacute;tiles son: 
+    </p>
+    <ul>
+      <li> <strong>WIFEXITED(estadoHijo)</strong> es <strong>0</strong> 
+        si el hijo ha terminado de una manera anormal (caida, matado con un <strong>kill</strong>, 
+        etc). Distinto de <strong>0</strong> si ha terminado porque ha hecho una 
+        llamada a la funci&oacute;n <strong>exit()</strong></li>
+      <li> <strong>WEXITSTATUS(estadoHijo)</strong> devuelve el valor que 
+        ha pasado el hijo a la funci&oacute;n <strong>exit()</strong>, siempre 
+        y cuando la macro anterior indique que la salida ha sido por una llamada 
+        a <strong>exit()</strong>.</li>
+    </ul>
+    <p>Por ello, podemos hacer algo como </p>
+    <p class="codigo">if ( WIFEXITED(estadoHijo) != 0) <br />
+      { <br />
+      &nbsp;&nbsp;&nbsp; printf ("Mi hijo ha hecho exit (%d)\n", WEXITSTAUS (estadoHijo)); 
+      <br />
+      } </p>
+    <p> En el c&oacute;digo de ejemplo <a href="pfork.c.txt">pfork.c</a> 
+      tienes exactamente esto. Puedes descargarlo, quitarle la extensi&oacute;n 
+      .txt, compilarlo con <strong>make pfork</strong> (sin Makefile) o con <strong>gcc 
+      pfork.c -o pfork</strong>. Si lo ejecutas ver&aacute;s en pantalla lo que 
+      va pasando. En otra terminal y siendo un poco h&aacute;bil, puedes poner 
+      <strong>ps</strong> para ver los procesos que van corriendo. Ver&aacute;s 
+      que primero hay un pfork y que luego hay dos. </p>
+    <p> Adem&aacute;s se ha declarado en el c&oacute;digo una variable <strong>int 
+      variable = 1</strong>. El proceso hijo cambia el valor de dicha variable 
+      por un valor <strong>2</strong> y sale. El padre espera que muera el hijo 
+      y escribe en pantalla el valor del <strong>exit()</strong> del hijo y el 
+      valor de la variable, que para &eacute;l permanece inalterada, sigue siendo 
+      <strong>1</strong>. </p>
+    <p>El siguiente paso es ver c&oacute;mo <a href="masprocesos.php">comunicar 
+      padre e hijo</a>. </p>
+    <h4>
+      <a name="hilos" id="hilos"></a>Ejemplo de programaci&oacute;n de Hilos 
+    </h4>
+    <p> Como ejemplo de hilos, vamos a hacer un programa que cree un hilo. 
+      Luego, tanto el programa principal como el hilo se meter&aacute;n en un 
+      bucle infinito. El primero se dedicar&aacute; a incrementar un contador 
+      y escribir su valor en pantalla. El hilo decrementar&aacute; el mismo contador 
+      y escribir&aacute; su valor en pantalla. El resultado es que veremos en 
+      pantalla el contador increment&aacute;ndose y decrement&aacute;ndose a toda 
+      velocidad. </p>
+    <p> Mas adelante veremos c&oacute;mo hacer que <a href="mashilos.php#join">un 
+      hilo espere a otro</a> o como <a href="mashilos.php#mutex">sincronizarlos</a> 
+      para acceso a estructuras de datos. </p>
+    <p> La funci&oacute;n que nos permite crear un un nuevo hilo de ejcuci&oacute;n 
+      es <strong>pthread_create()</strong> que admite cuatro par&aacute;metros: 
+    </p>
+    <ul>
+      <li> <strong>pthread_t *</strong> es un puntero a un identificador 
+        de thread. La funci&oacute;n nos devolver&aacute; este valor relleno, 
+        de forma que luego podamos referenciar al hilo para "hacerle cosas", como 
+        matarlo, esperar por &eacute;l, etc.</li>
+      <li> <strong>pthread_attr_t *</strong> son los atributos de creaci&oacute;n 
+        del hilo. Hay varios atributos posibles, como por ejemplo la prioridad. 
+        Un hilo de mayor prioridad se ejecutar&aacute; con preferencia (tendr&aacute; 
+        m&aacute;s rodajas de tiempo) que otros hilos de menor prioridad. Se puede 
+        pasar <strong>NULL</strong>, con lo que el hilo se crear&aacute; con sus 
+        atributos por defecto y para nuestro ejemplo es suficiente. Si queremos 
+        un programa que cree y destruya hilos continuamente, no vale <strong>NULL</strong>, 
+        ya que con esta opci&oacute;n dejaremos memoria sin liberar cada vez que 
+        termine un hilo.</li>
+      <li> <strong>void *(*)(void *)</strong> es un tipo la mar de raro. 
+        Aunque asuste, no es m&aacute;s que el tipo de una funci&oacute;n que 
+        admite un puntero <strong>void *</strong> y que devuelve <strong>void 
+        *</strong>. Eso quiere decir que a este par&aacute;metro le podemos pasar 
+        el nombre de una funci&oacute;n que cumpla lo que acabamos de decir. Esta 
+        funci&oacute;n es la que se ejecutar&aacute; como un hilo aparte. El hilo 
+        terminar&aacute; cuando la funci&oacute;n termine o cuando llame a la 
+        funci&oacute;n <strong>pthread_exit() </strong>(o que alguien lo mate 
+        desde otra parte del c&oacute;digo). Es bastante habitual hacer que esta 
+        funci&oacute;n se meta en un bucle infinito y quede suspendida en un <a href="../ipcs/semaforo.php">sem&aacute;foro</a> 
+        o a la espera de una se&ntilde;al para hacer lo que tenga que hacer y 
+        volver a quedar dormida. </li>
+      <li> <strong>void *</strong> es el par&aacute;metro que se le pasar&aacute; 
+        a la funci&oacute;n anterior cuando se ejecute en el hilo aparte. De esta 
+        manera nuestro programa principal puede pasar un &uacute;nico par&aacute;metro 
+        (que puede ser cualquier cosa, como una estructura compleja) a la funci&oacute;n 
+        que se ejecutar&aacute; en el hilo. La funci&oacute;n del hilo s&oacute;lo 
+        tendr&aacute; que hacer el "cast" adecuado. 
+        <p class="codigo">void *funcionDelHilo (void *parametro) <br />
+          { <br />
+          &nbsp;&nbsp;&nbsp; EstructuraGorda *miEstructura = (EstructuraGorda 
+          *)parametro; <br />
+          &nbsp;&nbsp;&nbsp; ... <br />
+          } </p>
+        <p>En nuestro ejemplo no le pasaremos ning&uacute;n par&aacute;metro, 
+          es decir, pondremos <strong>NULL</strong>.</p>
+      </li>
+    </ul>
+    <p>La funci&oacute;n <strong>pthread_create() </strong>devuelve <strong>0</strong> 
+      si todo ha ido bien. Un valor distinto de <strong>0</strong> si ha habido 
+      alg&uacute;n problema y no se ha creado el thread. </p>
+    <p> El c&oacute;digo de creaci&oacute;n del <strong>thread</strong> 
+      quedar&iacute;a. </p>
+    <p class="codigo">void *funcionDelThread (void *); <br />
+      ... <br />
+      pthread_t idHilo; <br />
+      ... <br />
+      pthread_create (&amp;idHilo, NULL, funcionDelThread, NULL); </p>
+    <p> Ya est&aacute; creado el thread. Ahora nuestro programa principal 
+      seguir&aacute; a lo suyo y la <strong>funci&oacute;nDelThread()</strong> 
+      se estar&aacute; ejecutando "simult&aacute;neamente". </p>
+    <ul>
+      <li> Podemos <a href="mashilos.php#join">hacer que un hilo espere 
+        por otro</a>. Para ello tenemos la funci&oacute;n <strong>pthread_join()</strong>.</li>
+      <li>  Podemos <a href="mashilos.php#mutex">hacer que dos o m&aacute;s 
+        hilos accedan <strong>sincronizadamente</strong> a un recurso com&uacute;n</a>. 
+        Para ellto tenemos las funciones <strong>pthread_mutex_lock()</strong> 
+        y similares. </li>
+    </ul>
+    <p> Hay un peque&ntilde;o detalle a tener en cuenta. En linux de PC 
+      todo esto funciona correctamente (al menos en el mio). Sin embargo, hay 
+      otros microprocesadores/sistemas operativos que requieren que los threads 
+      "colaboren" entre ellos. Un ejemplo es Sparc/Solaris. El sistema operativo 
+      pone en marcha uno de los threads y no le quita el control hasta que &eacute;l 
+      lo diga. Los dem&aacute;s threads quedan parados hasta que el primero "ceda 
+      el control". Para ceder el control suele haber funciones estilo <strong>yield()</strong>, 
+      <strong>thr_yield()</strong>, <strong>pthread_delay_pn()</strong>, etc. 
+      Tambi&eacute;n se cede el control si se hacen llamadas que dejen dormido 
+      al thread en espera de algo, como <strong><a
+ href="#wait">wait()</a></strong>, <strong>sleep()</strong>, etc. As&iacute; que 
+      ya sabes, si ejecutas el ejemplo y ves que el contador s&oacute;lo se incrementa 
+      o s&oacute;lo se decrementa, quiz&aacute;s haya que poner usleep (1) dentro 
+      de los bucles, despu&eacute;s del printf(). </p>
+    <p> Puedes descargar <a href="pthread.c.txt">pthread.c</a>, el <a
+ href="Makefile.txt">Makefile</a>, quitarles la extensi&oacute;n .txt y compilar 
+      con <strong>make pthread</strong> o bien <strong>gcc pthread.c -lpthread 
+      -o pthread</strong>. Necesitas linkar con la libreria libpthread.a, de ah&iacute; 
+      la necesidad de Makefile o del -lpthread. Si lo ejecutas ver&aacute;s en 
+      pantalla el valor del contador increment&aacute;ndose durante un rato, hasta 
+      que entre en ejecuci&oacute;n el segundo hilo. A partir de ese momento, 
+      se incrementar&aacute; y decrementar&aacute; a toda velocidad. Tendr&aacute;s 
+      que pararlo con Ctrl-C.</p>
+    <!-- InstanceEndEditable -->
+	<h4>Estad&iacute;sticas y comentarios</h4><h5>Numero de visitas desde el 4 Feb 2007:</h5><ul><li>Esta pagina este mes: 928</li><li>Total de esta pagina: 238528</li><li>Total del sitio: 14667882</li></ul></div>
+	  </div>
+  	<div id="pie"><script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-256265-1";
+urchinTracker();
+</script></div></body>
+<!-- InstanceEnd --></html>

@@ -3,11 +3,11 @@
       "last_known_google_url": "https://www.google.com.mx/",
       "last_prompted_google_url": "https://www.google.com.mx/",
       "window_placement": {
-         "bottom": 664,
-         "left": 295,
+         "bottom": 673,
+         "left": 296,
          "maximized": true,
-         "right": 870,
-         "top": 24,
+         "right": 871,
+         "top": 33,
          "work_area_bottom": 664,
          "work_area_left": 65,
          "work_area_right": 1366,
@@ -16,6 +16,10 @@
    },
    "countryid_at_install": 19800,
    "default_apps_install_state": 3,
+   "dns_prefetching": {
+      "host_referral_list": [ 2, [ "http://a.disquscdn.com/", [ "http://a.disquscdn.com/", 4.021518297423433 ] ], [ "http://barradevblog.wordpress.com/", [ "http://cdn.api.twitter.com/", 1.7529842543438134, "http://pagead2.googlesyndication.com/", 1.7529842543438134, "http://platform.twitter.com/", 1.7529842543438134, "http://r.skimresources.com/", 1.7529842543438134, "http://rma-api.gravity.com/", 1.7529842543438134, "http://s1.wp.com/", 2.262398482101845, "http://s2.wp.com/", 2.771812709859876, "http://t.skimresources.com/", 2.007691368222829, "http://widgets.wp.com/", 1.7529842543438134, "https://graph.facebook.com/", 1.7529842543438134 ] ], [ "http://batchdrake.wordpress.com/", [ "http://0.gravatar.com/", 2.4575561048895462, "http://1.gravatar.com/", 2.7693356107337426, "http://2.gravatar.com/", 2.4575561048895462, "http://img164.imageshack.us/", 2.1457765990453503, "http://img516.imageshack.us/", 2.1457765990453503, "http://s.skimresources.com/", 2.1457765990453503, "http://s0.wp.com/", 3.392894622422135, "http://s1.wp.com/", 2.4575561048895462, "http://s2.wp.com/", 2.7693356107337426, "http://stats.wp.com/", 2.1457765990453503 ] ], [ "http://bibliaubuntu.a.freewiki.in/", [ "http://bibliaubuntu.a.freewiki.in/", 5.260748316557643, "http://bibliaubuntu.a.wiki-site.com/", 1.6545901963366785, "http://bibliaubuntu.wiki-site.com/", 1.6545901963366785, "http://gnu.active.co.il/", 1.6545901963366785, "http://googleads.g.doubleclick.net/", 2.3758218203808714, "http://pagead2.googlesyndication.com/", 2.616232361728936, "http://www.gstatic.com/", 1.6545901963366785 ] ], [ "http://bits.wikimedia.org/", [ "http://upload.wikimedia.org/", 2.396465845114725 ] ], [ "http://charliedontcode.com/", [ "http://a.disquscdn.com/", 1.5172568052602975, "http://ajax.googleapis.com/", 1.5172568052602975, "http://charliedontcode.com/", 3.7218179752966263, "http://disqus.com/", 1.5172568052602975, "http://platform.twitter.com/", 1.7377129222639303, "http://santiagobasulto.disqus.com/", 1.5172568052602975, "http://www.google-analytics.com/", 1.7377129222639303, "http://www.vogella.com/", 1.7377129222639303, "https://accounts.google.com/", 1.5172568052602975, "https://apis.google.com/", 2.1786251562711962 ] ], [ "http://cm.g.doubleclick.net/", [ "http://cm.g.doubleclick.net/", 1.8043542189575343, "http://google-cm.p.veruta.com/", 1.8043542189575343, "http://rtd.tubemogul.com/", 1.8043542189575343 ] ], [ "http://conjugador.reverso.net/", [ "http://ajax.googleapis.com/", 2.328696470620408, "http://api.conduit.com/", 1.8043542189575343, "http://cm.g.doubleclick.net/", 2.066525344788971, "http://conjugador.reverso.net/", 3.1152098481147172, "http://googleads.g.doubleclick.net/", 2.066525344788971, "http://pagead2.googlesyndication.com/", 3.1152098481147172, "http://pubads.g.doubleclick.net/", 1.8043542189575343 ] ], [ "http://conociendogithub.readthedocs.org/", [ "http://conociendogithub.readthedocs.org/", 2.6963010820854345, "https://cdnjs.cloudflare.com/", 1.5617189435841379, "https://fonts.googleapis.com/", 1.5617189435841379, "https://media.readthedocs.org/", 2.923217509785694 ] ], [ "http://cypascal.blogspot.mx/", [ "http://www3.clustrmaps.com/", 3.2962989125217765, "https://www.blogger.com/", 2.084686339270529 ] ], [ "http://disqus.com/", [ "http://a.disquscdn.com/", 3.9573111075348613, "http://disqus.com/", 1.7220542861399788, "http://juggler.services.disqus.com/", 0.90132760571945, "http://referrer.disqus.com/", 1.1090877143148081, "http://www.google-analytics.com/", 0.7726464883999613 ] ], [ "http://docs.oracle.com/", [ "http://docs.oracle.com/", 6.078080475908073, "http://download.oracle.com/", 3.0227013119435315 ] ], [ "http://es.tldp.org/", [ "http://www.fie.us.es/", 2.127083409456189 ] ], [ "http://es.wikibooks.org/", [ "http://bits.wikimedia.org/", 3.392894622422135 ] ], [ "http://f.vimeocdn.com/", [ "http://player.vimeo.com/", 1.474060504014537 ] ], [ "http://facebook.com/", [ "http://www.facebook.com/", 0.4585205281485643, "https://www.facebook.com/", 0.4585205281485643 ] ], [ "http://fonts.googleapis.com/", [ "http://fonts.gstatic.com/", 3.923817315476035 ] ], [ "http://git-scm.com/", [ "http://beacon-6.newrelic.com/", 2.3775363804964185, "http://git-scm.com/", 37.4153153225384, "http://js-agent.newrelic.com/", 2.3775363804964185, "http://p.typekit.net/", 2.3775363804964185, "http://secure.gaug.es/", 3.899184306743438, "http://use.typekit.com/", 4.470008640544152, "https://www.google.com/", 2.1228292666174027 ] ], [ "http://gmail.com/", [ "https://accounts.google.com/", 2.771642501425901, "https://gmail.com/", 2.771642501425901, "https://mail.google.com/", 2.771642501425901 ] ], [ "http://google.com/", [ "http://www.google.com.mx/", 1.8572295440774185, "https://www.google.com.mx/", 1.8572295440774185 ] ], [ "http://googleads.g.doubleclick.net/", [ "http://googleads.g.doubleclick.net/", 0.22889652714711564, "http://pagead2.googlesyndication.com/", 0.15795284425475253, "http://www.gstatic.com/", 0.1773569117629969 ] ], [ "http://i.api.grvcdn.com/", [ "http://i.api.grvcdn.com/", 2.367666903500821 ] ], [ "http://linux.die.net/", [ "http://linux.die.net/", 2.7693356107337426, "http://pagead2.googlesyndication.com/", 2.1457765990453503 ] ], [ "http://personals.ac.upc.edu/", [ "http://personals.ac.upc.edu/", 2.127083409456189 ] ], [ "http://platform.twitter.com/", [ "http://cdn.api.twitter.com/", 0.33017403736607387, "https://cdn.syndication.twimg.com/", 1.9116543432291524, "https://syndication.twitter.com/", 0.8275433950255929 ] ], [ "http://rm-rf.es/", [ "http://googleads.g.doubleclick.net/", 2.467177827586342, "http://pagead2.googlesyndication.com/", 3.0227013119435315, "http://platform.twitter.com/", 2.1894160854077476, "http://rm-rf.es/", 3.578224796300721, "http://share.yandex.ru/", 1.9116543432291524, "http://www.google-analytics.com/", 2.1894160854077476, "http://www.google.es/", 1.9116543432291524, "http://www.gstatic.com/", 1.9116543432291524, "https://apis.google.com/", 2.1894160854077476, "https://cdn.api.twitter.com/", 1.9116543432291524 ] ], [ "http://rma-api.gravity.com/", [ "http://assets.thump.vice.com/", 0.8745503599978647, "http://assets.vice.com/", 0.7635999411921651, "http://i.api.grvcdn.com/", 2.517848482739396, "http://imagedrop.grvcdn.com/", 1.3758929839185494, "http://o.aolcdn.com/", 0.963516015778621, "http://rma-api.gravity.com/", 0.963516015778621, "http://slickamericans.com/", 1.575809058505005 ] ], [ "http://rogerdudler.github.io/", [ "http://a.disquscdn.com/", 1.9845837743086203, "http://d13bhd1byokz0o.cloudfront.net/", 2.224994315656685, "http://disqus.com/", 1.6545901963366785, "http://fonts.googleapis.com/", 2.224994315656685, "http://frontify.com/", 2.224994315656685, "http://git-the-simple-guide.disqus.com/", 2.224994315656685, "http://platform.twitter.com/", 2.6858609740083823, "http://rogerdudler.github.io/", 7.794156080056813, "http://www.google-analytics.com/", 2.912777401708641, "https://frontify.com/", 2.224994315656685 ] ], [ "http://s0.wp.com/", [ "http://s0.wp.com/", 2.0558873976566248 ] ], [ "http://s1.wp.com/", [ "http://s1.wp.com/", 2.262398482101845 ] ], [ "http://s2.wp.com/", [ "http://s2.wp.com/", 2.0647637601880096 ] ], [ "http://s7.addthis.com/", [ "http://m.addthis.com/", 0.8398695147012107 ] ], [ "http://salomonrt.wordpress.com/", [ "http://0.gravatar.com/", 2.690492625896153, "http://1.gravatar.com/", 2.084686339270529, "http://2.gravatar.com/", 2.084686339270529, "http://i1.wp.com/", 2.084686339270529, "http://i2.wp.com/", 2.084686339270529, "http://partner.googleadservices.com/", 2.084686339270529, "http://s0.wp.com/", 2.690492625896153, "http://s1.wp.com/", 2.690492625896153, "http://s2.wp.com/", 3.2962989125217765, "http://stats.wp.com/", 2.084686339270529 ] ], [ "http://translate.google.com.mx/", [ "http://translate.google.com.mx/", 0.706537549931325, "http://translate.googleusercontent.com/", 0.20312671945505625, "http://www.gstatic.com/", 0.616902189119142, "https://apis.google.com/", 0.616902189119142, "https://plus.google.com/", 0.22889652714711564 ] ], [ "http://translate.googleusercontent.com/", [ "http://c.statcounter.com/", 2.1457765990453503, "http://googleads.g.doubleclick.net/", 1.6940704509782787, "http://linux.die.net/", 2.7693356107337426, "http://man7.org/", 2.1416611095682065, "http://pagead2.googlesyndication.com/", 2.5892517681581344, "http://translate.google.com.mx/", 1.8298816037240104, "http://translate.google.com/", 2.1457765990453503, "http://translate.googleusercontent.com/", 1.8298816037240104, "http://www.google-analytics.com/", 3.0811151165779385, "http://www.gstatic.com/", 1.2464797923883506 ] ], [ "http://widgets.wp.com/", [ "http://s0.wp.com/", 1.8597427172797463, "http://widgets.wp.com/", 0.6090498495035375, "https://public-api.wordpress.com/", 0.5123898446400124 ] ], [ "http://www.adictosaltrabajo.com/", [ "http://ajax.googleapis.com/", 1.2576509304657901, "http://creativecommons.org/", 1.2576509304657901, "http://img.skitch.com/", 2.3876947404130817, "http://pagead2.googlesyndication.com/", 1.2576509304657901, "http://platform.twitter.com/", 1.2576509304657901, "http://rodney.karmacracy.com/", 1.2576509304657901, "http://s7.addthis.com/", 1.2576509304657901, "http://widgets.twimg.com/", 1.2576509304657901, "http://www.adictosaltrabajo.com/", 5.024463630290094 ] ], [ "http://www.chuidiang.com/", [ "http://googleads.g.doubleclick.net/", 2.9366450055924993, "http://i.creativecommons.org/", 1.8572295440774185, "http://pagead2.googlesyndication.com/", 2.6667911402137294, "http://platform.twitter.com/", 2.127083409456189, "http://www.chuidiang.com/", 2.127083409456189, "http://www.google-analytics.com/", 2.127083409456189, "http://www.google.com/", 1.8572295440774185, "http://www.gstatic.com/", 1.8572295440774185, "https://accounts.google.com/", 1.8572295440774185, "https://apis.google.com/", 2.6667911402137294 ] ], [ "http://www.cristalab.com/", [ "http://connect.facebook.net/", 1.5172568052602975, "http://google-code-prettify.googlecode.com/", 1.5172568052602975, "http://googleads.g.doubleclick.net/", 1.7377129222639303, "http://i.vimeocdn.com/", 1.5383144234202981, "http://l4c.me/", 1.7288946775837848, "http://www.cristalab.com/", 5.172231355071221, "http://www.facebook.com/", 1.5172568052602975, "http://www.google-analytics.com/", 1.5172568052602975, "https://apis.google.com/", 1.658348720142622, "https://www.facebook.com/", 1.5172568052602975 ] ], [ "http://www.espaciolinux.com/", [ "http://www.gstatic.com/", 2.1457765990453503 ] ], [ "http://www.google.com.mx/", [ "https://accounts.google.com.mx/", 2.0732522635184396 ] ], [ "http://www.google.com/", [ "http://www.google.com/", 2.084686339270529, "https://googleads.g.doubleclick.net/", 2.565865848680255 ] ], [ "http://www.maestrosdelweb.com/", [ "http://fonts.googleapis.com/", 1.788635371284397, "http://platform.twitter.com/", 1.5617189435841379, "http://static.ak.facebook.com/", 1.2576509304657901, "http://www.google-analytics.com/", 1.788635371284397, "http://www.maestrosdelweb.com/", 2.9141408526776833, "https://platform.twitter.com/", 1.5617189435841379, "https://s-static.ak.facebook.com/", 1.2576509304657901, "https://www.facebook.com/", 1.5617189435841379 ] ], [ "http://www.ompersonal.com.ar/", [ "http://googleads.g.doubleclick.net/", 1.8043542189575343, "http://pagead2.googlesyndication.com/", 2.066525344788971, "http://www.gstatic.com/", 1.8043542189575343, "http://www.ompersonal.com.ar/", 3.1152098481147172 ] ], [ "http://www.programacion.com.py/", [ "http://1.gravatar.com/", 1.8572295440774185, "http://creativecommons.org/", 1.8572295440774185, "http://pagead2.googlesyndication.com/", 1.8572295440774185, "http://s7.addthis.com/", 1.8572295440774185, "http://www.programacion.com.py/", 4.01606046710758 ] ], [ "http://www.redeszone.net/", [ "http://connect.facebook.net/", 1.6545901963366785, "http://googleads.g.doubleclick.net/", 2.856642903077, "http://pagead2.googlesyndication.com/", 3.818285068469256, "http://platform.twitter.com/", 1.8950007376847426, "http://pubads.g.doubleclick.net/", 3.3374639857731285, "http://www.gstatic.com/", 2.616232361728936, "http://www.redeszone.net/", 4.98187208859389, "https://apis.google.com/", 2.856642903077, "https://platform.twitter.com/", 1.6545901963366785, "https://www.facebook.com/", 2.1306030682058448 ] ], [ "http://www.tiyolischool.edu.mx/", [ "http://s7.addthis.com/", 1.967674022654115, "http://www.tiyolischool.edu.mx/", 6.542095682157697, "https://ajax.googleapis.com/", 1.967674022654115 ] ], [ "http://www.um.es/", [ "http://www.um.es/", 2.127083409456189 ] ], [ "http://youtube.com/", [ "http://www.youtube.com/", 1.8043542189575343, "https://www.youtube.com/", 1.8043542189575343 ] ], [ "https://0.client-channel.google.com/", [ "https://0.client-channel.google.com/", 5.0254899730507825 ] ], [ "https://0.docs.google.com/", [ "https://0.docs.google.com/", 2.6667911402137294, "https://docs.google.com/", 1.8572295440774185 ] ], [ "https://2.client-channel.google.com/", [ "https://2.client-channel.google.com/", 2.2733802 ] ], [ "https://accounts.google.com/", [ "https://accounts.youtube.com/", 0.13503210420503384, "https://apis.google.com/", 0.1332905452553907, "https://fonts.gstatic.com/", 0.49404527713094404, "https://lh3.googleusercontent.com/", 0.07103936964242122, "https://mail.google.com/", 0.3334982059079955, "https://oauth.googleusercontent.com/", 0.1332905452553907, "https://ssl.gstatic.com/", 0.33414665983732417 ] ], [ "https://accounts.youtube.com/", [ "https://accounts.youtube.com/", 0.07846147044999781 ] ], [ "https://ad.doubleclick.net/", [ "https://pubads.g.doubleclick.net/", 1.0681504318257737, "https://s0.2mdn.net/", 0.5187446205334153, "https://www.youtube.com/", 1.2211807666580867 ] ], [ "https://apis.google.com/", [ "https://apis.google.com/", 2.3321432729386355, "https://fonts.gstatic.com/", 0.16757744976015854, "https://lh3.googleusercontent.com/", 2.2733802, "https://ssl.gstatic.com/", 2.6037003999999997 ] ], [ "https://assets-cdn.github.com/", [ "https://assets-cdn.github.com/", 7.980052162590634 ] ], [ "https://clients4.google.com/", [ "https://clients4.google.com/", 1.6933272634136909 ] ], [ "https://clients5.google.com/", [ "https://accounts.google.com/", 2.2733802, "https://clients5.google.com/", 1.1872596935966635, "https://googleads.g.doubleclick.net/", 2.2733802, "https://www.google.com/", 2.2733802 ] ], [ "https://clients6.google.com/", [ "https://apis.google.com/", 0.3937368293751217, "https://clients6.google.com/", 2.130029676501059 ] ], [ "https://docs.google.com/", [ "https://docs.google.com/", 2.9366450055924993, "https://lh3.googleusercontent.com/", 1.8572295440774185, "https://ssl.gstatic.com/", 4.01606046710758 ] ], [ "https://docs.moodle.org/", [ "https://docs.moodle.org/", 5.217474419114993, "https://fonts.googleapis.com/", 1.0920295295822076 ] ], [ "https://dt8kf6553cww8.cloudfront.net/", [ "https://dt8kf6553cww8.cloudfront.net/", 3.202453282482282 ] ], [ "https://fbstatic-a.akamaihd.net/", [ "https://fbstatic-a.akamaihd.net/", 46.17386809696703 ] ], [ "https://fonts.googleapis.com/", [ "https://fonts.gstatic.com/", 1.8950007376847426 ] ], [ "https://github.com/", [ "https://assets-cdn.github.com/", 0.8196687104207541, "https://avatars0.githubusercontent.com/", 0.5312800790901644, "https://avatars1.githubusercontent.com/", 0.6823804373707669, "https://avatars2.githubusercontent.com/", 0.5851737452473483, "https://avatars3.githubusercontent.com/", 0.5323901457723659, "https://collector-cdn.github.com/", 0.17347959387124867, "https://collector.githubapp.com/", 0.1737653694562043, "https://github.com/", 0.20982935134568462, "https://www.google-analytics.com/", 0.8886814332465997 ] ], [ "https://groups.google.com/", [ "https://apis.google.com/", 2.262398482101845, "https://csi.gstatic.com/", 2.5171055959808606, "https://groups.google.com/", 4.809469620892, "https://ssl.google-analytics.com/", 2.007691368222829, "https://ssl.gstatic.com/", 2.007691368222829, "https://www.google.com/", 2.262398482101845, "https://www.gstatic.com/", 1.7529842543438134 ] ], [ "https://mail.google.com/", [ "https://accounts.google.com/", 0.5187446205334156, "https://apis.google.com/", 0.8202372205015542, "https://clients2.google.com/", 0.5187446205334156, "https://clients5.google.com/", 0.5187446205334156, "https://clients6.google.com/", 0.5187446205334156, "https://lh3.googleusercontent.com/", 0.5187446205334156, "https://mail.google.com/", 6.681959177050627, "https://plus.google.com/", 0.5941177705254502, "https://ssl.gstatic.com/", 2.812443475548034, "https://talkgadget.google.com/", 0.5187446205334156 ] ], [ "https://plus.google.com/", [ "https://csi.gstatic.com/", 0.12401654325598833, "https://plus.google.com/", 0.7914415466959452 ] ], [ "https://public-api.wordpress.com/", [ "https://public-api.wordpress.com/", 0.5317511495788669, "https://s0.wp.com/", 0.4645687436103681 ] ], [ "https://s.ytimg.com/", [ "https://s.ytimg.com/", 2.328696470620408 ] ], [ "https://talkgadget.google.com/", [ "https://accounts.google.com/", 0.2116492161186488, "https://clients6.google.com/", 0.2116492161186488, "https://csi.gstatic.com/", 0.18690679381260417, "https://lh3.googleusercontent.com/", 0.08480335742569263, "https://lh4.googleusercontent.com/", 0.33309057405728837, "https://plus.google.com/", 0.5604034683737478, "https://ssl.gstatic.com/", 0.7426611879286202, "https://talkgadget.google.com/", 1.5150105439938695 ] ], [ "https://www.blogger.com/", [ "https://apis.google.com/", 1.303923197067425, "https://img1.blogblog.com/", 1.0400339786133035, "https://www.blogger.com/", 1.1787452502039606, "https://www.google.com/", 0.59933898379492 ] ], [ "https://www.facebook.com/", [ "https://fbstatic-a.akamaihd.net/", 7.514572844276313 ] ], [ "https://www.google.com.mx/", [ "https://www.google.com.mx/", 1.1614060377381403 ] ], [ "https://www.youtube.com/", [ "https://ad.doubleclick.net/", 0.39899809975310385, "https://gg.google.com/", 1.8043542189575343, "https://googleads.g.doubleclick.net/", 0.9401836566229465, "https://i.ytimg.com/", 1.428325535679496, "https://pagead2.googlesyndication.com/", 0.8958102858346698, "https://plus.google.com/", 1.8043542189575343, "https://s.ytimg.com/", 2.053478917835967, "https://yt3.ggpht.com/", 0.5168723686524811 ] ] ],
+      "startup_list": [ 1, "http://gmail.com/", "https://accounts.google.com/", "https://accounts.youtube.com/", "https://fonts.gstatic.com/", "https://gmail.com/", "https://lh3.googleusercontent.com/", "https://mail.google.com/", "https://ssl.gstatic.com/", "https://www.google.com.mx/", "https://www.google.com/" ]
+   },
    "download": {
       "directory_upgrade": true
    },
@@ -25,8 +29,8 @@
          "initialized": true
       },
       "autoupdate": {
-         "last_check": "13057434734334692",
-         "next_check": "13057452610679828"
+         "last_check": "13057641192082338",
+         "next_check": "13057695384625253"
       },
       "chrome_url_overrides": {
          "bookmarks": [ "chrome-extension://eemcgdkfndhakfknompkggombfjjjeno/main.html" ]
@@ -63,7 +67,7 @@
             },
             "initial_keybindings_set": true,
             "install_time": "13056819037190933",
-            "lastpingday": "13057398000236921",
+            "lastpingday": "13057570802875782",
             "location": 1,
             "manifest": {
                "api_console_project_id": "889782162350",
@@ -174,7 +178,7 @@
             },
             "initial_keybindings_set": true,
             "install_time": "13056819044206904",
-            "lastpingday": "13057398000236921",
+            "lastpingday": "13057570802875782",
             "location": 1,
             "manifest": {
                "api_console_project_id": "619683526622",
@@ -235,7 +239,7 @@
 
             },
             "install_time": "13056819037507828",
-            "lastpingday": "13057398000236921",
+            "lastpingday": "13057570802875782",
             "location": 1,
             "manifest": {
                "app": {
@@ -299,7 +303,7 @@
 
             },
             "install_time": "13056819053913773",
-            "lastpingday": "13057398000236921",
+            "lastpingday": "13057570802875782",
             "location": 1,
             "manifest": {
                "app": {
@@ -362,7 +366,7 @@
 
             },
             "install_time": "13056819043653216",
-            "lastpingday": "13057398000236921",
+            "lastpingday": "13057570802875782",
             "location": 1,
             "manifest": {
                "app": {
@@ -526,7 +530,7 @@
             },
             "initial_keybindings_set": true,
             "install_time": "13056819039381209",
-            "lastpingday": "13057398000236921",
+            "lastpingday": "13057570802875782",
             "location": 1,
             "manifest": {
                "api_console_project_id": "1083656409722",
@@ -1003,7 +1007,7 @@
             },
             "initial_keybindings_set": true,
             "install_time": "13056819036874641",
-            "lastpingday": "13057398000236921",
+            "lastpingday": "13057570802875782",
             "location": 10,
             "manifest": {
                "app": {
@@ -1070,7 +1074,7 @@
 
             },
             "install_time": "13056819040772342",
-            "lastpingday": "13057398000236921",
+            "lastpingday": "13057570802875782",
             "location": 1,
             "manifest": {
                "app": {
@@ -1122,6 +1126,9 @@
    "net": {
       "http_server_properties": {
          "servers": {
+            "0-channel-proxy-07-ash2.facebook.com:443": {
+               "supports_spdy": true
+            },
             "0-channel-proxy-13-prn1.facebook.com:443": {
                "supports_spdy": true
             },
@@ -1131,7 +1138,21 @@
                   "protocol_str": "quic"
                },
                "settings": {
-                  "4": 100
+                  "4": 100,
+                  "5": 7,
+                  "6": 11
+               },
+               "supports_spdy": true
+            },
+            "0.docs.google.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "protocol_str": "quic"
+               },
+               "settings": {
+                  "4": 100,
+                  "5": 7,
+                  "6": 0
                },
                "supports_spdy": true
             },
@@ -1165,6 +1186,16 @@
                   "port": 80,
                   "protocol_str": "quic"
                }
+            },
+            "2.client-channel.google.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "protocol_str": "quic"
+               },
+               "settings": {
+                  "4": 100
+               },
+               "supports_spdy": true
             },
             "3-channel-proxy-06-ash2.facebook.com:443": {
                "supports_spdy": true
@@ -1220,7 +1251,7 @@
                "settings": {
                   "4": 100,
                   "5": 32,
-                  "6": 0
+                  "6": 46
                },
                "supports_spdy": true
             },
@@ -1231,8 +1262,8 @@
                },
                "settings": {
                   "4": 100,
-                  "5": 24,
-                  "6": 0
+                  "5": 9,
+                  "6": 5
                },
                "supports_spdy": true
             },
@@ -1272,7 +1303,7 @@
                "settings": {
                   "4": 100,
                   "5": 22,
-                  "6": 12
+                  "6": 0
                },
                "supports_spdy": true
             },
@@ -1289,7 +1320,7 @@
                },
                "settings": {
                   "4": 100,
-                  "5": 47,
+                  "5": 46,
                   "6": 0
                },
                "supports_spdy": true
@@ -1310,6 +1341,14 @@
                "supports_spdy": true
             },
             "channel-proxy-06-frc1.facebook.com:443": {
+               "supports_spdy": true
+            },
+            "ci5.googleusercontent.com:443": {
+               "settings": {
+                  "4": 100,
+                  "5": 32,
+                  "6": 0
+               },
                "supports_spdy": true
             },
             "clients1.google.com:443": {
@@ -1351,7 +1390,7 @@
                },
                "settings": {
                   "4": 100,
-                  "5": 22,
+                  "5": 15,
                   "6": 0
                },
                "supports_spdy": true
@@ -1364,7 +1403,7 @@
                "settings": {
                   "4": 100,
                   "5": 22,
-                  "6": 3
+                  "6": 0
                },
                "supports_spdy": true
             },
@@ -1375,7 +1414,7 @@
                },
                "settings": {
                   "4": 100,
-                  "5": 24,
+                  "5": 8,
                   "6": 0
                },
                "supports_spdy": true
@@ -1394,7 +1433,7 @@
                "settings": {
                   "4": 100,
                   "5": 15,
-                  "6": 0
+                  "6": 37
                },
                "supports_spdy": true
             },
@@ -1407,6 +1446,18 @@
             "cx.atdmt.com:443": {
                "supports_spdy": true
             },
+            "cypascal.blogspot.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "protocol_str": "quic"
+               }
+            },
+            "cypascal.blogspot.mx:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "protocol_str": "quic"
+               }
+            },
             "developer.android.com:443": {
                "alternate_protocol": {
                   "port": 443,
@@ -1415,6 +1466,18 @@
                "settings": {
                   "4": 100,
                   "5": 22,
+                  "6": 0
+               },
+               "supports_spdy": true
+            },
+            "docs.google.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "protocol_str": "quic"
+               },
+               "settings": {
+                  "4": 100,
+                  "5": 9,
                   "6": 0
                },
                "supports_spdy": true
@@ -1499,6 +1562,13 @@
                "supports_spdy": true
             },
             "fbcdn-sphotos-g-a.akamaihd.net:443": {
+               "settings": {
+                  "4": 20,
+                  "7": 65536
+               },
+               "supports_spdy": true
+            },
+            "fbcdn-sphotos-h-a.akamaihd.net:443": {
                "settings": {
                   "4": 20,
                   "7": 65536
@@ -1596,7 +1666,7 @@
                "settings": {
                   "4": 100,
                   "5": 22,
-                  "6": 0
+                  "6": 22
                },
                "supports_spdy": true
             },
@@ -1654,11 +1724,17 @@
                "settings": {
                   "4": 100,
                   "5": 32,
-                  "6": 0
+                  "6": 21
                },
                "supports_spdy": true
             },
             "img1.blogblog.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "protocol_str": "quic"
+               }
+            },
+            "img2.blogblog.com:80": {
                "alternate_protocol": {
                   "port": 80,
                   "protocol_str": "quic"
@@ -1680,6 +1756,18 @@
                "settings": {
                   "4": 100,
                   "5": 32,
+                  "6": 1
+               },
+               "supports_spdy": true
+            },
+            "lh5.google.com:443": {
+               "alternate_protocol": {
+                  "port": 443,
+                  "protocol_str": "quic"
+               },
+               "settings": {
+                  "4": 100,
+                  "5": 32,
                   "6": 0
                },
                "supports_spdy": true
@@ -1692,11 +1780,14 @@
                },
                "supports_spdy": true
             },
+            "linux.dropbox.com:443": {
+               "supports_spdy": true
+            },
             "mail-attachment.googleusercontent.com:443": {
                "settings": {
                   "4": 10,
-                  "5": 3,
-                  "6": 13
+                  "5": 5,
+                  "6": 0
                },
                "supports_spdy": true
             },
@@ -1707,7 +1798,7 @@
                },
                "settings": {
                   "4": 10,
-                  "5": 8,
+                  "5": 19,
                   "6": 0
                },
                "supports_spdy": true
@@ -1773,7 +1864,7 @@
             "oauth.googleusercontent.com:443": {
                "settings": {
                   "4": 100,
-                  "5": 18,
+                  "5": 22,
                   "6": 0
                },
                "supports_spdy": true
@@ -1810,7 +1901,7 @@
                },
                "settings": {
                   "4": 100,
-                  "5": 20,
+                  "5": 21,
                   "6": 0
                },
                "supports_spdy": true
@@ -1913,7 +2004,7 @@
                },
                "settings": {
                   "4": 100,
-                  "5": 42,
+                  "5": 25,
                   "6": 0
                },
                "supports_spdy": true
@@ -1939,6 +2030,12 @@
             "syndication.twitter.com:443": {
                "supports_spdy": true
             },
+            "t2.gstatic.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "protocol_str": "quic"
+               }
+            },
             "talkgadget.google.com:443": {
                "alternate_protocol": {
                   "port": 443,
@@ -1947,7 +2044,7 @@
                "settings": {
                   "4": 100,
                   "5": 9,
-                  "6": 0
+                  "6": 10
                },
                "supports_spdy": true
             },
@@ -2006,6 +2103,12 @@
                },
                "supports_spdy": true
             },
+            "www.blogblog.com:80": {
+               "alternate_protocol": {
+                  "port": 80,
+                  "protocol_str": "quic"
+               }
+            },
             "www.blogger.com:443": {
                "alternate_protocol": {
                   "port": 443,
@@ -2023,6 +2126,9 @@
                   "port": 80,
                   "protocol_str": "quic"
                }
+            },
+            "www.dropbox.com:443": {
+               "supports_spdy": true
             },
             "www.facebook.com:443": {
                "supports_spdy": true
@@ -2064,7 +2170,7 @@
                },
                "settings": {
                   "4": 100,
-                  "5": 24,
+                  "5": 61,
                   "6": 0
                },
                "supports_spdy": true
@@ -2083,7 +2189,7 @@
                "settings": {
                   "4": 100,
                   "5": 14,
-                  "6": 0
+                  "6": 20
                },
                "supports_spdy": true
             },
@@ -2130,7 +2236,7 @@
                },
                "settings": {
                   "4": 100,
-                  "5": 37,
+                  "5": 42,
                   "6": 0
                },
                "supports_spdy": true
@@ -2198,7 +2304,7 @@
          "pref_version": 1
       },
       "created_by_version": "37.0.2062.94",
-      "exit_type": "Crashed",
+      "exit_type": "Normal",
       "exited_cleanly": true,
       "local_profile_id": 16370459,
       "managed_user_id": "",
@@ -2223,15 +2329,15 @@
          "extensions": {
             "known_disabled": "D72B9877BE1FADE48E4DA5A859FFB65E33D7AC54C7FDF9BB7BC2E03590DF8299",
             "settings": {
-               "aapocclcgogkmnckokdopfmhonfmgoek": "E46FACD55AD9696CF28FA8D26E6ABB2DE279B92C98AC2267073E88099E40874A",
+               "aapocclcgogkmnckokdopfmhonfmgoek": "B49A9BBE7A476611ACFC0AE0403878AE2619FFD56B62C5A6621D479B167EABCF",
                "ahfgeienlihckogmohjhadlkjgocpleb": "B34AC2258AD5BD09573307D67C376510247BF37536B31C5CE4A9050CFB95DF96",
-               "aohghmighlieiainnegkcijnfilokake": "5CD97C3C9B53C01209A9C189B80F5F5C6D110065810E614F3074647BAA7A4586",
-               "apdfllckaahabafndbhieahigkjlhalf": "4AC6C4FD5A58EB55E813D71D27B72872B556DDFAA59AD76CD76EA3D6D591756B",
-               "blpcfgokakmgnkcojhhkbfbldkacnbeo": "F09306473523EE1C2FED24933FB28E1B292FA04F6F99BBB363A59CEC1E3667B9",
-               "coobgpohoikkiipiblmjeljniedjpjpf": "626A7E276324A65282EA30667AC3FFA43EFD735CF192C7A04A5F48F7738338C3",
+               "aohghmighlieiainnegkcijnfilokake": "45EEC3C038E2CAB8639183D5DF67B9612C63BB09023AE2E47B9DCFC4DE3BE01F",
+               "apdfllckaahabafndbhieahigkjlhalf": "C62019174F05380DE7BFA6AA274AB93D884E04AEB3A136D14C2E12ED3B58A7AF",
+               "blpcfgokakmgnkcojhhkbfbldkacnbeo": "365E50490FF5731F3C11B7A750D344CB45F16EC8D1ACCFD7F6CC55420F36AC61",
+               "coobgpohoikkiipiblmjeljniedjpjpf": "FCE8FF888CBD03FC4A2414460802DF1B5CBDCE2513C011256F717BF7BDDB1178",
                "eemcgdkfndhakfknompkggombfjjjeno": "8636A82393B7AB15DD0BBF974DEECC4E1E432E1FE136CC664F261C6AB7F63E4C",
                "ennkphjdgehloodpbhlhldgbnhmacadg": "52AA69A491D5DD565F0569AEBE9AB5457394C8C3862A8C258E8C02C61CA527A2",
-               "felcaaldnbdncclmgdcncolpebgiejap": "09E11AB428D829FB8E2D2BE2CE0B0D7427F1B6826AC9A635A5EA55949DA2D263",
+               "felcaaldnbdncclmgdcncolpebgiejap": "E53568F5F6BD11A1058A37193CD9ADFB7CC851468CD805F9F66B35AA34CF3977",
                "gfdkimpbcpahaombhbimeihdjnejgicl": "0055B6C95E519710CDD137C7243A2280B6B3DD2A809C87353D33E148BC93DB3C",
                "kmendfapggjehodndflmmgagdbamhnfd": "97938E811E0254FF5197B41A66477EF497990CBD271F3D289E8CB2E3A4400617",
                "mfehgcgbbipciphmccgaenjidiccnmng": "46EB6900CBC7D705591E07E50AFC5038B8B40404672726ABFB85AF1CDE3DA07F",
@@ -2239,8 +2345,8 @@
                "mgndgikekgjfcpckkfioiadnlibdjbkf": "77630CF41FD539AC4AA15C164804454ACA53038EFD90A1F4ACAB4C1B82CE1680",
                "neajdppkdcdipfabeoofebfddakdcjhd": "D5C4A3964574035A37AF920087D7FB4A099BA950AA7E7BA16990FB00600A07CA",
                "nkeimhogjdpnpccoofpliimaahmaaome": "0360883201F0DD9A3106AB618026E1C4EDBE428B965CF7AECA8545B9D57FE7D2",
-               "nmmhkkegccagdldgiimedpiccmgmieda": "3431D349E0586ED98A0C3288031D8836B95C3CE4C7864A878705F1A27074FFD5",
-               "pjkljhegncpnkpknbcohdijeoejaedia": "AFA7B312203B750BF54E9EE12A1AC64562A5003C3532EFF4C1B32851C5036C17"
+               "nmmhkkegccagdldgiimedpiccmgmieda": "6328DD247A108FE7D73689D16B8F98808722222D3B1263D12DF4B59F4A240831",
+               "pjkljhegncpnkpknbcohdijeoejaedia": "426D9FF3925D54F8A1C3A0DF77E1CFFC81117DF8842B6AAA8F4950026671B2CE"
             }
          },
          "google": {

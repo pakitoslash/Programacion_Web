@@ -416,3 +416,283 @@ git commit -m "Ya subi mi tarea de hoy viernes yupi ;)"
 git add -A
 git commit -m "Ya subi mi tarea de hoy viernes yupi ;)"
 git push origin miRama 
+git status
+git add -A
+git commint -m "Hola aby"
+git commit -m "Hola aby"
+git branch
+git push origin ramaPrebe28
+git commit -m "falla mucho mi internet, no sube bien mis archivos AUXILIO~"
+git add -A
+git commit -m "falla mucho mi internet, no sube bien mis archivos AUXILIO~"
+git push origin ramaPrebe28
+git status
+gid add -a
+man gid
+git status
+git add -A
+git commit -m "Se tarda mucho mi internet en subir los archivos AUXILIO"
+git branch
+git push origin ramaPrebe28
+kill -l
+top
+cd Escritorio/Clase_3
+ls
+gcc mihilo1.c 
+gcc mihilo1.c
+gcc mihilo1.c  pthread
+gcc mihilo1.c  pthread.h
+gcc mihilo1.c  -lpread
+gcc mihilo1.c  -lpthread
+./a.out
+gcc hilo2.c  -lpthre
+./a.out
+gcc mihilo1.c  -lpthread
+./a.out
+gcc mihilo1.c  -lpthread
+./a.out
+gcc mihilo1.c  -lpthread
+./a.out
+vi hilo2.c
+vi hilo3.c
+vi hilo2.c
+vi hilo3.c
+vi parametrosHilos.c
+cd Escritorio/Clase_3
+ls
+vi parametrosHilos.c 
+cd Escritorio/Clase_3
+ls
+gcc senial.c
+gcc senial.c -o sig
+gcc senial.c 
+nano senial.c
+gcc senial.c 
+nano senial.c
+gcc ejemploSenial.c 
+./a.out 
+gcc ejemploSenial.c 
+./a.out 
+gcc ejemploSenial.c 
+./a.out 
+gcc matarProceso.c 
+./a.out 
+gcc tuberia.c 
+vi 
+vi mihilo1.c 
+cd Escritorio/Clase_3
+gcc parametrosHilos.c 
+gcc parametrosHilos.c -lpthread
+./a.out 
+gcc parametrosHilos.c -lpthread
+./a.out 
+gcc hilo4.c -lpthre
+gcc hilo3.c -lpthre
+gcc hilo3.c -lpthread
+./a.out 
+gcc hilo4.c -lpthread
+./a.out 
+gcc hilo4.c -lpthread
+./a.out 
+gcc mutex.c -lpthread
+./a.out 
+gcc mutex.c -lpthread
+./a.out 
+gcc hilo4.c -lpthread
+./a.out 
+gcc hilo4.c -lpthread
+./a.out 
+gcc hilo4.c -lpthread
+./a.out 
+gcc hilo4.c -lpthread
+./a.out 
+gcc hilo4.c -lpthread
+./a.out 
+gcc hilo4.c -lpthread
+./a.out 
+gcc hilo4.c -lpthread
+./a.out 
+gcc hilo4.c -lpthread
+./a.out 
+gcc hilo4.c -lpthread
+./a.out 
+gcc fam_exec.c 
+./a.out 
+gcc fam_exec.c 
+./a.out 
+gcc fam_exec.c 
+./a.out 
+gcc fam_exec.c 
+./a.out 
+exit
+sudo apt-get update
+cd Escritorio/Proyecto_C/
+ls
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+cat /usr/include/stdio.h
+sublime /usr/include/stdio.h
+man sublime
+gcc TiendaMusica.c 
+man sublime
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+gcc TiendaMusica.c 
+./a.out 
+EXIT

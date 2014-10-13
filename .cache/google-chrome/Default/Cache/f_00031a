@@ -1,0 +1,503 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<meta name="keywords" content="" />
+	<meta name="description" content="Tuberías y redirecciones en Linux" />
+
+	<title>HPC @UPV/EHU &raquo; Tuberías y redirecciones en Linux</title>
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0 - all posts" href="http://www.ehu.es/ehusfera/hpc/feed/" />
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0 - all comments" href="http://www.ehu.es/ehusfera/hpc/comments/feed/" />
+	<link rel="pingback" href="http://www.ehu.es/ehusfera/hpc/xmlrpc.php" />
+
+	<!-- style START -->
+	<!-- default style -->
+	<style type="text/css" media="screen">@import url( http://www.ehu.es/ehusfera/hpc/wp-content/themes/inove-blog/style.css );</style>
+	<!-- for translations -->
+		<!--[if IE 6]>
+		<link rel="stylesheet" href="http://www.ehu.es/ehusfera/hpc/wp-content/themes/inove-blog/ie6.css" type="text/css" media="screen" />
+	<![endif]-->
+	<!-- style END -->
+
+	<!-- script START -->
+	<script type="text/javascript" src="http://www.ehu.es/ehusfera/hpc/wp-content/themes/inove-blog/js/util.js"></script>
+			<script type="text/javascript" src="http://www.ehu.es/ehusfera/hpc/wp-content/themes/inove-blog/js/menu.js"></script>
+		<!-- script END -->
+
+	<link rel="alternate" type="application/rss+xml" title="HPC @UPV/EHU &raquo; Tuberías y redirecciones en Linux Comments Feed" href="http://www.ehu.es/ehusfera/hpc/2013/07/05/tuberias-y-redirecciones-en-linux/feed/" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.ehu.es/ehusfera/hpc/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.ehu.es/ehusfera/hpc/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Tianhe-2, el ordenador más potente del mundo' href='http://www.ehu.es/ehusfera/hpc/2013/07/01/tianhe-2-el-ordenador-mas-potente-del-mundo/' />
+<link rel='next' title='bc, let y expresiones matemáticas en Linux' href='http://www.ehu.es/ehusfera/hpc/2013/07/23/bc-let-y-expresiones-matematicas-en-linux/' />
+<meta name="generator" content="WordPress 3.9.1" />
+<link rel='canonical' href='http://www.ehu.es/ehusfera/hpc/2013/07/05/tuberias-y-redirecciones-en-linux/' />
+<link rel='shortlink' href='http://wp.me/p10bli-VN' />
+<meta property="og:site_name" content="HPC @UPV/EHU" />
+<meta property="og:title" content="Tuberías y redirecciones en Linux" />
+<meta property="og:url" content="http://www.ehu.es/ehusfera/hpc/2013/07/05/tuberias-y-redirecciones-en-linux/" />
+<meta property="og:description" content="Tweet Tweet" />
+<meta property="og:type" content="article" />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<!-- Vipers Video Quicktags v6.5.2 | http://www.viper007bond.com/wordpress-plugins/vipers-video-quicktags/ -->
+<style type="text/css">
+.vvqbox { display: block; max-width: 100%; visibility: visible !important; margin: 10px auto; } .vvqbox img { max-width: 100%; height: 100%; } .vvqbox object { max-width: 100%; } 
+</style>
+<script type="text/javascript">
+// <![CDATA[
+	var vvqflashvars = {};
+	var vvqparams = { wmode: "opaque", allowfullscreen: "true", allowscriptaccess: "always" };
+	var vvqattributes = {};
+	var vvqexpressinstall = "http://www.ehu.es/ehusfera/hpc/wp-content/plugins/vipers-video-quicktags/resources/expressinstall.swf";
+// ]]>
+</script>
+</head>
+
+
+<body>
+<!-- wrap START -->
+<div id="wrap">
+
+<!-- container START -->
+<div id="container">
+
+<!-- header START -->
+<div id="header">
+	<div id="caption">
+		<h1 id="title"><a href="http://www.ehu.es/ehusfera/hpc/">HPC @UPV/EHU</a></h1>
+		<div id="tagline">High Performance Computing @UPV/EHU</div>
+	</div>
+
+	<!-- navigation START -->
+	<div id="navigation">
+		<ul id="menus">
+			<li class="page_item"><a class="home" title="Home" href="http://www.ehu.es/ehusfera/hpc/">Home</a></li>
+				<li class="cat-item cat-item-939"><a href="http://www.ehu.es/ehusfera/hpc/category/anuncios/" title="Anuncios generales">Anuncios</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.ehu.es/ehusfera/hpc/category/general/" title="View all posts filed under General">General</a>
+</li>
+	<li class="cat-item cat-item-2349"><a href="http://www.ehu.es/ehusfera/hpc/category/hpc/" title="Post related with High Performance Computing">HPC</a>
+</li>
+	<li class="cat-item cat-item-2353"><a href="http://www.ehu.es/ehusfera/hpc/category/izo-sgi/" title="Announments about the IZO-SGI Computing Service">IZO-SGI</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="http://www.ehu.es/ehusfera/hpc/category/linux/" title="Sobre Linux especialmente orientado al Cálculo Científico">Linux</a>
+<ul class='children'>
+	<li class="cat-item cat-item-29321"><a href="http://www.ehu.es/ehusfera/hpc/category/linux/comandos-avanzados/" title="View all posts filed under Comandos Avanzados">Comandos Avanzados</a>
+</li>
+	<li class="cat-item cat-item-908"><a href="http://www.ehu.es/ehusfera/hpc/category/linux/comandos-basicos/" title="Comandos básicos">Comandos básicos</a>
+</li>
+</ul>
+</li>
+			<li><a class="lastmenu" href="javascript:void(0);"></a></li>
+		</ul>
+
+		<!-- searchbox START -->
+		<div id="searchbox">
+							<form action="http://www.ehu.es/ehusfera/hpc" method="get">
+					<div class="content">
+						<input type="text" class="textfield" name="s" size="24" value="" />
+						<span class="switcher" >Switcher</span>
+					</div>
+				</form>
+					</div>
+		<!-- searchbox END -->
+
+		<div class="fixed"></div>
+	</div>
+	<!-- navigation END -->
+
+	<div class="fixed"></div>
+</div>
+<!-- header END -->
+
+<!-- content START -->
+<div id="content">
+
+	<!-- main START -->
+	<div id="main">
+
+
+	<div id="postpath">
+		<a title="Goto homepage" href="http://www.ehu.es/ehusfera/hpc/">Home</a>
+		 &gt; <a href="http://www.ehu.es/ehusfera/hpc/category/linux/comandos-avanzados/" title="View all posts in Comandos Avanzados" rel="category tag">Comandos Avanzados</a>, <a href="http://www.ehu.es/ehusfera/hpc/category/linux/" title="View all posts in Linux" rel="category tag">Linux</a>		 &gt; Tuberías y redirecciones en Linux	</div>
+
+	<div class="post" id="post-3583">
+		<h2>Tuberías y redirecciones en Linux</h2>
+		<div class="info">
+			<span class="date">July 5th, 2013</span>
+			<div class="act">
+									<span class="comments"><a href="#comments">Goto comments</a></span>
+					<span class="addcomment"><a href="#respond">Leave a comment</a></span>
+												<div class="fixed"></div>
+			</div>
+			<div class="fixed"></div>
+		</div>
+		<div class="content">
+			
+<!-- Facebook Like Button v1.9.6 BEGIN [http://blog.bottomlessinc.com] -->
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.ehu.es%2Fehusfera%2Fhpc%2F2013%2F07%2F05%2Ftuberias-y-redirecciones-en-linux%2F&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px; height: 30px; align: left; margin: 2px 0px 2px 0px"></iframe>
+<!-- Facebook Like Button END -->
+<div style="float:right"><a href="https://twitter.com/share" class="twitter-share-button" data-via="izosgi" data-count="vertical" data-url="http://www.ehu.es/ehusfera/hpc/2013/07/05/tuberias-y-redirecciones-en-linux/">Tweet</a></div>
+<p style="clear: both" align="JUSTIFY">Las redirecciónes nos permiten en Linux redirigir la entrada o salida estándar desde o hacia un fichero, respectivamente. La tubería nos permite usar la salida de un comando como entrada para otro, permitiendo concatenar comandos.</p>
+<p>&nbsp;</p>
+<h4>Redirecciones</h4>
+<p align="JUSTIFY">Primero señalar que en cuando hablamos de la entrada estándar se hace referencia, normalmente, a lo escrito a través del teclado y como salida estándar a lo envíado a la pantalla, aunque pueden ser otros los dispositivos definidos como estándar en algún caso especial. Las redirecciones se realizan con los símbolos <code>&gt;</code> y <code>&lt;</code> usando su similitud con unas flechas. Así con el símbolo <code>&gt;</code> podemos redirigir la salida estándar desde un comando hacia un fichero. La redirección es muy útil cuando la salida es muy larga y no nos cabe en pantalla, cuando necesitamos o nos es conveniente guardarla en un fichero, etc. Veamos un ejemplo.</p>
+<pre>$ echo "Hola mundo"
+Hola mundo
+$ echo "Hola mundo" &gt; saludo
+$ cat saludo
+Hola mundo</pre>
+<p align="JUSTIFY">Como vemos en el ejemplo con el comando <code>echo</code> mandamos a pantalla un mensaje, pero si usamos la redirección &gt; mandamos el mensaje al fichero <code>saludo</code>. Luego con el comando <a title="cat (y tac)" href="http://www.ehu.es/ehusfera/hpc/2010/08/30/cat/" target="_blank"><code>cat</code></a> hemos mostrado el contenido del fichero que hemos creado. Para añadir información a un fichero existente, sin sobreescribirlo se usa <code>&gt;&gt;</code>. Veamos otro ejemplo:</p>
+<pre>$ echo "Hola mundo"
+Hola mundo
+$ echo "Hola mundo" &gt; saludo
+$ cat saludo
+Hola mundo
+$ echo "Ahora he sobreescrito el fichero saludo" &gt; saludo
+$ cat saludo
+Ahora he sobreescrito el fichero saludo
+$ echo "Pero ahora le he añadido otra línea" &gt; saludo
+$ cat saludo
+Ahora he sobreescrito el fichero saludo
+Pero ahora le he añadido otra línea</pre>
+<p align="JUSTIFY">Como vemos en este ejemplo <code>&gt;</code> destruye el contenido del fichero si existe pero <code>&gt;&gt;</code> añade la información al final.</p>
+<p align="JUSTIFY">El símbolo <code>&lt;</code> permite enviar el contenido de un fichero como entrada estándar. Esto es útil, por ejemplo, en programas o comandos en los que introducimos o podemos introducir los argumentos por el teclado, de tal manera que podemos sustituirlos por un fichero. Un ejemplo tirivial con <a title="cat (y tac)" href="http://www.ehu.es/ehusfera/hpc/2010/08/30/cat/" target="_blank"><code>cat</code></a> es:</p>
+<pre>$ echo "Hola mundo" &gt; saludo
+$ cat &lt; saludo
+Hola mundo</pre>
+<p>&nbsp;</p>
+<h4>Tuberías</h4>
+<p align="JUSTIFY">Las tubería es una redirección especial que nos permite enviar la salida de un comando como entrada de otro, para ellos se usa el símbolo <code>|</code>. Su gran útilidad es que nos permite concatenar comandos enriqueciendo mucho la programación. Veamos unos sencillos ejemplos con <a title="seq" href="http://www.ehu.es/ehusfera/hpc/2013/05/15/seq/" target="_blank"><code>seq</code></a> y <a title="head" href="http://www.ehu.es/ehusfera/hpc/2010/09/02/head/" target="_blank"><code>head</code></a>:</p>
+<pre>$ seq 1 5 |head -2</pre>
+<pre>1
+2</pre>
+<p>&nbsp;</p>
+<h4>Redirecciones, avanzado</h4>
+<p align="JUSTIFY">También exite la salida de error que va por otro &#8216;canal&#8217; diferente. Así por ejemplo si el fichero <code>file1</code> existe y el <code>file2</code> no tenemos el siguiente comportamiento</p>
+<pre>$ ls file1 file2
+ls: no se puede acceder a file2: No existe el archivo o el directorio
+file1
+$ ls file1 file2 &gt; salida
+ls: no se puede acceder a file2: No existe el archivo o el directorio
+$ cat salida
+file1</pre>
+<p align="JUSTIFY">Como vemos, cuando hemos redirigido la salida al fichero <code>salida</code>, el mensaje de error que nos informa que el fichero <code>file2</code> no existe sigue saliendo por pantalla. Para poder redireccinar también la salida de error tenemos que usar <code>&amp;&gt;</code> que nos dice que redireccionemos ambas salidas, así:</p>
+<pre>$ ls file1 file2 &amp;&gt; salida
+$ cat salida
+ls: no se puede acceder a file2: No existe el archivo o el directorio
+file1</pre>
+<p align="JUSTIFY">De hecho la salida estándar suele ir identificada con <code>1</code> (o <code>&amp;1</code> si va despues de &gt; para diferenciarla de un fichero con nombre 1), y la salida de error con <code>2</code> (o <code>&amp;2</code>) para poder hacer redirecciones individuales. Así, es equivalente a redirigir la sólo salida el siguiente comando:</p>
+<pre>$ ls file1 file2 1&gt; salida
+ls: no se puede acceder a file2: No existe el archivo o el directorio
+$ cat salida
+file1</pre>
+<p>Para redirigir la salida de error a un fichero</p>
+<pre>$ ls file1 file2 2&gt; salida
+file1
+$ cat salida
+ls: no se puede acceder a file2: No existe el archivo o el directorio</pre>
+<p align="JUSTIFY"><code>2&gt;&amp;1</code> o <code>1&gt;&amp;2</code>  sirven para redirigir la salida de error a la estandar  o viceversa para luego, por ejemplo, enviarla con una tubería a otro comando.</p>
+<pre>$ ls file1 file2 2&gt;&amp;1 salida |wc -l
+2</pre>
+<p>&nbsp;</p>
+<p>&nbsp;
+<div style="float:right"><a href="https://twitter.com/share" class="twitter-share-button" data-via="izosgi" data-count="vertical" data-url="http://www.ehu.es/ehusfera/hpc/2013/07/05/tuberias-y-redirecciones-en-linux/">Tweet</a></div>
+
+<!-- Facebook Like Button v1.9.6 BEGIN [http://blog.bottomlessinc.com] -->
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.ehu.es%2Fehusfera%2Fhpc%2F2013%2F07%2F05%2Ftuberias-y-redirecciones-en-linux%2F&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px; height: 30px; align: left; margin: 2px 0px 2px 0px"></iframe>
+<!-- Facebook Like Button END -->
+			<p class="under">
+								<span class="categories"><a href="http://www.ehu.es/ehusfera/hpc/category/linux/comandos-avanzados/" title="View all posts in Comandos Avanzados" rel="category tag">Comandos Avanzados</a>, <a href="http://www.ehu.es/ehusfera/hpc/category/linux/" title="View all posts in Linux" rel="category tag">Linux</a></span>				<span class="tags"></span>			</p>
+			<div class="fixed"></div>
+		</div>
+	</div>
+
+
+<!-- related posts START -->
+<!-- related posts END -->
+
+<script type="text/javascript" src="http://www.ehu.es/ehusfera/hpc/wp-content/themes/inove-blog/js/comment.js"></script>
+
+
+
+<div id="comments">
+
+<div id="cmtswitcher">
+			<a id="commenttab" class="curtab" href="javascript:void(0);" onclick="MGJS.switchTab('thecomments,commentnavi', 'thetrackbacks', 'commenttab', 'curtab', 'trackbacktab', 'tab');">Comments (0)</a>
+		<a id="trackbacktab" class="tab" href="javascript:void(0);" onclick="MGJS.switchTab('thetrackbacks', 'thecomments,commentnavi', 'trackbacktab', 'curtab', 'commenttab', 'tab');">Trackbacks (1)</a>
+				<span class="addcomment"><a href="#respond">Leave a comment</a></span>
+				<span class="addtrackback"><a href="http://www.ehu.es/ehusfera/hpc/2013/07/05/tuberias-y-redirecciones-en-linux/trackback/">Trackback</a></span>
+		<div class="fixed"></div>
+</div>
+
+<div id="commentlist">
+	<!-- comments START -->
+	<ol id="thecomments">
+			<li class="messagebox">
+			No comments yet.		</li>
+		</ol>
+	<!-- comments END -->
+
+
+	<!-- trackbacks START -->
+			<ol id="thetrackbacks">
+												<li class="trackback">
+						<div class="date">
+							February 10th, 2014 at 12:20							 | <a href="#comment-159708">#1</a>
+						</div>
+						<div class="act">
+													</div>
+						<div class="fixed"></div>
+						<div class="title">
+							<a href="http://www.ehu.es/ehusfera/hpc/2013/10/24/comando-if-en-linux/">
+								HPC @UPV/EHU &raquo; Comando if en Linux							</a>
+						</div>
+					</li>
+				
+					</ol>
+		<div class="fixed"></div>
+	<!-- trackbacks END -->
+</div>
+
+</div>
+
+	<form action="http://www.ehu.es/ehusfera/hpc/wp-comments-post.php" method="post" id="commentform">
+	<div id="respond">
+
+					
+			<div id="author_info">
+				<div class="row">
+					<input type="text" name="author" id="author" class="textfield" value="" size="24" tabindex="1" />
+					<label for="author" class="small">Name (required)</label>
+				</div>
+				<div class="row">
+					<input type="text" name="email" id="email" class="textfield" value="" size="24" tabindex="2" />
+					<label for="email" class="small">E-Mail (will not be published) (required)</label>
+				</div>
+				<div class="row">
+					<input type="text" name="url" id="url" class="textfield" value="" size="24" tabindex="3" />
+					<label for="url" class="small">Website</label>
+				</div>
+			</div>
+
+			
+		
+		<!-- comment input -->
+		<div class="row">
+			<textarea name="comment" id="comment" tabindex="4" rows="8" cols="50"></textarea>
+		</div>
+
+		<!-- comment submit and rss -->
+		<div id="submitbox">
+			<a class="feed" href="http://www.ehu.es/ehusfera/hpc/comments/feed/">Subscribe to comments feed</a>
+			<div class="submitbutton">
+				<input name="submit" type="submit" id="submit" class="button" tabindex="5" value="Submit Comment" />
+			</div>
+						<input type="hidden" name="comment_post_ID" value="3583" />
+			<div class="fixed"></div>
+		</div>
+
+	</div>
+	<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="5f06a8cc83" /></p><script type='text/javascript' src='http://www.ehu.es/ehusfera/hpc/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+<script type='text/javascript' src='http://www.ehu.es/ehusfera/hpc/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://www.ehu.es/ehusfera/hpc/wp-content/plugins/akismet/_inc/form.js?ver=3.0.0'></script>
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="171"/></p>	</form>
+
+
+<div id="postnavi">
+	<span class="prev"><a href="http://www.ehu.es/ehusfera/hpc/2013/07/23/bc-let-y-expresiones-matematicas-en-linux/" rel="next">bc, let y expresiones matemáticas en Linux</a></span>
+	<span class="next"><a href="http://www.ehu.es/ehusfera/hpc/2013/07/01/tianhe-2-el-ordenador-mas-potente-del-mundo/" rel="prev">Tianhe-2, el ordenador más potente del mundo</a></span>
+	<div class="fixed"></div>
+</div>
+
+	</div>
+	<!-- main END -->
+
+	
+<!-- sidebar START -->
+<div id="sidebar">
+
+<!-- sidebar north START -->
+<div id="northsidebar" class="sidebar">
+<div id="linkcat-66" class="widget widget_links"><h3>Enlaces</h3>
+	<ul class='xoxo blogroll'>
+<li><a href="https://www.facebook.com/izosgi" title="Computing Service at Facebook" target="_blank">Facebook: IZO-SGI, HPC at UPV/EHU</a></li>
+<li><a href="https://twitter.com/izosgi" title="Computing Service at Twitter" target="_blank">Twitter: IZO-SGI, HPC at UPV/EHU</a></li>
+<li><a href="http://www.ehu.es/sgi" title="UPV/EHU Computing Service" target="_blank">UPV/EHU Computing Service Web Page</a></li>
+<li><a href="http://www.ehu.es/sgiker" target="_blank">UPV/EHU SGIker Servicios Generales de Investigación</a></li>
+
+	</ul>
+</div>
+<div id="nav_menu-3" class="widget widget_nav_menu"><h3>Contenidos</h3><div class="menu-contenidos-container"><ul id="menu-contenidos" class="menu"><li id="menu-item-2685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2685"><a title="Página de inicio" href="http://www.ehu.es/ehusfera/hpc/">Home</a>
+<ul class="sub-menu">
+	<li id="menu-item-2687" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2687"><a title="Cálculo Científico" href="http://www.ehu.es/ehusfera/hpc/informacion/high-performace-computing/">Cálculo Científico</a></li>
+</ul>
+</li>
+<li id="menu-item-2701" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-has-children menu-item-2701"><a title="Todos los posts" href="http://www.ehu.es/ehusfera/hpc/posts/">Posts</a>
+<ul class="sub-menu">
+	<li id="menu-item-2693" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2693"><a title="Posts en Anuncios" href="http://www.ehu.es/ehusfera/hpc/category/anuncios/">Anuncios</a></li>
+	<li id="menu-item-2695" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2695"><a title="Posts en General" href="http://www.ehu.es/ehusfera/hpc/category/general/">General</a></li>
+	<li id="menu-item-2697" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2697"><a title="Posts en HPC" href="http://www.ehu.es/ehusfera/hpc/category/hpc/">HPC</a></li>
+	<li id="menu-item-2699" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2699"><a title="Posts en IZO-SGI" href="http://www.ehu.es/ehusfera/hpc/category/izo-sgi/">IZO-SGI</a></li>
+</ul>
+</li>
+<li id="menu-item-2689" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2689"><a title="Comandos de Linux" href="http://www.ehu.es/ehusfera/hpc/linux/">Linux</a>
+<ul class="sub-menu">
+	<li id="menu-item-2691" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2691"><a title="Comandos básicos de Linux" href="http://www.ehu.es/ehusfera/hpc/linux/comando-basicos/">Comandos básicos</a></li>
+	<li id="menu-item-2925" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2925"><a href="http://www.ehu.es/ehusfera/hpc/linux/comandos-avanzados/">Comandos Avanzados</a></li>
+</ul>
+</li>
+</ul></div></div><div id="rss-4" class="widget widget_rss"><h3><a class='rsswidget' href='http://www.ehu.es/ehusfera/hpc/feed/' title='Syndicate this content'><img style='border:0' width='14' height='14' src='http://www.ehu.es/ehusfera/hpc/wp-includes/images/rss.png' alt='RSS' /></a> <a class='rsswidget' href='http://www.ehu.es/ehusfera/hpc' title='High Performance Computing @UPV/EHU'>HPC @UPV/EHU</a></h3><ul><li><a class='rsswidget' href='http://www.ehu.es/ehusfera/hpc/2014/09/25/curso-de-bioestadistica-en-bilbao-software-libre-y-ssps/' title='Curso que se llevará a cabo en Bilbao los días 10 y 11 de Octubre y que puede ser un buen complemento con el curso sobre el software R que se dará también a principios de Octubre. Datos del curso Objetivo Implementar y desarrollar las diferentes herramientas estadísticas y multivariantes en el ámbito biológico. Agenda […]'>Curso de Bioestadística en Bilbao. Software libre y SSPS</a></li><li><a class='rsswidget' href='http://www.ehu.es/ehusfera/hpc/2014/09/16/curso-de-estadistica-con-r-en-bilbao/' title='R es un potente programa de estadística libre gratuito y multiplataforma. El curso se llevará a cabo en Bilbao los días 7 y 14 de Octubre. Datos del curso Objetivo Adquirir destreza en el uso del programa R a la hora de llevar a cabo análisis estadísticos y figuras. Agenda Martes 7 de Octrubre 15:30:-17:30: […]'>Curso de estadística con R en Bilbao</a></li><li><a class='rsswidget' href='http://www.ehu.es/ehusfera/hpc/2014/07/15/kalkulu-zerbitzua-eta-bere-ikertzaileak-emaitza-onak-lortu-zituzten-2013an-2/' title='Memoria 2013 Ikerkuntzari zuzendutatko Informatikako zerbitzuak (Kalkulu Zientifikoa) IZO-SGI SGIker 2013ko txostena argitaratu du. Txosten osoa ondorengo estekan dago: 2013ko IZO-SGIren urteko txostena (pdf gazteleraz) Aurten ere, UPV/EHUko Kalkulu Zerbitzuak bere zenbaki ia gehienak hobetu edo mantendu ditu beheko taula konparatiboan argi ikusi daiteken mo'>Kalkulu zerbitzua eta bere ikertzaileak emaitza onak lortu zituzten 2013an</a></li><li><a class='rsswidget' href='http://www.ehu.es/ehusfera/hpc/2014/07/15/the-computing-service-and-its-researches-obtained-goog-results-in-2013/' title='2013 year report The Computing Service IZO-SGI SGIker of the UPV/EHU has published the 2013 year report, which can be found in the next link: IZO-SGI 2013 year report (pdf in spanish) The Computing Service has increased or maintained their main indexes as can be observed in the table below. Among the positive indexes, we can […]'>The Computing Service and its researches obtained good results in 2013</a></li><li><a class='rsswidget' href='http://www.ehu.es/ehusfera/hpc/2014/07/15/el-servicio-de-calculo-y-sus-investigadores-obtuvieron-unos-buenos-resultados-en-2013/' title='Memoria 2013 El Servicio de Informática Aplicada a la Investigación (Cálculo Científico) IZO-SGI SGIker ha publicado la memoria del 2013. La memoria completa puede encontrarse en el siguiente enlace: IZO-SGI memoria del 2013 (pdf) Un año más el Servicio General de Informática Aplicada a la Investigación (Cálculo Científico) de la UPV/EHU sigue mejorando la m'>El Servicio de Cálculo y sus investigadores obtuvieron unos buenos resultados en 2013</a></li><li><a class='rsswidget' href='http://www.ehu.es/ehusfera/hpc/2014/05/14/la-eficiencia-energetica-un-paso-necesario-para-avanzar-en-supercomputacion/' title='Existen similitudes entre un PC de sobremesa, un smartphone y un supercomputador, puesto que todos ellos son máquinas programables que ejecutan un sistema operativo, es decir, son lo que comúnmente conocemos como un ordenador. No obstante, cada uno de ellos tiene una arquitectura diseñada con un fin primario, buscado potencia y versatilidad en los casos […]'>La eficiencia energética, un paso necesario para avanzar en supercomputación</a></li></ul></div><div id="recent-comments-4" class="widget widget_recent_comments"><h3>Comentarios</h3><ul id="recentcomments"><li class="recentcomments"><a href='http://hrabbey.homeip.net/semanticscuttle/bookmarks.php/melindawallin' rel='external nofollow' class='url'>kids clothing sale new zealand</a> on <a href="http://www.ehu.es/ehusfera/hpc/2012/06/20/benchmarking-genetic-assemblers-abyss-vs-velvet/comment-page-1/#comment-176136">Benchmarking genetic assemblers: ABySS vs. velvet</a></li><li class="recentcomments"><a href='http://newelectronicsguide.com/sony-sd-80gb-hard-disk-drive-camcorder/trackback/' rel='external nofollow' class='url'>newelectronicsguide.com</a> on <a href="http://www.ehu.es/ehusfera/hpc/2012/06/20/benchmarking-genetic-assemblers-abyss-vs-velvet/comment-page-1/#comment-175810">Benchmarking genetic assemblers: ABySS vs. velvet</a></li><li class="recentcomments"><a href='http://sobieto.myht.org/index.php/Point_Plan_For_Building_Brands_In_The_Social_Media_Age' rel='external nofollow' class='url'>sobieto.myht.org</a> on <a href="http://www.ehu.es/ehusfera/hpc/2012/06/27/curso-de-cloud-computing-tecnologias-y-herramientas-para-trabajar-en-la-nube/comment-page-1/#comment-175682">Curso de Cloud Computing: tecnologías y herramientas para trabajar en la nube</a></li></ul></div><div id="meta-3" class="widget widget_meta"><h3>Utilities</h3>			<ul>
+						<li><a href="https://www.ehu.es/ehusfera/hpc/wp-login.php">Log in</a></li>
+			<li><a href="http://www.ehu.es/ehusfera/hpc/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://www.ehu.es/ehusfera/hpc/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+</div></div>
+<!-- sidebar north END -->
+
+
+<div id="centersidebar">
+	<!-- sidebar east START -->
+	<div id="eastsidebar" class="sidebar">
+	
+		<!-- categories -->
+		<div class="widget widget_categories">
+			<h3>Categories</h3>
+			<ul>
+					<li class="cat-item cat-item-939"><a href="http://www.ehu.es/ehusfera/hpc/category/anuncios/" title="Anuncios generales">Anuncios</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.ehu.es/ehusfera/hpc/category/general/" title="View all posts filed under General">General</a>
+</li>
+	<li class="cat-item cat-item-2349"><a href="http://www.ehu.es/ehusfera/hpc/category/hpc/" title="Post related with High Performance Computing">HPC</a>
+</li>
+	<li class="cat-item cat-item-2353"><a href="http://www.ehu.es/ehusfera/hpc/category/izo-sgi/" title="Announments about the IZO-SGI Computing Service">IZO-SGI</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="http://www.ehu.es/ehusfera/hpc/category/linux/" title="Sobre Linux especialmente orientado al Cálculo Científico">Linux</a>
+</li>
+			</ul>
+		</div>
+
+		</div>
+	<!-- sidebar east END -->
+
+	<!-- sidebar west START -->
+	<div id="westsidebar" class="sidebar">
+	
+		<!-- archives -->
+		<div class="widget widget_archive">
+			<h3>Archives</h3>
+			<ul>
+					<li><a href='http://www.ehu.es/ehusfera/hpc/2014/09/'>September 2014</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2014/07/'>July 2014</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2014/05/'>May 2014</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2014/04/'>April 2014</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2014/03/'>March 2014</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2014/02/'>February 2014</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2014/01/'>January 2014</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2013/12/'>December 2013</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2013/11/'>November 2013</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2013/10/'>October 2013</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2013/09/'>September 2013</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2013/08/'>August 2013</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2013/07/'>July 2013</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2013/06/'>June 2013</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2013/05/'>May 2013</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2013/04/'>April 2013</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2013/03/'>March 2013</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2013/02/'>February 2013</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2013/01/'>January 2013</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2012/12/'>December 2012</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2012/11/'>November 2012</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2012/10/'>October 2012</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2012/09/'>September 2012</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2012/07/'>July 2012</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2012/06/'>June 2012</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2012/05/'>May 2012</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2012/04/'>April 2012</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2012/02/'>February 2012</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2012/01/'>January 2012</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2011/12/'>December 2011</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2011/11/'>November 2011</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2011/10/'>October 2011</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2011/09/'>September 2011</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2011/08/'>August 2011</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2011/07/'>July 2011</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2011/06/'>June 2011</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2011/05/'>May 2011</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2011/04/'>April 2011</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2011/03/'>March 2011</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2011/02/'>February 2011</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2011/01/'>January 2011</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2010/12/'>December 2010</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2010/11/'>November 2010</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2010/10/'>October 2010</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2010/09/'>September 2010</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2010/08/'>August 2010</a></li>
+	<li><a href='http://www.ehu.es/ehusfera/hpc/2010/07/'>July 2010</a></li>
+			</ul>
+		</div>
+
+		</div>
+	<!-- sidebar west END -->
+	<div class="fixed"></div>
+</div>
+
+<!-- sidebar south START -->
+<div id="southsidebar" class="sidebar">
+
+	<!-- feeds -->
+	<div class="widget widget_feeds">
+		<div class="content">
+			<div id="subscribe">
+				<a id="feedrss" title="Subscribe to this blog..." href=""><abbr title="Really Simple Syndication">RSS</abbr> feed</a>
+				<ul id="feed_readers">
+					<li id="google_reader"><a class="reader" title="Subscribe with Google" href="http://fusion.google.com/add?feedurl="><span>Google</span></a></li>
+					<li id="yahoo_reader"><a class="reader" title="Subscribe with My Yahoo!"	href="http://add.my.yahoo.com/rss?url="><span>My Yahoo!</span></a></li>
+					<li id="newsgator_reader"><a class="reader" title="Subscribe with newsgator"	href="http://www.newsgator.com/ngs/subscriber/subfext.aspx?url="><span>newsgator</span></a></li>
+					<li id="bloglines_reader"><a class="reader" title="Subscribe with Bloglines"	href="http://www.bloglines.com/sub/"><span>Bloglines</span></a></li>
+				</ul>
+			</div>
+						<div class="fixed"></div>
+		</div>
+	</div>
+
+</div>
+<!-- sidebar south END -->
+
+</div>
+<!-- sidebar END -->
+	<div class="fixed"></div>
+</div>
+<!-- content END -->
+
+
+<!-- footer START -->
+<div id="footer">
+	<a id="gotop" href="#" onclick="MGJS.goTop();return false;">Top</a>
+	<a id="powered" href="http://www.ehu.es">UPV/EHU</a>
+	<div style="float:right; margin-top:12px; margin-right:20px;">
+		<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/es/88x31.png" /></a>
+	</div>
+	<div id="copyright">
+		<strong>ehu</strong>sfera - UPV/EHU blog service - IT Department	</div>
+	<div id="themeinfo">
+		Powered by <a href='http://mu.wordpress.org/'>WordPress-mu</a> and based on <a href='http://www.neoease.com/inove/'>iNove</a> theme	</div>
+</div>
+<!-- footer END -->
+
+</div>
+<!-- container END -->
+</div>
+<!-- wrap END -->
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><!--stats_footer_test--><script src="http://stats.wordpress.com/e-201441.js" type="text/javascript"></script>
+<script type="text/javascript">
+st_go({blog:'14819940',v:'ext',post:'3583'});
+var load_cmc = function(){linktracker_init(14819940,3583,2);};
+if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+else load_cmc();
+</script>
+
+</body>
+</html>

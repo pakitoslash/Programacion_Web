@@ -1,60 +1,38 @@
 Activating service name='com.canonical.Unity.Scope.Home'
 Successfully activated service 'com.canonical.Unity.Scope.Home'
 
-(unity-scope-home:2455): unity-scope-home-WARNING **: platform-info.vala:112: Unable to read SIM properties: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.ofono was not provided by any .service files
+(unity-scope-home:2249): unity-scope-home-WARNING **: platform-info.vala:112: Unable to read SIM properties: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.ofono was not provided by any .service files
 Activating service name='com.canonical.Unity.Scope.Applications'
 Activating service name='com.canonical.Unity.Scope.File.Gdrive'
 Activating service name='com.canonical.Unity.Scope.LocalFiles'
 Activating service name='com.canonical.Unity.Scope.Music'
 
-(process:2474): unity-files-daemon-WARNING **: folder.vala:65: Failed to read favorites: Falló al abrir el archivo «/home/francisco/.gtk-bookmarks»: No existe el archivo o el directorio
+(process:2268): unity-files-daemon-WARNING **: folder.vala:65: Failed to read favorites: Falló al abrir el archivo «/home/francisco/.gtk-bookmarks»: No existe el archivo o el directorio
 Successfully activated service 'com.canonical.Unity.Scope.LocalFiles'
 Successfully activated service 'com.canonical.Unity.Scope.Music'
 
-(unity-music-daemon:2476): unity-music-daemon-WARNING **: rhythmbox-collection.vala:510: Unable to open album-art DB!
+(unity-music-daemon:2270): unity-music-daemon-WARNING **: rhythmbox-collection.vala:510: Unable to open album-art DB!
 
-(unity-music-daemon:2476): unity-music-daemon-WARNING **: rhythmbox-collection.vala:574: Error while parsing rhythmbox DB: Error al abrir el archivo: No existe el archivo o el directorio
+(unity-music-daemon:2270): unity-music-daemon-WARNING **: rhythmbox-collection.vala:574: Error while parsing rhythmbox DB: Error al abrir el archivo: No existe el archivo o el directorio
 Successfully activated service 'com.canonical.Unity.Scope.File.Gdrive'
 Successfully activated service 'com.canonical.Unity.Scope.Applications'
 
-(unity-scope-home:2455): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+** (process:2075): WARNING **: *** Unsupported operation detected on trash directory
 
-(unity-scope-home:2455): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+** (process:2075): WARNING **:     A trash files/ directory should only have files linked or unlinked (via moves or deletes).  Some other operation has been detected on a file in the directory (eg: a file has been modified).  Likely, the data reported by the trash backend will now be inconsistent.
 
-(unity-scope-home:2455): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+** (process:2075): WARNING **:   dir: /home/francisco/.local/share/Trash/files, file: Tarea_6.docx, type: 1
 
-(unity-scope-home:2455): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
 
-(unity-scope-home:2455): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
 
-(unity-scope-home:2455): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+** (process:2075): WARNING **: *** Unsupported operation detected on trash directory
 
-(unity-scope-home:2455): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+** (process:2075): WARNING **:   dir: /home/francisco/.local/share/Trash/files, file: bootstrap-3.2.0-dist.zip, type: 1
 
-(unity-scope-home:2455): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
 
-(unity-scope-home:2455): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
-
-(unity-scope-home:2455): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
-
-(unity-scope-home:2455): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
-
-(unity-scope-home:2455): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
-
-(unity-scope-home:2455): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
-
-(unity-scope-home:2455): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
-
-(unity-scope-home:2455): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
-
-(unity-scope-home:2455): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
-
-(unity-scope-home:2455): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
-
-(unity-scope-home:2455): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
-
-(unity-scope-home:2455): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
-
-(unity-scope-home:2455): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
-
-** (zeitgeist-fts:2177): WARNING **: Unable to get info on application://nautilus-autostart.desktop
+GLib (gthread-posix.c): Unexpected error from C library during 'pthread_mutex_lock': Argumento inválido.  Aborting.
+Activating service name='com.ubuntu.OneConf'
+Successfully activated service 'com.ubuntu.OneConf'
+WARNING:oneconf.hosts:Error in loading other_hosts file: [Errno 2] No such file or directory: '/home/francisco/.cache/oneconf/f7a2ac34b69b8ebfc1c66b09541133fc/other_hosts'
+Activating service name='com.ubuntu.sso'
+Successfully activated service 'com.ubuntu.sso'

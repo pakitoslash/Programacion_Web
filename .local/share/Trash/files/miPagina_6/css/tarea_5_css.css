@@ -1,0 +1,63 @@
+	nav !important
+	{
+		text-align: center !important;
+		color: orange !important;
+	}
+
+	h1 
+	{
+		text-align: center !important;
+		color: #2EFE64 !important;
+	}
+
+	h1:hover:nth-child(even) 
+	{
+		text-align: center !important;
+		color: #00FF00 !important;
+		font-size: 30px !important;
+	}
+
+	h2 
+	{
+		text-align: center !important;
+		color: orange !important;
+
+	}
+
+	th:hover
+	{
+		font-size: 20px !important;
+	}
+
+	th
+	{	
+
+		width: 135px !important; 
+		height: 40px !important; 
+	}
+
+
+	img
+	{
+		width: 100px !important;
+		
+	}
+
+	img:hover
+	{
+		transform: scale(1.1) !important;
+	}
+
+	table
+	{
+		border: 20px solid YELLOW !important;
+		margin: auto !important;
+		border-spacing: 0 !important;	
+		text-align: ="center" !important;
+
+	}
+
+	thead
+	{
+		background: radial-gradient(red,blue,yellow) !important;
+	}

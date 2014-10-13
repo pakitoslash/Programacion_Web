@@ -314,12 +314,312 @@
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///home/francisco/Escritorio/Programacion_Web/Tareas/Tarea_5/Pagina_Web/Tarea_5.html" added="2014-10-10T17:16:01Z" modified="2014-10-10T17:16:01Z" visited="2014-10-10T17:16:01.957782Z">
+  <bookmark href="file:///home/francisco/Escritorio/Programacion_Web/Tareas/Tarea_5/Pagina_Web/Tarea_5.html" added="2014-10-10T17:16:01Z" modified="2014-10-10T17:16:01Z" visited="2014-10-10T17:16:01Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="text/html"/>
         <bookmark:applications>
           <bookmark:application name="nautilus" exec="&apos;/usr/bin/google-chrome-stable %U&apos;" modified="2014-10-10T17:16:01Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Im%C3%A1genes/Captura%20de%20pantalla%20de%202014-10-10%2014%3A25%3A52.png" added="2014-10-10T19:25:56Z" modified="2014-10-10T19:25:56Z" visited="2014-10-10T19:25:56Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="GNOME Screenshot" exec="&apos;eog %u&apos;" modified="2014-10-10T19:25:56Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Im%C3%A1genes/Captura%20de%20pantalla%20de%202014-10-10%2014%3A26%3A11.png" added="2014-10-10T19:26:14Z" modified="2014-10-10T19:26:14Z" visited="2014-10-10T19:26:14Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="GNOME Screenshot" exec="&apos;eog %u&apos;" modified="2014-10-10T19:26:14Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/senial.c" added="2014-10-11T13:44:18Z" modified="2014-10-12T20:51:42Z" visited="2014-10-11T13:44:18Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-10-11T13:44:18Z" count="1"/>
+          <bookmark:application name="nautilus" exec="&apos;gedit %U&apos;" modified="2014-10-12T20:51:21Z" count="1"/>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2014-10-12T20:51:42Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_3/senial.c" added="2014-10-11T13:57:54Z" modified="2014-10-11T18:19:29Z" visited="2014-10-11T13:57:54Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;gedit %U&apos;" modified="2014-10-11T18:19:27Z" count="3"/>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2014-10-11T18:19:29Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_3/ejemploSenial.c" added="2014-10-11T14:01:33Z" modified="2014-10-11T18:19:29Z" visited="2014-10-11T14:01:33Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-10-11T14:01:33Z" count="1"/>
+          <bookmark:application name="nautilus" exec="&apos;gedit %U&apos;" modified="2014-10-11T18:19:27Z" count="1"/>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2014-10-11T18:19:29Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_3/matarProceso.c" added="2014-10-11T14:10:13Z" modified="2014-10-11T18:19:29Z" visited="2014-10-11T14:10:13Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-10-11T14:10:13Z" count="1"/>
+          <bookmark:application name="nautilus" exec="&apos;gedit %U&apos;" modified="2014-10-11T18:19:27Z" count="1"/>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2014-10-11T18:19:29Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_3/tuberia.c" added="2014-10-11T14:30:40Z" modified="2014-10-11T14:30:40Z" visited="2014-10-11T14:30:41Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-10-11T14:30:40Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_3/Tareas.txt" added="2014-10-11T15:10:51Z" modified="2014-10-11T15:10:51Z" visited="2014-10-11T15:10:52Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-10-11T15:10:51Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_3/mihilo1.c" added="2014-10-11T15:26:27Z" modified="2014-10-11T15:26:27Z" visited="2014-10-11T15:26:27Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-10-11T15:26:27Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_3/hilo2.c" added="2014-10-11T15:27:52Z" modified="2014-10-11T15:27:52Z" visited="2014-10-11T15:27:52Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-10-11T15:27:52Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_3/parametrosHilos.c" added="2014-10-11T16:30:40Z" modified="2014-10-11T16:30:59Z" visited="2014-10-11T16:30:41Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;/opt/sublime_text/sublime_text %F&apos;" modified="2014-10-11T16:30:59Z" count="2"/>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2014-10-11T16:30:43Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_3/hilo3.c" added="2014-10-11T16:45:10Z" modified="2014-10-11T16:45:10Z" visited="2014-10-11T16:45:10Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-10-11T16:45:10Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_3/hilo4.c" added="2014-10-11T17:02:28Z" modified="2014-10-11T17:02:28Z" visited="2014-10-11T17:02:28Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-10-11T17:02:28Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_3/mutex.c" added="2014-10-11T17:28:09Z" modified="2014-10-11T17:28:09Z" visited="2014-10-11T17:28:10Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-10-11T17:28:09Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Clase_3/fam_exec.c" added="2014-10-11T18:01:10Z" modified="2014-10-11T18:01:10Z" visited="2014-10-11T18:01:10Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-10-11T18:01:10Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Proyecto_C/loggeo.h" added="2014-10-13T00:22:24Z" modified="2014-10-13T00:22:24Z" visited="2014-10-13T00:22:25Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-chdr"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-10-13T00:22:24Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Proyecto_C/TiendaMusica.c" added="2014-10-13T00:35:25Z" modified="2014-10-13T00:35:25Z" visited="2014-10-13T00:35:26Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-10-13T00:35:25Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Proyecto_C/opciones.h" added="2014-10-13T00:48:16Z" modified="2014-10-13T00:48:16Z" visited="2014-10-13T00:48:16Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-chdr"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-10-13T00:48:16Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Proyecto_C/%98%0C@.txt.txt.txt" added="2014-10-13T03:01:11Z" modified="2014-10-13T03:01:12Z" visited="2014-10-13T03:01:11Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;gedit %U&apos;" modified="2014-10-13T03:01:11Z" count="1"/>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2014-10-13T03:01:12Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Proyecto_C/francisco.txt" added="2014-10-13T03:05:36Z" modified="2014-10-13T03:05:36Z" visited="2014-10-13T03:05:36Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2014-10-13T03:05:36Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Proyecto_C/Francisco%0A.txt" added="2014-10-13T03:05:45Z" modified="2014-10-13T03:05:45Z" visited="2014-10-13T03:05:45Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2014-10-13T03:05:45Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Proyecto_C/francisco%0A.txt" added="2014-10-13T03:05:56Z" modified="2014-10-13T03:07:34Z" visited="2014-10-13T03:05:56Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2014-10-13T03:07:34Z" count="2"/>
+          <bookmark:application name="nautilus" exec="&apos;gedit %U&apos;" modified="2014-10-13T03:07:33Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Proyecto_C/Francisco%0A" added="2014-10-13T03:08:35Z" modified="2014-10-13T03:32:54Z" visited="2014-10-13T03:08:36Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2014-10-13T03:32:54Z" count="3"/>
+          <bookmark:application name="nautilus" exec="&apos;gedit %U&apos;" modified="2014-10-13T03:32:53Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Proyecto_C/francisco%0A" added="2014-10-13T03:09:39Z" modified="2014-10-13T03:35:43Z" visited="2014-10-13T03:09:40Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2014-10-13T03:35:43Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/francisco/Escritorio/Proyecto_C/discos.h" added="2014-10-13T03:47:23Z" modified="2014-10-13T03:47:23Z" visited="2014-10-13T03:47:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-chdr"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2014-10-13T03:47:23Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
